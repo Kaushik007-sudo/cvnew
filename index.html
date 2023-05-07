@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Personal-Portfolio-Website-Kaushik</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/f295489ca5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">My Workflow</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text"> 
+                    <p>Product Manager</p>
+                    <h1>Hi, I'm <span>Kaushik</span> Das <br> from Kolkata</h1>
+                </div>
+        </div>
+    </div>
+    <!----------About------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/image2.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"> About Me</h1>
+                    <p> Project manager with overall responsibility for the management throughly analysing the possibilities and risks involved in the process of execution, performance and completion of
+                        new product</p>
+                          <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('certification')">Certifications</p>
+                          </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Resource Management</span><br>Optimize the resource capabilities and workload</li>
+                            <li><span>Risk Management</span><br>Identification, evaluation, and prioritization of risks</li>
+                            <li><span>Quality Management</span><br>Assuring Quality control in deliverables</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Lee & Nee Software Exports</span><br>Project Coordinator — December 2022 to till date</li>
+                            <li><span>Codebuddy</span><br>Project Manager — June 2022 to Dec 2022</li>
+                            <li><span>InfluxIQ Tech</span><br>Project Coordinator — December 2020 to July 2022</li>
+                            <li><span>Kloud Byte</span><br>BDE — Feb 2016 to July 2017</li>
+                            <li><span>Wipro</span><br>HP Tech Support — June 2013 to March 2015</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.Com</span><br>West Bengal Sate University</li>
+                            <li><span>BCA (Appeared)</span><br>DOEACC</li>
+                            <li><span>Class 12th</span><br>Julian Day School, Kalyani</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certification">
+                        <ul>
+                            <li><span>Project Management Foundations: Teams</span><br>Program: PMI® Registered Education Provider</li>
+                            <li><span>Cognizant USA Agile Methodology</span><br>Issued by Forage</li>
+                            <li><span>MongoDB Tutorial</span><br>Great Learning Academy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+        <!--------------Services----------->
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title"> My Workflow</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <h2>Plan</h2>
+                        <p> The planning phase refines the project’s objectives, which were gathered during the initiation phase. It includes planning the steps necessary to meet those objectives by further identifying the specific activities and resources required to com­plete the project.</p>
+                        <a href="#"> learn more</a>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Execute</h2>
+                    <p> A project execution plan is used to define how a project will be phased out. It also addresses the project scheduling, monitoring and controlling needed to bring the project deliverables.</p>
+                    <a href="#"> learn more</a>
+              </div>
+              <div>
+                <i class="fa-solid fa-face-smile"></i>
+                <h2>Deliver</h2>
+                <p>A result of successful coordination of the resources and efforts of multiple people/ teams in order to complete a task or project on time and under budget</p>
+                <a href="#"> learn more</a>
+          </div>
+                </div>
+             </div>
+        </div>
+        <!-------------Portfolio------>
+        <div id="portfolio">
+            <div class="container">
+            <h1 class="sub-title"> My Work</h1>   
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Social Media Trivia App</h3>
+                        <p> This App allows you to conect to the talented people around the world and play intresting games</p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>eCommerce App</h3>
+                        <p>Get Branded optics, shades & lenses delivered at the comfort of your homes</p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Reselling App</h3>
+                        <p>Resell your old products and get people to bid, ensuring best ever prices.</p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+            </div>
+        </div>
+        <!--------------Contact----------->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-sharp fa-solid fa-paper-plane"></i>kaushikthebest2get@gmail.com</p>
+                        <p><i class="fa-solid fa-square-phone"></i>+91 8436327900</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/kaushikdaszico"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.linkedin.com/in/techgemz"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://wa.me/+918436327900"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                        <a href="images/cv.pdf" download class="btn btn2">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p> © Copyright <span>Kaushik</span> All Rights Reserved</p>
+            </div>
+        </div>
+        
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+        }
+            </script>
+
+            <script>
+            var sidemeu= document.getElementById("sidemenu");
+
+            function openmenu(){
+                sidemeu.style.right= "0";
+            }
+
+            function closemenu(){
+                sidemeu.style.right= "-200px";
+            }
+            </script>
+            <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwLnwb0G1HcwWBbk7NLFdVlcWTyyulxCadTzLbcc-zjwjfoTjowgaPrC6zAhrjjVaH7Uw/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent Successfully!"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html> 
