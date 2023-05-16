@@ -351,8 +351,28 @@ nav .fa-solid{
         top: 25px;
         left: 25px;
         cursor: pointer;
-
     }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 12px;
+    }
+    .tab-links{
+        font-size: 14px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
     #msg{
         color: #61b752;
         margin-top: -40px;
