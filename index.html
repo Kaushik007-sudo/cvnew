@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal-Portfolio-Website-Kaushik</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Ubuntu&display=swap" rel="stylesheet">
+        
+    <style>
+    h1{font-family: 'Alkatra', cursive;}
+    p{font-family: 'Ubuntu', sans-serif;}
+    </style>
 
     <script src="https://kit.fontawesome.com/f295489ca5.js" crossorigin="anonymous"></script>
 </head>
@@ -15,18 +23,17 @@
             <nav>
                 <img src="images/logo.png" class="logo">
                 <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                   <li><a href="#about">About</a></li>
                     <li><a href="#services">My Workflow</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                                        <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
                 </nav>
                 <div class="header-text"> 
-                    <p>IT Project Manager</p>
-                    <h1>Hi, I'm <span>Kaushik</span> Das <br> from Kolkata</h1>
+                    <p>Product Manager</p>
+                    <h1>Hi, I'm <span>Kaushik</span> Das <br>from Kolkata</h1>
                 </div>
         </div>
     </div>
@@ -56,9 +63,9 @@
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Zoho</span><br>Project Coordinator — Jan 2023 to till date</li>
-                            <li><span>Vista Prints</span><br>Project Manager — July 2022 to Jan 2023</li>
-                            <li><span>WebQ Tech</span><br>Project Coordinator — December 2020 to July 2022</li>
+                            <li><span>Lee & Nee Software Exports</span><br>Project Coordinator — December 2022 to till date</li>
+                            <li><span>Codebuddy</span><br>Project Manager — June 2022 to Dec 2022</li>
+                            <li><span>InfluxIQ Tech</span><br>Project Coordinator — December 2020 to July 2022</li>
                             <li><span>Kloud Byte</span><br>BDE — Feb 2016 to July 2017</li>
                             <li><span>Wipro</span><br>HP Tech Support — June 2013 to March 2015</li>
                         </ul>
@@ -167,7 +174,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p> © Copyright <span>Kaushik.</span> All Rights Reserved</p>
+                <p> © Copyright <span>Kaushik</span> All Rights Reserved</p>
             </div>
         </div>
         
@@ -188,14 +195,14 @@
             </script>
 
             <script>
-            var sidemeu= document.getElementById("sidemenu");
+            var sidemeu = document.getElementById("sidemenu");
 
             function openmenu(){
-                sidemeu.style.right= "0";
+                sidemeu.style.right = "0";
             }
 
             function closemenu(){
-                sidemeu.style.right= "-200px";
+                sidemeu.style.right = "-200px";
             }
             </script>
             <script>
