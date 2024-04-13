@@ -327,7 +327,7 @@ nav .fa-solid{
         background-image: url(images/phonebackground.png);
     }
     .header-text{
-        margin-bottom: 1%;
+        margin-bottom: 100%;
         position: bottom;
         font-size: 16px;
     }
