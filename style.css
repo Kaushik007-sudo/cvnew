@@ -328,6 +328,7 @@ nav .fa-solid{
     }
     .header-text{
         margin-bottom: 1%;
+        position: bottom;
         font-size: 16px;
     }
     .header-text h1{
