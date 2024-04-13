@@ -326,15 +326,17 @@ nav .fa-solid{
     #header{
         background-image: url(images/phonebackground.png);
     }
-    .header-text{
-        margin-bottom: 100%;
-        position: bottom;
-        font-size: 16px;
-    }
-    .header-text h1{
-        font-size: 30px;
-        position: sticky;
-    }
+    .header-text {
+    position: fixed;
+    bottom: 0;
+    font-size: 16px;
+    width: 100%; /* Ensure the text spans the full width */
+    text-align: left; /* Center the text horizontally */
+}
+
+.header-text h1 {
+    font-size: 30px;
+
     nav .fa-solid{
         display: block;
         font-size: 25px;
