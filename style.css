@@ -251,6 +251,34 @@ margin-bottom: 20px;
 .btn:hover{
     background: #ff004f;
 }
+
+/* Video Gallery Styles */
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-item {
+    width: 30%;
+    aspect-ratio: 16/9;
+    position: relative;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .video-item {
+        width: 100%;
+    }
+}
 /*-----------Contact-----------*/
 .contact-left{
     flex-basis: 35%;
@@ -390,54 +418,3 @@ nav .fa-solid{
         display: block;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
