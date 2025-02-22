@@ -20,6 +20,63 @@ workflows. Well-versed in boosting productivity through AI tools such as ChatGPT
     <style>
     h1{font-family: 'Alkatra', cursive;}
     p{font-family: 'Ubuntu', sans-serif;}
+    
+     /* Floating Chatbot Button */
+     .chatbot-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #77C593;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s ease;
+    }
+
+    .chatbot-btn:hover {
+        background-color: #DA68A0;
+    }
+
+    /* Chatbot Container */
+    .chatbot-container {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        width: 350px;
+        height: 500px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        display: none;
+        overflow: hidden;
+    }
+
+    .chatbot-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    /* Close Button */
+    .close-btn {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        color: #DA68A0;
+    }
     </style>
 
     <script src="https://kit.fontawesome.com/f295489ca5.js" crossorigin="anonymous"></script>
@@ -139,6 +196,14 @@ workflows. Well-versed in boosting productivity through AI tools such as ChatGPT
             <h1 class="sub-title"> My Work</h1>   
             <div class="work-list">
                 <div class="work">
+                    <img src="images/work-0.jpg">
+                    <div class="layer">
+                        <h3>Farmers Market Online</h3>
+                        <p>Interactive platform for Farmers and Customers</p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                    <div class="work">
                     <img src="images/work-1.jpg">
                     <div class="layer">
                         <h3>Chase the Zen</h3>
@@ -304,6 +369,50 @@ workflows. Well-versed in boosting productivity through AI tools such as ChatGPT
       })
       .catch(error => console.error('Error!', error.message))
   })
+</script>
+    <!-- Floating Chatbot Button -->
+    <button class="chatbot-btn" onclick="toggleChat()">💬</button>
+
+    <!-- Chatbot Window -->
+    <div class="chatbot-container" id="chatbot">
+        <button class="close-btn" onclick="toggleChat()">✖</button>
+        <iframe id="chatbot-frame" 
+            src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/02/03/12/20250203125217-QXU8NVWU.json">
+        </iframe>
+    </div>
+
+   <script>
+    function toggleChat() {
+        var chatbox = document.getElementById("chatbot");
+        chatbox.style.display = (chatbox.style.display === "none" || chatbox.style.display === "") ? "block" : "none";
+    }
+
+    document.getElementById("chatbot-frame").addEventListener("load", function() {
+        const iframe = document.getElementById("chatbot-frame").contentWindow.document;
+
+        const styleTag = iframe.createElement("style");
+        styleTag.innerHTML = `
+            .bpw-composer { 
+                position: fixed !important; 
+                bottom: 0 !important; 
+                width: 100%; 
+                background: white; 
+                padding: 10px; 
+                border-top: 1px solid #ddd; 
+            }
+            .bpw-messages-container { 
+                flex-grow: 1; 
+                overflow-y: auto; 
+                padding-bottom: 60px; /* Adjusts space for input box */
+            }
+            .bpw-chat-container {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+        `;
+        iframe.head.appendChild(styleTag);
+    });
 </script>
 </body>
 </html> 
