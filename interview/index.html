@@ -5,709 +5,382 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kaushik Das — Project Manager Interview Guide</title>
 <style>
-:root{
-  --bg:#080b10;--panel:#0f141c;--panel2:#141b25;--ink:#f4f7fb;--muted:#9aa6b5;
-  --accent:#7cf7a1;--accent2:#65d9ff;--line:#27313d;--white:#fff;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
-.hero{
-  padding:72px 7% 64px;
-  background:
-    radial-gradient(circle at 80% 20%,#65d9ff18,transparent 28%),
-    radial-gradient(circle at 20% 80%,#7cf7a114,transparent 30%),
-    linear-gradient(180deg,#0a0e14,#080b10);
-  border-bottom:1px solid var(--line);
-}
-.hero .tag{display:inline-block;padding:7px 12px;border:1px solid #7cf7a155;border-radius:999px;font-size:12px;letter-spacing:.08em;background:#7cf7a10b;color:var(--accent)}
-h1{font-size:clamp(38px,6vw,68px);line-height:1.02;margin:18px 0 12px;letter-spacing:-.04em}
-.hero p{max-width:820px;color:#c5ced9;font-size:17px}
-nav{position:sticky;top:0;z-index:5;background:#080b10e8;backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:12px 7%;display:flex;gap:8px;flex-wrap:wrap}
-nav a{color:#cbd5e1;text-decoration:none;padding:7px 11px;border-radius:8px;font-size:13px}
-nav a:hover{background:#7cf7a112;color:var(--accent)}
-main{max-width:1200px;margin:34px auto;padding:0 24px}
-section{margin:52px 0}
-h2{font-size:28px;margin-bottom:8px;letter-spacing:-.02em}
-.sub{color:var(--muted);margin-top:0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
-.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 16px 45px #00000025}
-.card h3{margin:0 0 8px;font-size:18px}
-.card p{margin:0;color:#b6c0cc}
-.num{color:var(--accent);font-weight:800;font-size:13px}
-.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
-.step{padding:10px 14px;background:#7cf7a10e;color:var(--accent);border:1px solid #7cf7a133;border-radius:10px;font-weight:700}
-.arrow{color:#667384;font-weight:900}
-.badge{display:inline-block;padding:5px 9px;border-radius:8px;background:#65d9ff0e;color:var(--accent2);border:1px solid #65d9ff2e;font-size:11px;font-weight:700;margin-bottom:10px}
-.product{position:relative;overflow:hidden}
-.product:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(#7cf7a1,#65d9ff)}
-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-th,td{padding:14px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
-th{background:#141b25;color:#dce5ef;font-size:13px}
-td{color:#b9c4d0}
-tr:last-child td{border-bottom:0}
-.search{width:100%;padding:13px 15px;border:1px solid var(--line);background:#0d1219;color:var(--ink);border-radius:10px;font-size:15px;margin:12px 0 16px}
-.search::placeholder{color:#687586}
-.callout{background:linear-gradient(135deg,#101822,#0d151c);border:1px solid #7cf7a126;color:#dbe5ee;border-radius:16px;padding:22px}
-.callout strong{color:var(--accent)}
-footer{text-align:center;padding:35px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
-@media(max-width:650px){h1{font-size:38px}.hero{padding:48px 6%}main{padding:0 16px}}
-
-.interview-content{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;max-height:900px;overflow:auto}
-.interview-content pre{font-size:14px}
-.interview-content h3{color:var(--accent)}
+:root{--bg:#07070d;--soft:#0c0c16;--panel:#111120;--panel2:#17172a;--line:rgba(255,255,255,.09);--text:#f1f2fb;--muted:#a0a0bf;--faint:#70708e;--violet:#7c5cff;--blue:#3b9dff;--cyan:#37e6e6;--green:#5af0a0;--grad:linear-gradient(120deg,var(--violet),var(--blue));--radius:20px;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}h1,h2,h3{font-family:Sora,Inter,sans-serif;margin:0;letter-spacing:-.025em}p{margin:0;color:var(--muted)}a{color:inherit;text-decoration:none}.container{max-width:var(--max);margin:auto;padding:0 24px}
+.grain{position:fixed;inset:0;z-index:10;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}.orb{position:fixed;border-radius:50%;filter:blur(100px);opacity:.18;z-index:0;pointer-events:none}.orb-1{width:500px;height:500px;background:var(--violet);top:-200px;left:-180px}.orb-2{width:450px;height:450px;background:var(--blue);top:30%;right:-220px}.orb-3{width:400px;height:400px;background:var(--cyan);bottom:-220px;left:30%}
+.topbar{position:sticky;top:0;z-index:20;background:#07070de8;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.topbar-inner{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{font:700 1.18rem Sora}.brand span{background:var(--grad);-webkit-background-clip:text;color:transparent}.top-actions{display:flex;align-items:center;gap:12px}.status{font-size:12px;color:#b8bdd1;border:1px solid var(--line);padding:7px 11px;border-radius:100px}.status i{display:inline-block;width:7px;height:7px;background:var(--green);border-radius:50%;margin-right:7px}.icon-btn{width:36px;height:36px;border:1px solid var(--line);border-radius:50%;background:#ffffff08;color:#fff}
+.hero{position:relative;z-index:1;min-height:520px;padding:80px 0;background:radial-gradient(circle at 75% 50%,#3b9dff12,transparent 30%)}.hero-inner{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center}.eyebrow,.section-label{font-size:11px;font-weight:800;letter-spacing:.14em;color:#a9a0ff}.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.02;margin:18px 0}.hero h1 span{background:var(--grad);-webkit-background-clip:text;color:transparent}.hero-copy>p{font-size:17px;max-width:650px}.hero-actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:10px;border-radius:100px;padding:13px 22px;font-weight:700;font-size:14px;transition:.25s}.btn.primary{background:var(--grad);box-shadow:0 15px 45px #503cdc44}.btn.primary:hover{transform:translateY(-3px)}.btn.ghost{border:1px solid var(--line);background:#ffffff05}.btn.ghost:hover{background:#ffffff0b}
+.hero-card{background:linear-gradient(145deg,#15152a,#0e1019);border:1px solid var(--line);border-radius:28px;padding:32px;display:flex;gap:22px;align-items:center;box-shadow:0 30px 80px #00000040}.hero-card p{font-size:13px;margin-top:7px}.ring{width:118px;height:118px;border-radius:50%;padding:5px;background:conic-gradient(var(--violet),var(--cyan),var(--blue),var(--violet));flex-shrink:0}.ring-inner{height:100%;border-radius:50%;background:#0d0f17;display:flex;flex-direction:column;align-items:center;justify-content:center}.ring strong{font:800 27px Sora}.ring small{color:var(--green);font-size:10px;font-weight:800;letter-spacing:.15em}
+.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-24px;position:relative;z-index:3}.quick-card{background:#111120ee;border:1px solid var(--line);border-radius:16px;padding:17px;display:flex;gap:12px;align-items:center;transition:.3s}.quick-card:hover{transform:translateY(-5px);border-color:#7c5cff55}.quick-card b,.quick-card small{display:block}.quick-card small{font-size:12px;color:var(--muted);margin-top:3px}.qicon{font-size:22px}
+section{position:relative;z-index:1;padding:82px 0}.section-head{text-align:center;margin-bottom:34px}.section-head.left{text-align:left}.section-head h2{font-size:clamp(27px,4vw,42px);margin:10px 0}.section-head p{max-width:700px;margin:auto}.section-head.left p{margin:0}
+.learning-map{padding-bottom:40px}.map{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}.map-step{display:flex;gap:10px;align-items:center;padding:13px 15px;background:var(--panel);border:1px solid var(--line);border-radius:14px;min-width:170px;transition:.25s}.map-step:hover{border-color:#7c5cff66;transform:translateY(-3px)}.map-step>span{font:800 12px Sora;color:var(--cyan)}.map-step b,.map-step small{display:block}.map-step small{color:var(--muted);font-size:11px}.map>i{color:#65677b}
+.profile-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.big-profile,.mini-stack>div{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:28px}.big-profile{background:linear-gradient(145deg,#16152a,#10121b)}.profile-tag{font-size:10px;color:var(--cyan);font-weight:800;letter-spacing:.14em}.big-profile h3{font-size:27px;margin:13px 0}.profile-points{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.profile-points span{font-size:12px;padding:8px 10px;border-radius:100px;background:#ffffff06;border:1px solid var(--line);color:#c5c8d7}.mini-stack{display:grid;gap:12px}.mini-stack b,.mini-stack span,.mini-stack small{display:block}.mini-stack span{font:600 15px Sora;margin:5px 0}.mini-stack small{font-size:12px}
+.dark-section{background:linear-gradient(180deg,#0a0a12,#0d0e18);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.product-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.product-card{padding:28px;background:var(--panel);border:1px solid var(--line);border-radius:22px;transition:.3s}.product-card:hover{transform:translateY(-5px);border-color:#7c5cff55}.product-top{display:flex;justify-content:space-between;color:var(--cyan);font-size:11px;letter-spacing:.1em}.product-card h3{font-size:22px;margin:16px 0 9px}.flowline{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:22px}.flowline span{padding:7px 9px;background:#ffffff06;border:1px solid var(--line);border-radius:8px;font-size:11px}.flowline i{color:#6e7190}.agent-list{display:grid;gap:8px;margin-top:20px}.agent-list div{padding:11px 13px;border-left:2px solid #7c5cff88;background:#ffffff04;border-radius:0 9px 9px 0}.agent-list strong,.agent-list small{display:block}.agent-list strong{font-size:12px;color:#d9d7ff}.agent-list small{font-size:11px;margin-top:2px}
+.method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.method{padding:23px;border-radius:18px;border:1px solid var(--line);background:var(--panel);transition:.3s}.method:hover{transform:translateY(-5px)}.method>span{font-size:10px;font-weight:800;letter-spacing:.13em;color:var(--cyan)}.method h3{margin:10px 0;font-size:19px}.method p{font-size:13px}.when{font-size:11px;color:#8e91a9;margin-top:16px;padding-top:13px;border-top:1px solid var(--line)}
+.framework{padding:20px 0 70px}.framework-card{display:flex;align-items:center;gap:18px;padding:23px;border-radius:18px;background:linear-gradient(110deg,#18152e,#101c26);border:1px solid #7c5cff44}.framework-icon{font-size:28px}.framework-card h3{font-size:19px;margin:4px 0}.framework-card p{font-size:12px}
+.control-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.control-card{padding:22px;background:var(--panel);border:1px solid var(--line);border-radius:18px}.control-no{font:800 12px Sora;color:var(--violet)}.control-card h3{margin:8px 0;font-size:19px}.control-card p{font-size:13px}.control-card b{display:block;font-size:10px;color:#a7abc0;margin-top:15px}
+.problem-flow{padding-top:40px}.formula{display:flex;justify-content:center;align-items:stretch;gap:8px;flex-wrap:wrap}.formula>div{min-width:120px;text-align:center;padding:17px 11px;border:1px solid var(--line);background:var(--panel);border-radius:15px}.formula>div:first-child{border-color:#7c5cff55}.formula b,.formula small{display:block}.formula b{font-size:12px;margin-top:5px}.formula small{font-size:10px;color:var(--faint)}.formula>span{display:flex;align-items:center;color:#666a80}
+.risk-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.risk-cards>div{padding:15px 17px;background:var(--panel);border:1px solid var(--line);border-radius:13px}.risk-cards b{display:block;color:#c9c3ff;font-size:13px}.risk-cards span{display:block;color:var(--muted);font-size:11px;margin-top:4px}.risk-workflow{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:24px;padding:17px;background:#ffffff03;border:1px solid var(--line);border-radius:14px;font-size:11px;color:#b9bdd0}.risk-workflow span{color:#666a80}
+.tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tool-card{display:flex;gap:14px;padding:19px;background:#111120;border:1px solid var(--line);border-radius:16px}.tool-logo{width:42px;height:42px;border-radius:11px;background:var(--grad-soft);border:1px solid #7c5cff44;display:grid;place-items:center;font:800 14px Sora;color:#cfc9ff;flex-shrink:0}.tool-card h3{font-size:16px}.tool-card p{font-size:11px;margin-top:4px}
+.memory-cloud{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:22px}.memory-cloud span{padding:9px 12px;border:1px solid #7c5cff44;background:#7c5cff0c;border-radius:100px;color:#c7c2ff;font-size:11px;font-weight:700}.aws-list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.aws-row{display:grid;grid-template-columns:100px 85px 1fr;gap:10px;align-items:center;padding:12px 14px;border:1px solid var(--line);background:var(--panel);border-radius:11px}.aws-row b{font-size:12px}.aws-row span{font-size:9px;text-transform:uppercase;color:var(--cyan);letter-spacing:.08em}.aws-row p{font-size:11px}
+.jira-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.jira-card{padding:19px;background:var(--panel);border:1px solid var(--line);border-radius:16px}.jira-card b,.jira-card span,.jira-card p{display:block}.jira-card b{font:600 16px Sora}.jira-card span{font-size:10px;color:var(--cyan);margin:5px 0}.jira-card p{font-size:11px}
+.qa-toolbar{display:flex;gap:12px;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap}.qa-toolbar input{flex:1;min-width:250px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;color:#fff;font-size:13px;outline:none}.filters{display:flex;gap:6px;flex-wrap:wrap}.filters button{background:var(--panel);color:var(--muted);border:1px solid var(--line);border-radius:100px;padding:8px 12px;font-size:11px;cursor:pointer}.filters button.active{background:var(--grad);color:#fff;border-color:transparent}.qa-list{display:grid;gap:8px}.qa-item{background:var(--panel);border:1px solid var(--line);border-radius:15px;overflow:hidden}.qa-item summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:44px 1fr 28px;align-items:center;gap:10px;padding:17px}.qa-item summary::-webkit-details-marker{display:none}.qa-item summary i{font-style:normal;text-align:center;color:#777b94}.qnum{font:800 11px Sora;color:var(--violet)}.qa-answer{padding:0 17px 18px 71px}.qa-answer p{font-size:13px;color:#c1c4d0}.answer-tip{display:flex;gap:9px;align-items:center;margin-top:12px;padding:10px 12px;background:#7c5cff0b;border:1px solid #7c5cff2b;border-radius:10px}.answer-tip strong{font-size:10px;color:var(--cyan);white-space:nowrap}.answer-tip span{font-size:10px;color:#a9acc0}
+.initiative{padding:28px;background:linear-gradient(130deg,#17132c,#0e1820);border:1px solid #7c5cff55;border-radius:23px}.initiative-copy h2{font-size:30px;margin:8px 0}.initiative-copy p{font-size:13px}.story{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}.story>div{padding:17px;background:#00000025;border:1px solid var(--line);border-radius:14px}.story span{font:800 10px Sora;color:var(--cyan);letter-spacing:.1em}.story p{font-size:12px;margin-top:7px}.story-line{margin-top:16px;color:#c9cbd8;font-size:12px}.story-line b{color:#fff}
+.final-check{padding-top:50px}.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.check-grid label{display:flex;gap:10px;align-items:center;padding:13px 15px;background:var(--panel);border:1px solid var(--line);border-radius:12px;color:#c2c5d3;font-size:12px}.check-grid input{accent-color:var(--violet)}
+.closing{text-align:center;padding:80px 0 100px}.closing-mark{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;margin:0 auto 18px;background:var(--grad);font-size:25px}.closing h2{font-size:32px}.closing p{max-width:570px;margin:10px auto 24px;font-size:14px}footer{border-top:1px solid var(--line);padding:26px;text-align:center;color:var(--faint);font-size:11px}footer a{color:#a9a0ff}
+.quick-card,.map-step,.product-card,.method,.control-card,.risk-cards>div,.tool-card,.jira-card,.aws-row,.qa-item,.initiative,.final-check,.section-head{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.show{opacity:1;transform:none}
+@media(max-width:980px){.hero-inner,.profile-grid,.product-grid{grid-template-columns:1fr}.hero-card{max-width:520px}.quick-grid{grid-template-columns:repeat(2,1fr)}.method-grid{grid-template-columns:repeat(2,1fr)}.control-grid,.tool-grid,.jira-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.container{padding:0 17px}.hero{padding:55px 0}.hero h1{font-size:43px}.hero-card{padding:22px}.ring{width:85px;height:85px}.quick-grid,.method-grid,.control-grid,.tool-grid,.jira-grid,.risk-cards,.aws-list,.story,.check-grid{grid-template-columns:1fr}.map>i{display:none}.map-step{min-width:100%;}.formula>span{display:none}.aws-row{grid-template-columns:85px 70px 1fr}.qa-answer{padding-left:17px}.qa-item summary{grid-template-columns:35px 1fr 25px}.status{display:none}}
 </style>
 </head>
+
 <body>
-<div style="position:absolute;top:22px;right:7%;z-index:10"><a href="https://www.thekaushikdas.com/" style="color:#9aa6b5;text-decoration:none;font-size:13px;">← Portfolio</a></div>
-<header class="hero">
-<span class="tag">PROJECT MANAGER • INTERVIEW QUICK GUIDE</span>
-<h1>Kaushik Das</h1>
-<p>Clarity and control, end to end — a practical interview reference for project planning, Agile delivery, B2B SaaS, AI-enabled workflows and stakeholder communication.</p>
+<div class="grain"></div>
+<div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="https://www.thekaushikdas.com/">Kaushik <span>Das</span></a>
+    <div class="top-actions">
+      <span class="status"><i></i> Interview Mode</span>
+      <button class="icon-btn" id="themeHint" title="Interview guide">✦</button>
+    </div>
+  </div>
 </header>
 
-<main>
-
-<section id="interview">
-<h2>Complete Interview Q&A</h2>
-<p class="sub">Interview-ready answers and guidance from the attached preparation material.</p>
-<div class="callout" style="margin-bottom:18px"><strong>How to use:</strong> Keep answers natural, use real examples, and structure problem answers as Situation → Action → Impact.</div>
-<input class="search" placeholder="Search interview questions..." onkeyup="filterInterview(this.value)">
-<div id="interviewContent" class="interview-content">
-<pre style="white-space:pre-wrap;font-family:inherit;color:#b9c4d0;margin:0;line-height:1.7">## 1. Tell me about yourself
-
-&gt; “I’m Kaushik Das, a Software Project Manager and Engineering Manager with over six years of experience in software delivery.
-
-&gt; Currently, I manage a 16-member cross-functional team working on two B2B SaaS platforms — an **Interior Design Business Management Platform and a Real Estate Business Management Platform.**
-
-&gt; My experience covers the complete project lifecycle, including requirement gathering, scope planning, sprint planning, resource allocation, client communication, risk and dependency management, QA and final delivery.
-
-&gt; I have worked with Agile, Scrum, Kanban and Waterfall, and I regularly use tools such as Jira, Trello, Asana and Monday.com.
-
-&gt; I also have a technical background, including web, mobile, cloud and AI-based projects. This helps me communicate effectively with both technical teams and business stakeholders.
-
-&gt; Overall, I see myself as someone who focuses on three things — clear planning, strong communication and successful delivery.”
-
----
-
-# 2. How do you analyze a project before starting it?
-
-&gt; “I start by understanding the business requirement and expected outcome.
-
-&gt; Then I break the project into functional modules and identify the scope, assumptions, dependencies and major milestones.
-
-&gt; After that, I work with the technical team to estimate effort, identify the required resources and prepare a realistic timeline.
-
-&gt; I also identify risks early and check whether there are any third-party or technical dependencies that can affect delivery.
-
-&gt; Finally, I document the scope clearly so that the client and team have the same understanding before development starts.”
-
-### If they ask: What does your scope document contain?
-
-&gt; “Normally, I include the project objective, functional requirements, modules, user stories, assumptions, dependencies, exclusions, acceptance criteria, estimated effort, timeline and major milestones.”
-
----
-
-# 3. How do you manage Agile/Scrum projects?
-
-&gt; “I normally start with a properly defined backlog.
-
-&gt; I work with the team to break requirements into user stories and smaller tasks, prioritize them and plan the sprint.
-
-&gt; During the sprint, I track progress through Jira, conduct regular discussions with the team, identify blockers and manage dependencies.
-
-&gt; At the end of the sprint, I review the completed work with the stakeholders and use the feedback for the next sprint.
-
-&gt; My main focus is to make sure the team understands what needs to be delivered and that there are no surprises for the client.”
-
----
-
-# 4. How do you create user stories?
-
-&gt; “I first understand what the user wants to achieve and why.
-
-&gt; Then I convert the requirement into a simple user story with acceptance criteria.
-
-&gt; For example:
-
-&gt; ‘As an interior designer, I want to track project costs so that I can understand my project budget.’
-
-&gt; I then discuss the story with the development and QA teams, clarify edge cases and make sure the acceptance criteria are clear before adding it to the sprint.”
-
----
-
-# 5. Do you create wireframes and flow diagrams?
-
-&gt; “Yes. I have worked with Figma and Miro for product discussions, wireframes and flow diagrams.
-
-&gt; My approach is to first understand the user journey, then create a simple flow or wireframe to communicate the requirement clearly to the design and development teams.
-
-&gt; I don&#x27;t see wireframes only as a design activity. For me, they are also a communication tool that helps reduce misunderstanding before development starts.”
-
----
-
-# 6. How do you ensure projects are delivered on time?
-
-&gt; “I believe timely delivery starts with realistic planning.
-
-&gt; I break the project into smaller milestones, assign ownership, track progress regularly and monitor dependencies.
-
-&gt; If I see a delay, I don&#x27;t wait until the deadline. I identify the reason, understand the impact and discuss options with the team.
-
-&gt; Depending on the situation, we may reprioritize the scope, adjust resources or change the delivery approach.
-
-&gt; Most importantly, I communicate the situation with the client early instead of giving them a surprise at the end.”
-
----
-
-# 7. How do you manage multiple projects?
-
-&gt; “I manage multiple projects by keeping clear priorities, owners, deadlines and risks for each project.
-
-&gt; I use project-management tools to track the work and maintain separate project views.
-
-&gt; I regularly review resource availability and identify conflicts between projects.
-
-&gt; My experience managing concurrent projects has taught me that communication and prioritization are very important. The team should always know what is the most important work at that point.”
-
-Your CV specifically supports concurrent project leadership and a 12-member team; use your **current 16-member figure** if that is your updated situation.
-
----
-
-# 8. How do you manage risks and dependencies?
-
-&gt; “I maintain a clear view of project risks and dependencies from the beginning.
-
-&gt; For each major risk, I try to understand its probability, impact and possible mitigation.
-
-&gt; For dependencies, I identify who owns the dependency, what we need from them and when we need it.
-
-&gt; I also review these regularly during project meetings.
-
-&gt; One example was a recent project where a third-party dependency was causing delays. Instead of simply reporting the blocker, I suggested a RAG-based chatbot that the team could build independently. We were able to prepare a demo in two days, which helped maintain the client&#x27;s confidence while the dependency was being resolved.”
-
----
-
-# 9. Tell me about a time you took initiative.
-
-This should be one of your **strongest answers**.
-
-&gt; “In a recent project, we were facing delays because of a third-party dependency, and the client was becoming frustrated.
-
-&gt; Since the dependency was outside our immediate control, I looked for something valuable that we could deliver while waiting.
-
-&gt; I suggested building a RAG-based chatbot. I discussed the idea with the technical team, helped define the scope and coordinated the implementation.
-
-&gt; Within two days, we had a working solution ready for a client demo.
-
-&gt; The client was happy to see visible progress, and it helped us maintain their confidence while the third-party dependency was being resolved.
-
-&gt; For me, this was a good example of project management — when there is a blocker, don&#x27;t just report it; find a practical way forward.”
-
----
-
-# 10. How do you monitor project budget and cost?
-
-This is an area where you should be **careful not to overclaim**.
-
-&gt; “My approach is to first establish the estimated effort and resource requirement during planning.
-
-&gt; During execution, I track the actual effort against the planned effort and monitor whether changes in scope, resources or dependencies are affecting the project.
-
-&gt; I also keep an eye on resource utilization and delivery progress so that potential cost overruns can be identified early.
-
-&gt; I have experience with cost estimation, resource allocation and reporting, and I use project tracking and reporting tools to support these decisions.”
-
-If they specifically ask about **Earned Value Management**, don&#x27;t pretend you have deep hands-on experience if you haven&#x27;t used it.
-Say:
-
-&gt; “I understand the basic concept of Earned Value Management — comparing planned value, earned value and actual cost to understand whether a project is ahead or behind schedule and whether it is within budget. My stronger hands-on experience has been in effort tracking, cost estimation, resource planning and project reporting.”
-
-That is much safer and more credible.
-
----
-
-# 11. What is Critical Path Analysis?
-
-A simple interview answer:
-
-&gt; “Critical Path Analysis helps identify the activities that directly determine the project completion date.
-
-&gt; These activities have very little or no flexibility. If one of them is delayed, the overall project can also be delayed.
-
-&gt; So, as a Project Manager, I would give special attention to those activities, their dependencies and their risks.”
-
-If they ask **“Have you used it?”**
-
-&gt; “I have used dependency and milestone-based planning in software projects. My understanding of Critical Path is based on identifying activities and dependencies that can directly affect the final delivery date.”
-
----
-
-# 12. How do you communicate with clients?
-
-&gt; “I believe client communication should be regular, clear and honest.
-
-&gt; I usually keep clients updated on progress, completed work, upcoming activities, risks, blockers and any decisions required from their side.
-
-&gt; If there is a problem, I don&#x27;t just communicate the problem. I also try to provide possible options and recommendations.
-
-&gt; This helps build trust because the client knows both the current situation and what we are doing about it.”
-
----
-
-# 13. How do you prepare project reports and dashboards?
-
-&gt; “I prepare reports based on what the stakeholder needs to know.
-
-&gt; Typically, I track overall project status, sprint progress, completed and pending work, risks, issues, dependencies, resource status and upcoming milestones.
-
-&gt; I have experience with Power BI, data analytics and reporting, and I use dashboards to make project information easier for stakeholders to understand and act upon.”
-
----
-
-# 14. How do you use AI or automation in project management?
-
-This is a **very strong differentiator for you**.
-
-&gt; “I use AI tools such as ChatGPT and Claude as productivity and decision-support tools.
-
-&gt; For example, I use them to help with requirement analysis, user-story drafting, meeting notes, action items, risk identification, sprint reports, stakeholder updates, BRDs, SRS documents and delivery handovers.
-
-&gt; But I don&#x27;t depend on AI to make project decisions. I use it to reduce repetitive work and improve the speed of analysis, while the final decision remains with me and the team.”
-
-Your CV explicitly lists these AI-assisted PM activities.
-
----
-
-# 15. How do you handle a change in requirements?
-
-&gt; “First, I understand why the change is required and what business value it provides.
-
-&gt; Then I assess its impact on scope, timeline, resources and cost.
-
-&gt; I discuss the impact with the technical team and clearly communicate it to the client.
-
-&gt; If the change is approved, I update the scope, backlog and project plan accordingly.
-
-&gt; I believe every change should be visible and properly documented rather than simply being added to the project without understanding its impact.”
-
-This directly connects to the JD&#x27;s **Change Control Notes** requirement.
-
----
-
-# 16. What do you know about invoices and agreements?
-
-If you have participated in this but not owned it:
-
-&gt; “I have been involved in client and project coordination, so I understand the importance of keeping project scope, deliverables, commercial terms and approved changes properly documented.
-
-&gt; For invoices or agreements, I would make sure the project information, approved scope, milestones and delivery records are aligned before they are processed.”
-
-Don&#x27;t claim that you independently prepare legal agreements if that isn&#x27;t in your experience.
-
----
-
-# 17. How do you handle an unhappy client?
-
-&gt; “First, I listen carefully and understand the actual concern instead of immediately trying to defend the team.
-
-&gt; Then I separate the issue into what we can control and what we cannot control.
-
-&gt; I provide a clear action plan and realistic timeline.
-
-&gt; In my experience, clients usually become more comfortable when they see ownership, transparency and regular updates.
-
-&gt; My RAG chatbot example is a good example of this approach. Instead of only explaining the third-party delay, I created another path to show progress.”
-
----
-
-# 18. What are your strengths as a Project Manager?
-
-&gt; “I would say my main strengths are ownership, communication, technical understanding and problem-solving.
-
-&gt; Because I have worked closely with engineering teams, I can understand technical challenges without losing sight of the business requirement.
-
-&gt; At the same time, my earlier business and client-facing experience helps me communicate with clients and understand their expectations.
-
-&gt; I also believe in proactive problem-solving rather than waiting for issues to become serious.”
-
----
-
-# 19. Why should we hire you?
-
-This is where you should connect **almost the entire JD**.
-
-&gt; “I believe I bring a combination of project management experience, technical understanding and business communication.
-
-&gt; I have experience managing multiple software projects, leading cross-functional teams, working with Agile and Scrum, managing requirements, risks and dependencies, and communicating directly with clients.
-
-&gt; I also have hands-on exposure to B2B SaaS products, AI-based solutions, Power BI and digital tools for improving project delivery.
-
-&gt; Most importantly, I take ownership of the outcome. If there is a problem, I try to find a solution rather than simply reporting the problem.
-
-&gt; I believe this combination can help me contribute effectively to your projects from both a delivery and business perspective.”
-
----
-
-# 20. Why are you interested in this role?
-
-&gt; “This role interests me because it covers the areas I enjoy most — project planning, team management, client communication, tracking delivery, managing risks and improving processes.
-
-&gt; I also like that the role involves dashboards, data, automation and digital delivery practices.
-
-&gt; My current experience with B2B SaaS, AI-based products, Agile delivery and project reporting makes the role a strong match for my background.
-
-&gt; At the same time, I see this as an opportunity to grow further in areas such as advanced project controls, earned value management and more structured cost and schedule analysis.”
-
-That last sentence is useful because it turns some of the JD gaps into a **growth story instead of a weakness**.
-—------------------------------------------------------------------------------------------------------------------
-
-### &amp;#x20;
-
-|   |
-| - |
-
-### Risk Type
-
-|   |
-| - |
-
-### What it means
-
-|   |
-| - |
-
-### Small Example
-
-|   |
-| - |
-
-### 1. Scope Risk
-
-|   |
-| - |
-
-### Project requirements may change or become unclear.
-
-|   |
-| - |
-
-### Client adds a new dashboard after development has started.
-
-|   |
-| - |
-
-### 2. Schedule Risk
-
-|   |
-| - |
-
-### A delay in one activity may delay the project.
-
-|   |
-| - |
-
-### A feature planned for 3 days takes 7 days to complete.
-
-|   |
-| - |
-
-### 3. Cost / Budget Risk
-
-|   |
-| - |
-
-### Actual project cost may exceed the planned budget.
-
-|   |
-| - |
-
-### Extra development hours increase the project cost by 15%.
-
-|   |
-| - |
-
-### 4. Resource Risk
-
-|   |
-| - |
-
-### Required people or skills may not be available.
-
-|   |
-| - |
-
-### The only senior backend developer leaves during a critical sprint.
-
-|   |
-| - |
-
-### 5. Technical Risk
-
-|   |
-| - |
-
-### A technical solution may not work as expected.
-
-|   |
-| - |
-
-### A new AI model gives inaccurate results during testing.
-
-|   |
-| - |
-
-### 6. Dependency Risk
-
-|   |
-| - |
-
-### The project depends on another team, system or service.
-
-|   |
-| - |
-
-### A third-party API is delayed and blocks the payment feature.
-
-|   |
-| - |
-
-### 7. Quality Risk
-
-|   |
-| - |
-
-### The product may not meet the required quality level.
-
-|   |
-| - |
-
-### A critical bug is found during UAT just before release.
-
-|   |
-| - |
-
-### 8. Security Risk
-
-|   |
-| - |
-
-### The system or data may be exposed to security threats.
-
-|   |
-| - |
-
-### A vulnerability is found in the login system before launch.
-
-|   |
-| - |
-
-### 9. Operational Risk
-
-|   |
-| - |
-
-### Problems may occur when the product is used in real operations.
-
-|   |
-| - |
-
-### The application works in testing but becomes slow with real users.
-
-|   |
-| - |
-
-### 10. Communication Risk
-
-|   |
-| - |
-
-### Poor communication can create misunderstanding or mistakes.
-
-|   |
-| - |
-
-### The client expects one feature, while the developer understands it differently.
-
-|   |
-| - |
-
-### 11. Stakeholder Risk
-
-|   |
-| - |
-
-### Stakeholder decisions or approvals may affect delivery.
-
-|   |
-| - |
-
-### The client delays design approval for one week.
-
-|   |
-| - |
-
-### 12. Vendor / Third-Party Risk
-
-|   |
-| - |
-
-### An external company may fail to deliver as expected.
-
-|   |
-| - |
-
-### A cloud or software vendor fails to provide a required service on time.
-
-|   |
-| - |
-
-### 13. Business Risk
-
-|   |
-| - |
-
-### Business changes may affect the project&#x27;s priority or value.
-
-|   |
-| - |
-
-### The client changes its business strategy and cancels a planned feature.
-
-|   |
-| - |
-
-### 14. Compliance / Legal Risk
-
-|   |
-| - |
-
-### The project may not meet legal or regulatory requirements.
-
-|   |
-| - |
-
-### An application stores customer data without meeting required data rules.
-
-|   |
-| - |
-
-### 15. People Risk
-
-|   |
-| - |
-
-### Team-related issues can affect project delivery.
-
-|   |
-| - |
-
-### Conflict between two team members reduces productivity during a sprint.
-
-### Easy interview answer
-
-If asked **“What are the major types of project risks?”**, you can say:
-
-&gt; **“The major risks I normally look at are Scope, Schedule, Cost, Resource, Technical, Dependency, Quality, Security, Vendor, Stakeholder, Communication and Business risks. I identify them early, assess their probability and impact, assign an owner, define a mitigation plan and review them regularly.”**
-
-**\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_**
-
-### Simple Risk Management Workflow
-
-**Identify → Assess → Prioritize → Mitigate → Assign Owner → Monitor → Communicate**
-A useful phrase to remember for your interview:
-
-&gt; **“A good PM should not only identify a risk; they should understand its impact, plan a response and monitor it until it is closed.”**
-
----
-
-## Your 30-second closing statement
-
-If they ask **“Do you have anything else to add?”**, finish strongly:
-
-&gt; **“Yes. I would just like to add that I see project management as more than tracking tasks and deadlines. For me, it is about understanding the business goal, keeping people aligned, identifying problems early and making sure the project reaches the right outcome. My technical background, business experience and current leadership role allow me to work comfortably with both clients and engineering teams. I’m confident that I can bring that ownership and practical approach to this role.”**
-
-### Your key interview message
-
-Try to make the interviewer remember these **5 points** about you:
-**B2B SaaS → 16-member team → Agile delivery → AI/technical understanding → proactive problem solver**
-And don&#x27;t try to sound overly technical. For this JD, your best impression will come from sounding like a **calm, structured PM who understands technology and takes ownership when things go wrong**.
-
-**—-----------------------------------------------------------------------------------------------------------------**
-A strong, universal PM workflow would be:
-**Analyze → Prioritize → Plan → Discuss → Execute → Monitor → Document → Communicate → Review**
-For an interview, an even shorter version is easier to remember:
-
-&gt; **Analyze → Prioritize → Plan → Execute → Monitor → Communicate → Close**
-
-**One-line explanation:**
- **Understand the problem → decide what matters most → make a plan → execute → track progress → keep stakeholders informed → close and learn.**
-
-| **Methodology** | **Description**                                                                                                                                                                                              |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Agile**       | Agile is an approach where projects are delivered in small, frequent parts with continuous feedback and changes. It focuses on flexibility, customer collaboration and quick delivery.                       |
-| **Waterfall**   | Waterfall follows a fixed step-by-step process where each phase is completed before the next begins. It works well when requirements are clear and unlikely to change.                                       |
-| **Scrum**       | Scrum is an Agile framework where work is divided into short **sprints**, usually 1–4 weeks, with defined goals and regular reviews. It uses roles, ceremonies and a prioritized backlog to manage delivery. |
-| **Kanban**      | Kanban manages work continuously by visualizing tasks on a board such as **To Do → In Progress → Done**. It focuses on limiting work in progress and improving the flow of work.                             |</pre>
-</div>
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow">PROJECT MANAGER • INTERVIEW PLAYBOOK</div>
+      <h1>Prepare smarter.<br><span>Speak with confidence.</span></h1>
+      <p>A visual, beginner-friendly guide to help you understand Project Management concepts, remember key points, and answer interview questions naturally.</p>
+      <div class="hero-actions">
+        <a href="#start" class="btn primary">Start Preparing <span>↓</span></a>
+        <a href="#questions" class="btn ghost">Jump to Q&amp;A</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="ring">
+        <div class="ring-inner"><strong>PM</strong><small>READY</small></div>
+      </div>
+      <div>
+        <b>Learn → Practice → Answer</b>
+        <p>Don't memorize. Understand the idea and explain it in your own words.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="products">
-<h2>B2B SaaS Platforms</h2><p class="sub">Two products currently managed as part of a 16-member cross-functional team.</p>
-<div class="grid">
-<div class="card product"><span class="badge">B2B SaaS • INTERIOR DESIGN</span><h3>Interior Design Business Management</h3><p>Helps manage products, contractors, vendors, clients and accounts, while allowing teams to check project work status.</p></div>
-<div class="card product"><span class="badge">B2B SaaS • REAL ESTATE</span><h3>Real Estate Business Management</h3><p>Connects leads from third-party platforms; Seller Agent communicates with leads and categorizes them as Hot, Warm or Cold.</p><p style="margin-top:10px"><b>Nurture Agent:</b> Shares matching property updates and communicates with inactive leads.</p><p style="margin-top:10px"><b>Prospecting Agent:</b> Schedules realtor and lead meetings to check properties.</p><p style="margin-top:10px"><b>Admin Agent:</b> Simplifies and automates the final purchase process, including finance and legal documents for final handoff.</p></div>
-</div>
+<main class="container" id="start">
+
+<section class="quick-grid">
+  <div class="quick-card"><span class="qicon">🎯</span><div><b>Know the concept</b><small>Understand what it means.</small></div></div>
+  <div class="quick-card"><span class="qicon">🧩</span><div><b>Use a real example</b><small>Connect it to your project.</small></div></div>
+  <div class="quick-card"><span class="qicon">💬</span><div><b>Answer simply</b><small>Clear beats complicated.</small></div></div>
+  <div class="quick-card"><span class="qicon">🚀</span><div><b>Show ownership</b><small>Explain what you did.</small></div></div>
 </section>
 
-<section id="workflow"><h2>Universal Project Management Workflow</h2><p class="sub">A simple sequence to approach almost any project problem.</p>
-<div class="flow"><span class="step">Analyze</span><span class="arrow">→</span><span class="step">Prioritize</span><span class="arrow">→</span><span class="step">Plan</span><span class="arrow">→</span><span class="step">Execute</span><span class="arrow">→</span><span class="step">Monitor</span><span class="arrow">→</span><span class="step">Communicate</span><span class="arrow">→</span><span class="step">Close</span></div>
+<section class="learning-map" id="map">
+  <div class="section-head left">
+    <span class="section-label">YOUR ROADMAP</span>
+    <h2>From beginner to interview-ready</h2>
+    <p>Follow the sections in order, or jump directly to the topic you need.</p>
+  </div>
+  <div class="map">
+    <a href="#profile" class="map-step"><span>01</span><div><b>Your Story</b><small>Tell me about yourself</small></div></a>
+    <i>→</i>
+    <a href="#pm" class="map-step"><span>02</span><div><b>PM Basics</b><small>Agile, Scrum &amp; delivery</small></div></a>
+    <i>→</i>
+    <a href="#controls" class="map-step"><span>03</span><div><b>Project Control</b><small>Scope, time, cost &amp; risk</small></div></a>
+    <i>→</i>
+    <a href="#tools" class="map-step"><span>04</span><div><b>Tools</b><small>Jira, AWS &amp; Power BI</small></div></a>
+    <i>→</i>
+    <a href="#questions" class="map-step"><span>05</span><div><b>Practice</b><small>Interview Q&amp;A</small></div></a>
+  </div>
 </section>
 
-<section id="aws"><h2>AWS Services</h2><p class="sub">Quick one-line explanations for interviews.</p>
-<input class="search" placeholder="Search AWS services..." onkeyup="filterTable('awsTable', this.value)">
-<table id="awsTable"><thead><tr><th>Service</th><th>Use</th></tr></thead><tbody>
-<tr><td><b>EC2</b></td><td>Provides virtual servers to run applications and software.</td></tr><tr><td><b>S3</b></td><td>Stores files, images, videos, backups and other objects securely.</td></tr><tr><td><b>RDS</b></td><td>Provides managed relational databases such as MySQL and PostgreSQL.</td></tr><tr><td><b>DynamoDB</b></td><td>Provides a fast, scalable NoSQL database for applications.</td></tr><tr><td><b>Lambda</b></td><td>Runs code without managing servers, based on events or requests.</td></tr><tr><td><b>ECS</b></td><td>Runs and manages containerized applications.</td></tr><tr><td><b>ECR</b></td><td>Stores and manages Docker/container images.</td></tr><tr><td><b>CloudFront</b></td><td>Delivers websites and content faster through a global CDN.</td></tr><tr><td><b>Route 53</b></td><td>Manages domain names and routes users to applications.</td></tr><tr><td><b>VPC</b></td><td>Creates a private and controlled network environment for AWS resources.</td></tr><tr><td><b>IAM</b></td><td>Controls user access, roles and permissions for AWS resources.</td></tr><tr><td><b>CloudWatch</b></td><td>Monitors applications, servers, logs, metrics and system health.</td></tr><tr><td><b>API Gateway</b></td><td>Creates, manages and secures APIs for applications.</td></tr><tr><td><b>SNS</b></td><td>Sends notifications and messages to multiple subscribers.</td></tr><tr><td><b>SQS</b></td><td>Queues messages between applications to support reliable communication.</td></tr><tr><td><b>Elastic Beanstalk</b></td><td>Simplifies deploying and managing web applications on AWS.</td></tr><tr><td><b>CloudFormation</b></td><td>Creates and manages AWS infrastructure using templates.</td></tr><tr><td><b>EBS</b></td><td>Provides persistent storage volumes for EC2 servers.</td></tr><tr><td><b>Bedrock</b></td><td>Provides access to foundation AI models for building generative-AI applications.</td></tr><tr><td><b>Rekognition</b></td><td>Uses AI to analyze images and videos for objects, faces and other visual information.</td></tr>
-</tbody></table>
-<div class="callout" style="margin-top:18px"><strong>Memory shortcut:</strong> EC2 = Compute • S3 = Storage • RDS = Database • Lambda = Serverless • VPC = Network • IAM = Security/Access • CloudWatch = Monitoring • API Gateway = APIs • SQS/SNS = Messaging • CloudFront = Content Delivery</div>
+<section id="profile">
+  <div class="section-head">
+    <span class="section-label">01 • YOUR STORY</span>
+    <h2>Know your own profile first</h2>
+    <p>These are the points you should be able to explain without looking at notes.</p>
+  </div>
+  <div class="profile-grid">
+    <div class="big-profile">
+      <span class="profile-tag">YOUR 30-SECOND INTRO</span>
+      <h3>“I manage people, projects and delivery.”</h3>
+      <p>Kaushik Das is a Software Project Manager and Engineering Manager with 6+ years of software delivery experience across B2B SaaS, AI-based solutions, web and cloud platforms.</p>
+      <div class="profile-points">
+        <span>👥 16-member team</span><span>☁️ B2B SaaS</span><span>🤖 AI / ML exposure</span><span>⚡ Agile / Scrum</span><span>📊 Power BI</span><span>🧭 Risk &amp; dependency management</span>
+      </div>
+    </div>
+    <div class="mini-stack">
+      <div><b>Current focus</b><span>Two B2B SaaS platforms</span><small>Interior Design Business Management + Real Estate Business Management</small></div>
+      <div><b>Leadership</b><span>Cross-functional team management</span><small>Planning, allocation, coordination, client communication and delivery.</small></div>
+      <div><b>Technical edge</b><span>AI + software understanding</span><small>Helps bridge business needs and engineering execution.</small></div>
+    </div>
+  </div>
 </section>
 
-<section id="jira"><h2>Jira Charts & Reports</h2><p class="sub">Use these to explain how you track project, sprint and team performance.</p>
-<input class="search" placeholder="Search Jira charts..." onkeyup="filterTable('jiraTable', this.value)">
-<table id="jiraTable"><thead><tr><th>Chart / Report</th><th>Use</th></tr></thead><tbody>
-<tr><td><b>Burndown Chart</b></td><td>Tracks remaining work in a sprint and shows whether the team is likely to complete it on time.</td></tr><tr><td><b>Burnup Chart</b></td><td>Shows completed work against total scope and helps identify scope changes.</td></tr><tr><td><b>Velocity Chart</b></td><td>Tracks how much work the team completes in each sprint to help with future planning.</td></tr><tr><td><b>Sprint Report</b></td><td>Shows completed, incomplete and added work during a sprint.</td></tr><tr><td><b>Control Chart</b></td><td>Measures how long issues take to move through the workflow and helps identify delays.</td></tr><tr><td><b>Cumulative Flow Diagram (CFD)</b></td><td>Shows work across different stages and helps identify bottlenecks.</td></tr><tr><td><b>Cycle Time Report</b></td><td>Measures the time taken from starting work to completing it.</td></tr><tr><td><b>Created vs Resolved Chart</b></td><td>Compares new issues with resolved issues to understand whether the backlog is growing or reducing.</td></tr><tr><td><b>Resolution Time Report</b></td><td>Shows how quickly issues are being resolved over time.</td></tr><tr><td><b>Average Age Chart</b></td><td>Shows how long unresolved issues have been open.</td></tr><tr><td><b>Version Report</b></td><td>Tracks progress toward completing work planned for a specific release/version.</td></tr><tr><td><b>Release Burndown</b></td><td>Shows remaining work against the planned release timeline.</td></tr><tr><td><b>Time Tracking Report</b></td><td>Compares estimated effort with the actual time spent on issues.</td></tr><tr><td><b>Workload Pie Chart</b></td><td>Shows how work is distributed among team members.</td></tr><tr><td><b>Team Workload / Assignee Report</b></td><td>Helps identify whether work is evenly distributed or someone is overloaded.</td></tr><tr><td><b>Epic Report</b></td><td>Tracks progress of an epic and its related stories/tasks.</td></tr><tr><td><b>Dashboard Gadgets</b></td><td>Combines key project, sprint and team metrics into a single view for stakeholders.</td></tr>
-</tbody></table>
+<section id="products" class="dark-section">
+  <div class="section-head">
+    <span class="section-label">YOUR PRODUCTS</span>
+    <h2>Explain your B2B SaaS projects like a PM</h2>
+  </div>
+  <div class="product-grid">
+    <article class="product-card">
+      <div class="product-top"><span>01</span><b>B2B SaaS</b></div>
+      <h3>Interior Design Business Management</h3>
+      <p>Helps an interior design business manage products, contractors, vendors, clients and accounts, while tracking work status.</p>
+      <div class="flowline"><span>Products</span><i>→</i><span>People</span><i>→</i><span>Accounts</span><i>→</i><span>Work Status</span></div>
+    </article>
+    <article class="product-card">
+      <div class="product-top"><span>02</span><b>B2B SaaS + AI</b></div>
+      <h3>Real Estate Business Management</h3>
+      <p>Connects leads from third-party platforms and supports the journey from first contact to property purchase.</p>
+      <div class="agent-list">
+        <div><strong>Seller Agent</strong><small>Communicates with leads and categorizes them as Hot, Warm or Cold.</small></div>
+        <div><strong>Nurture Agent</strong><small>Shares matching property updates and communicates with inactive leads.</small></div>
+        <div><strong>Prospecting Agent</strong><small>Schedules realtor and lead meetings to check properties.</small></div>
+        <div><strong>Admin Agent</strong><small>Simplifies the final purchase, finance and legal document handoff.</small></div>
+      </div>
+    </article>
+  </div>
 </section>
 
-<section id="risks"><h2>Project Risks</h2><p class="sub">Risk type → meaning → practical example.</p>
-<input class="search" placeholder="Search risk types..." onkeyup="filterTable('riskTable', this.value)">
-<table id="riskTable"><thead><tr><th>Risk</th><th>What it means</th><th>Small example</th></tr></thead><tbody>
-<tr><td><b>Scope</b></td><td>Requirements may change or become unclear.</td><td>Client adds a new dashboard after development has started.</td></tr><tr><td><b>Schedule</b></td><td>A delay in one activity may delay the project.</td><td>A feature planned for 3 days takes 7 days.</td></tr><tr><td><b>Cost / Budget</b></td><td>Actual project cost may exceed the planned budget.</td><td>Extra development hours increase project cost.</td></tr><tr><td><b>Resource</b></td><td>Required people or skills may not be available.</td><td>A key developer becomes unavailable during a critical sprint.</td></tr><tr><td><b>Technical</b></td><td>A technical solution may not work as expected.</td><td>An AI model gives inaccurate results during testing.</td></tr><tr><td><b>Dependency</b></td><td>The project depends on another team, system or service.</td><td>A third-party API delay blocks a payment feature.</td></tr><tr><td><b>Quality</b></td><td>The product may not meet the required quality level.</td><td>A critical bug is found during UAT before release.</td></tr><tr><td><b>Security</b></td><td>The system or data may be exposed to security threats.</td><td>A vulnerability is found in the login system.</td></tr><tr><td><b>Operational</b></td><td>Problems may occur when the product is used in real operations.</td><td>The app works in testing but becomes slow with real users.</td></tr><tr><td><b>Communication</b></td><td>Poor communication can create misunderstanding or mistakes.</td><td>The client and developer understand a requirement differently.</td></tr><tr><td><b>Stakeholder</b></td><td>Stakeholder decisions or approvals may affect delivery.</td><td>The client delays design approval for one week.</td></tr><tr><td><b>Vendor / Third-Party</b></td><td>An external company may fail to deliver as expected.</td><td>A vendor fails to provide a required service on time.</td></tr><tr><td><b>Business</b></td><td>Business changes may affect project priority or value.</td><td>The client changes strategy and cancels a planned feature.</td></tr><tr><td><b>Compliance / Legal</b></td><td>The project may not meet legal or regulatory requirements.</td><td>An app stores customer data without meeting required rules.</td></tr><tr><td><b>People</b></td><td>Team-related issues can affect project delivery.</td><td>Conflict between team members reduces sprint productivity.</td></tr>
-</tbody></table>
-<div class="callout" style="margin-top:18px"><strong>Risk workflow:</strong> Identify → Assess → Prioritize → Mitigate → Assign Owner → Monitor → Communicate</div>
+<section id="pm">
+  <div class="section-head">
+    <span class="section-label">02 • PM BASICS</span>
+    <h2>Understand the four delivery approaches</h2>
+    <p>Use these simple definitions in an interview.</p>
+  </div>
+  <div class="method-grid">
+    <div class="method agile"><span>AGILE</span><h3>Flexible delivery</h3><p>Deliver small pieces, get feedback, and adapt as requirements change.</p><div class="when">Best when: <b>requirements may change</b></div></div>
+    <div class="method scrum"><span>SCRUM</span><h3>Agile framework</h3><p>Organize work into short sprints with a backlog, goals, reviews and regular team discussions.</p><div class="when">Think: <b>Sprint + Backlog + Review</b></div></div>
+    <div class="method waterfall"><span>WATERFALL</span><h3>Step-by-step</h3><p>Complete one phase before moving to the next, with a more fixed plan.</p><div class="when">Best when: <b>requirements are stable</b></div></div>
+    <div class="method kanban"><span>KANBAN</span><h3>Continuous flow</h3><p>Visualize work such as To Do → In Progress → Done and limit work in progress.</p><div class="when">Think: <b>Flow + WIP limits</b></div></div>
+  </div>
 </section>
 
-<section id="methods"><h2>Delivery Methods</h2>
-<div class="grid">
-<div class="card"><h3>Agile</h3><p>Delivers work in small, frequent parts with regular feedback and room for change.</p></div>
-<div class="card"><h3>Waterfall</h3><p>Uses a fixed step-by-step process where one phase is completed before the next begins.</p></div>
-<div class="card"><h3>Scrum</h3><p>An Agile framework that organizes work into short sprints with a backlog, goals and regular reviews.</p></div>
-<div class="card"><h3>Kanban</h3><p>Visualizes work such as To Do → In Progress → Done and focuses on smooth flow and limiting work in progress.</p></div>
-</div>
+<section class="framework">
+  <div class="framework-card">
+    <div class="framework-icon">🧠</div>
+    <div><span class="section-label">REMEMBER THIS</span><h3>Agile is the approach. Scrum is a framework.</h3><p>Waterfall is sequential. Kanban focuses on continuous flow.</p></div>
+  </div>
 </section>
+
+<section id="controls">
+  <div class="section-head">
+    <span class="section-label">03 • PROJECT CONTROL</span>
+    <h2>How a PM keeps a project under control</h2>
+  </div>
+  <div class="control-grid">
+    <div class="control-card"><div class="control-no">01</div><h3>Scope</h3><p>What are we building? What is included and excluded?</p><b>Tools: BRD • SRS • User Stories</b></div>
+    <div class="control-card"><div class="control-no">02</div><h3>Timeline</h3><p>When should each milestone and deliverable be completed?</p><b>Tools: Jira • Sprint Plan • Dependencies</b></div>
+    <div class="control-card"><div class="control-no">03</div><h3>Cost</h3><p>Are actual hours and cost staying within the plan?</p><b>Track: Estimate vs Actual</b></div>
+    <div class="control-card"><div class="control-no">04</div><h3>Resources</h3><p>Do we have the right people and skills at the right time?</p><b>Track: Capacity • Allocation</b></div>
+    <div class="control-card"><div class="control-no">05</div><h3>Risk</h3><p>What could go wrong, and what can we do before it becomes a blocker?</p><b>Track: Probability • Impact • Owner</b></div>
+    <div class="control-card"><div class="control-no">06</div><h3>Communication</h3><p>Does everyone know progress, blockers, decisions and next steps?</p><b>Track: Reports • Dashboards • Meetings</b></div>
+  </div>
+</section>
+
+<section class="problem-flow">
+  <div class="section-head">
+    <span class="section-label">THE PM FORMULA</span>
+    <h2>Use this for almost any project problem</h2>
+  </div>
+  <div class="formula">
+    <div>🔎<b>Analyze</b><small>Understand the problem</small></div><span>→</span>
+    <div>🎯<b>Prioritize</b><small>Decide what matters most</small></div><span>→</span>
+    <div>🗺️<b>Plan</b><small>Create practical options</small></div><span>→</span>
+    <div>⚙️<b>Execute</b><small>Take action</small></div><span>→</span>
+    <div>📈<b>Monitor</b><small>Check the result</small></div><span>→</span>
+    <div>💬<b>Communicate</b><small>Keep stakeholders aligned</small></div>
+  </div>
+</section>
+
+<section id="risks">
+  <div class="section-head">
+    <span class="section-label">PROJECT RISKS</span>
+    <h2>Risk = something that might go wrong</h2>
+    <p>Remember: <b>Risk → Impact → Action</b></p>
+  </div>
+  <div class="risk-cards">
+    <div><b>Scope</b><span>Client adds a dashboard after development starts.</span></div>
+    <div><b>Schedule</b><span>A 3-day feature takes 7 days.</span></div>
+    <div><b>Cost</b><span>Extra hours increase project cost.</span></div>
+    <div><b>Resource</b><span>A key developer becomes unavailable.</span></div>
+    <div><b>Technical</b><span>An AI model gives inaccurate results.</span></div>
+    <div><b>Dependency</b><span>A third-party API is delayed.</span></div>
+    <div><b>Quality</b><span>A critical bug appears during UAT.</span></div>
+    <div><b>Security</b><span>A vulnerability is found before launch.</span></div>
+    <div><b>Operational</b><span>The app slows down with real users.</span></div>
+    <div><b>Communication</b><span>Client and developer understand a requirement differently.</span></div>
+    <div><b>Stakeholder</b><span>Client delays an important approval.</span></div>
+    <div><b>Vendor</b><span>An external provider misses a delivery date.</span></div>
+    <div><b>Business</b><span>Client changes its business priority.</span></div>
+    <div><b>Compliance</b><span>Product does not meet a required data rule.</span></div>
+    <div><b>People</b><span>Team conflict affects productivity.</span></div>
+  </div>
+  <div class="risk-workflow"><b>Identify</b><span>→</span><b>Assess</b><span>→</span><b>Prioritize</b><span>→</span><b>Mitigate</b><span>→</span><b>Owner</b><span>→</span><b>Monitor</b></div>
+</section>
+
+<section id="tools" class="dark-section">
+  <div class="section-head">
+    <span class="section-label">04 • TOOLS</span>
+    <h2>Tools you should be ready to discuss</h2>
+  </div>
+  <div class="tool-grid">
+    <div class="tool-card"><div class="tool-logo">J</div><div><h3>Jira</h3><p>Sprint planning, issue tracking, backlog and project dashboards.</p></div></div>
+    <div class="tool-card"><div class="tool-logo">P</div><div><h3>Power BI</h3><p>Dashboards and visual reporting for project and stakeholder communication.</p></div></div>
+    <div class="tool-card"><div class="tool-logo">F</div><div><h3>Figma</h3><p>Wireframes and product-flow discussions.</p></div></div>
+    <div class="tool-card"><div class="tool-logo">M</div><div><h3>Miro</h3><p>Collaboration, flows, workshops and visual planning.</p></div></div>
+    <div class="tool-card"><div class="tool-logo">A</div><div><h3>Asana / Monday / Trello</h3><p>Planning, task tracking and team coordination.</p></div></div>
+    <div class="tool-card"><div class="tool-logo">AI</div><div><h3>ChatGPT / Claude</h3><p>Requirement analysis, documentation, reports and productivity support.</p></div></div>
+  </div>
+</section>
+
+<section id="aws">
+  <div class="section-head">
+    <span class="section-label">AWS QUICK GUIDE</span>
+    <h2>Speak AWS in simple words</h2>
+    <p>Don't over-explain. Know what each service is used for.</p>
+  </div>
+  <div class="memory-cloud">
+    <span>EC2 = Compute</span><span>S3 = Storage</span><span>RDS = Database</span><span>Lambda = Serverless</span><span>VPC = Network</span><span>IAM = Access</span><span>CloudWatch = Monitoring</span><span>API Gateway = APIs</span><span>SQS/SNS = Messaging</span><span>CloudFront = Content Delivery</span>
+  </div>
+  <div class="aws-list" id="awsList"></div>
+</section>
+
+<section id="jira">
+  <div class="section-head">
+    <span class="section-label">JIRA REPORTING</span>
+    <h2>Which chart should you use?</h2>
+  </div>
+  <div class="jira-grid" id="jiraList"></div>
+</section>
+
+<section id="questions">
+  <div class="section-head">
+    <span class="section-label">05 • PRACTICE</span>
+    <h2>Interview questions &amp; answer patterns</h2>
+    <p>Read the idea first, then say it naturally. The goal is confidence, not memorization.</p>
+  </div>
+  <div class="qa-toolbar">
+    <input id="qaSearch" placeholder="🔎 Search questions: risk, Agile, client, budget...">
+    <div class="filters" id="filters">
+      <button class="active" data-filter="all">All</button><button data-filter="pm">PM</button><button data-filter="scenario">Scenarios</button><button data-filter="tools">Tools</button>
+    </div>
+  </div>
+  <div class="qa-list" id="qaList"></div>
+</section>
+
+<section class="initiative">
+  <div class="initiative-copy">
+    <span class="section-label">YOUR BEST STORY</span>
+    <h2>The RAG chatbot example</h2>
+    <p>This is your strongest example of ownership and problem-solving.</p>
+  </div>
+  <div class="story">
+    <div><span>Situation</span><p>Third-party dependency caused delays and the client was frustrated.</p></div>
+    <div><span>Action</span><p>Suggested a RAG-based chatbot, aligned the team, defined scope and coordinated implementation.</p></div>
+    <div><span>Impact</span><p>A working solution was demonstrated within two days, showing progress and helping rebuild client confidence.</p></div>
+  </div>
+  <div class="story-line">Remember: <b>“When there is a blocker, don't just report it — find a practical way forward.”</b></div>
+</section>
+
+<section class="final-check">
+  <div class="section-head">
+    <span class="section-label">FINAL 5-MINUTE CHECK</span>
+    <h2>Before you join the interview</h2>
+  </div>
+  <div class="check-grid">
+    <label><input type="checkbox"> I can introduce myself in 30–45 seconds.</label>
+    <label><input type="checkbox"> I can explain my two B2B SaaS products.</label>
+    <label><input type="checkbox"> I can explain Agile, Scrum, Waterfall and Kanban.</label>
+    <label><input type="checkbox"> I can explain my RAG initiative using Situation → Action → Impact.</label>
+    <label><input type="checkbox"> I can explain common Jira charts.</label>
+    <label><input type="checkbox"> I can give examples of project risks.</label>
+    <label><input type="checkbox"> I can explain AWS services in simple words.</label>
+    <label><input type="checkbox"> I can explain how I handle clients and blockers.</label>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="closing-mark">✓</div>
+  <h2>Be clear. Be practical. Show ownership.</h2>
+  <p>You don't need to know every answer. Show how you think, how you communicate, and how you move a project forward.</p>
+  <a href="#start" class="btn primary">Back to Top ↑</a>
+</section>
+
 </main>
-<footer>Prepared as an interview study reference • Keep answers simple, structured and supported by real examples.</footer>
-<script>
-function filterTable(id,q){
-  q=q.toLowerCase();
-  document.querySelectorAll('#'+id+' tbody tr').forEach(r=>r.style.display=r.innerText.toLowerCase().includes(q)?'':'none');
-}
+<footer>© Kaushik Das • Project Manager Interview Guide • <a href="https://www.thekaushikdas.com/">thekaushikdas.com</a></footer>
 
-function filterInterview(q){
-  const box=document.getElementById('interviewContent');
-  if(!q){box.style.display=''; return;}
-  const text=box.innerText.toLowerCase();
-  box.style.display=text.includes(q.toLowerCase())?'':'none';
+<script>
+const aws = [
+["EC2","Compute","Virtual servers to run applications."],["S3","Storage","Stores files, images, videos and backups."],
+["RDS","Database","Managed relational databases such as MySQL and PostgreSQL."],["DynamoDB","Database","Fast, scalable NoSQL database."],
+["Lambda","Serverless","Runs code without managing servers."],["ECS","Containers","Runs and manages containerized applications."],
+["ECR","Containers","Stores Docker/container images."],["CloudFront","Delivery","Delivers content faster through a global CDN."],
+["Route 53","Networking","Manages domains and routes users to applications."],["VPC","Networking","Creates a private network environment."],
+["IAM","Security","Controls users, roles and permissions."],["CloudWatch","Monitoring","Monitors applications, logs, metrics and health."],
+["API Gateway","APIs","Creates and manages APIs."],["SNS","Messaging","Sends notifications to subscribers."],
+["SQS","Messaging","Queues messages between applications."],["Elastic Beanstalk","Deployment","Simplifies web application deployment."],
+["CloudFormation","Infrastructure","Manages AWS infrastructure using templates."],["EBS","Storage","Persistent storage volumes for EC2."],
+["Bedrock","AI","Access to foundation models for generative AI."],["Rekognition","AI","Analyzes images and videos with AI."]
+];
+const jira = [
+["Burndown","Remaining sprint work","Are we likely to finish the sprint on time?"],
+["Burnup","Completed work vs total scope","Did scope change during the project?"],
+["Velocity","Work completed per sprint","How much can the team plan for future sprints?"],
+["Sprint Report","Completed, incomplete and added work","What happened in this sprint?"],
+["Control Chart","Issue cycle time","Where are delays happening?"],
+["Cumulative Flow","Work across workflow stages","Where is the bottleneck?"],
+["Cycle Time","Time from start to completion","How quickly does work move?"],
+["Created vs Resolved","New vs resolved issues","Is the backlog growing or shrinking?"],
+["Time Tracking","Estimated vs actual effort","Are we using more effort than planned?"],
+["Workload","Work by team member","Is work distributed fairly?"],
+["Epic Report","Epic progress","How much of an epic is complete?"],
+["Release Burndown","Remaining release work","Are we on track for the release?"]
+];
+const qa = [
+["pm","Tell me about yourself","Start with your current role, team size, products, delivery responsibilities, methods and your technical/AI edge.","Use: Present role → Experience → Skills → Impact"],
+["pm","How do you analyze a project before starting?","Understand the business goal, define scope, identify assumptions and dependencies, estimate effort, plan resources and set milestones.","Use: Goal → Scope → Estimate → Resources → Risks → Plan"],
+["pm","How do you manage Agile/Scrum projects?","Maintain the backlog, break requirements into stories, plan sprints, track blockers, review delivery and use feedback for the next sprint.","Use: Backlog → Sprint → Track → Review → Improve"],
+["pm","How do you create user stories?","Understand the user goal, write the story, add acceptance criteria and review it with development and QA.","Simple format: As a [user], I want [goal], so that [value]."],
+["pm","How do you ensure on-time delivery?","Use realistic planning, milestones, owners and dependency tracking. Identify delays early and discuss options before the deadline.","Key idea: Don't wait for a blocker to become a crisis."],
+["scenario","Tell me about a time you took initiative.","Explain the third-party dependency delay, your RAG chatbot idea, two-day implementation and improved client confidence.","Use: Situation → Action → Impact"],
+["scenario","How do you handle an unhappy client?","Listen first, separate what you can control from what you cannot, give a clear action plan and communicate regularly.","Key idea: Problem + solution, not just problem."],
+["scenario","How do you handle changing requirements?","Understand the business value, assess impact on scope/time/resources/cost, discuss it with the team and client, then document the approved change.","Use: Understand → Impact → Approve → Update"],
+["scenario","How do you manage risks?","Identify early, assess probability and impact, prioritize, define mitigation, assign an owner and review regularly.","Use: Identify → Assess → Mitigate → Monitor"],
+["pm","How do you manage multiple projects?","Keep priorities, owners, deadlines and risks clear for each project, and review resource conflicts regularly.","Key idea: Prioritization + visibility."],
+["tools","How do you use Jira?","Use it for backlog management, sprint planning, issue tracking, progress monitoring and dashboards.","Mention: Burndown, Velocity, CFD, Control Chart and Sprint Report."],
+["tools","How do you use AI in project management?","Use ChatGPT and Claude for requirement analysis, user stories, reports, documentation, action items and productivity, while keeping final decisions with the PM/team.","Key idea: AI supports decisions; it does not replace ownership."],
+["pm","What is Critical Path Analysis?","It identifies activities that directly affect the project completion date. A delay in a critical activity can delay the whole project.","Simple idea: Find the tasks with no schedule flexibility."],
+["pm","What is Earned Value Management?","It compares planned value, earned value and actual cost to understand project schedule and cost performance.","Remember: Planned → Earned → Actual."],
+["pm","How do you communicate with clients?","Give regular, clear updates on progress, risks, blockers, decisions and next steps. When there is a problem, also provide options.","Key idea: No surprises."],
+["pm","Why should we hire you?","Highlight project delivery, B2B SaaS experience, cross-functional leadership, technical understanding, client communication and proactive problem-solving.","Use: Experience → Skills → Ownership → Value"]
+];
+
+document.getElementById("awsList").innerHTML = aws.map(x=>`<div class="aws-row"><b>${x[0]}</b><span>${x[1]}</span><p>${x[2]}</p></div>`).join("");
+document.getElementById("jiraList").innerHTML = jira.map(x=>`<div class="jira-card"><b>${x[0]}</b><span>${x[1]}</span><p>${x[2]}</p></div>`).join("");
+
+const qaList=document.getElementById("qaList"), search=document.getElementById("qaSearch");
+let filter="all";
+function renderQA(){
+  const q=(search.value||"").toLowerCase();
+  qaList.innerHTML=qa.filter(x=>(filter==="all"||x[0]===filter)&&(!q||x.join(" ").toLowerCase().includes(q))).map((x,i)=>`
+  <details class="qa-item" ${i===0&& !q ? "open":""}>
+    <summary><span class="qnum">${String(i+1).padStart(2,"0")}</span><b>${x[1]}</b><i>+</i></summary>
+    <div class="qa-answer"><p>${x[2]}</p><div class="answer-tip"><strong>Easy answer pattern</strong><span>${x[3]}</span></div></div>
+  </details>`).join("");
 }
+renderQA();
+search.addEventListener("input",renderQA);
+document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("#filters button").forEach(x=>x.classList.remove("active"));b.classList.add("active");filter=b.dataset.filter;renderQA();}));
+
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.08});
+document.querySelectorAll(".section-head,.quick-card,.map-step,.product-card,.method,.control-card,.risk-cards>div,.tool-card,.jira-card,.aws-row,.qa-item,.initiative,.final-check").forEach(x=>obs.observe(x));
 </script>
+</body>
 </body></html>
