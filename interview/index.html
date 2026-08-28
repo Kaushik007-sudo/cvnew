@@ -31,6 +31,13 @@ section{position:relative;z-index:1;padding:82px 0}.section-head{text-align:cent
 .quick-card,.map-step,.product-card,.method,.control-card,.risk-cards>div,.tool-card,.jira-card,.aws-row,.qa-item,.initiative,.final-check,.section-head{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.show{opacity:1;transform:none}
 @media(max-width:980px){.hero-inner,.profile-grid,.product-grid{grid-template-columns:1fr}.hero-card{max-width:520px}.quick-grid{grid-template-columns:repeat(2,1fr)}.method-grid{grid-template-columns:repeat(2,1fr)}.control-grid,.tool-grid,.jira-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:650px){.container{padding:0 17px}.hero{padding:55px 0}.hero h1{font-size:43px}.hero-card{padding:22px}.ring{width:85px;height:85px}.quick-grid,.method-grid,.control-grid,.tool-grid,.jira-grid,.risk-cards,.aws-list,.story,.check-grid{grid-template-columns:1fr}.map>i{display:none}.map-step{min-width:100%;}.formula>span{display:none}.aws-row{grid-template-columns:85px 70px 1fr}.qa-answer{padding-left:17px}.qa-item summary{grid-template-columns:35px 1fr 25px}.status{display:none}}
+
+.jumpbar{position:sticky;top:68px;z-index:18;background:#080811ed;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.jump-inner{display:flex;gap:8px;align-items:center;overflow:auto;padding-top:9px;padding-bottom:9px}.jump-inner span{font-size:10px;color:var(--faint);white-space:nowrap}.jump-inner a{font-size:10px;color:#aaaec4;padding:7px 10px;border:1px solid var(--line);border-radius:100px;white-space:nowrap}.jump-inner a:hover{color:#fff;border-color:#7c5cff66}
+.aws-list{grid-template-columns:repeat(2,1fr)}.aws-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:17px;transition:.25s}.aws-card:hover{transform:translateY(-4px);border-color:#7c5cff55}.aws-card-top{display:flex;gap:12px;align-items:center}.aws-icon{width:43px;height:43px;border-radius:11px;background:#ff990012;border:1px solid #ff990044;display:grid;place-items:center;color:#ffb43d;font-weight:900;font-size:17px;flex-shrink:0}.aws-card-top b{display:block;font:700 15px Sora}.aws-card-top span{display:block;font-size:9px;color:var(--cyan);text-transform:uppercase;letter-spacing:.1em}.aws-card-top em{margin-left:auto;font-style:normal;font:800 10px Sora;color:#62667d}.aws-card>p{font-size:11px;margin:13px 0;color:#afb3c3}.aws-use{display:grid;grid-template-columns:auto 1fr;gap:8px;padding:9px 10px;background:#ffffff04;border:1px solid var(--line);border-radius:9px}.aws-use strong{font-size:9px;color:#a9a0ff;text-transform:uppercase}.aws-use span{font-size:10px;color:#a5a9ba}
+.jira-grid{grid-template-columns:repeat(2,1fr)}.jira-head{display:flex;gap:11px;align-items:center}.jira-no{font:800 10px Sora;color:var(--violet)}.jira-head b,.jira-head small{display:block}.jira-head b{font:600 16px Sora}.jira-head small{font-size:10px;color:var(--cyan)}.jira-chart{height:92px;margin:12px 0 9px;padding:8px;background:#080a10;border:1px solid var(--line);border-radius:10px}.jira-chart svg{width:100%;height:100%}.jira-chart .gline{fill:none;stroke:#8b7cff;stroke-width:3}.jira-chart .gline2{fill:none;stroke:#37e6e6;stroke-width:2.5}.jira-chart .guide{stroke:#5f6376;stroke-width:1.2;stroke-dasharray:4 4}.jira-chart .bar,.jira-chart .fill{fill:#7c5cff}.jira-chart .track{fill:#282b3a}.jira-chart .area1{fill:#7c5cff55}.jira-chart .area2{fill:#37e6e655}.jira-chart .circle{fill:none;stroke:#37e6e6;stroke-width:3}.jira-chart .hand{stroke:#8b7cff;stroke-width:3}.chart-tip{font-size:9px;color:#6f7388;margin-top:9px}
+.risk-table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px;background:var(--panel)}.risk-table{width:100%;min-width:900px;border-collapse:collapse}.risk-table th,.risk-table td{padding:13px 14px;text-align:left;border-bottom:1px solid var(--line);font-size:11px;vertical-align:top}.risk-table th{background:#17172a;color:#b7b0ff;font-size:10px;text-transform:uppercase;letter-spacing:.08em}.risk-table td{color:#aeb2c3}.risk-table tr:last-child td{border-bottom:0}.risk-table td:first-child{color:#fff}.risk-callout{margin-top:15px;padding:14px 16px;border:1px solid #5af0a033;background:#5af0a008;border-radius:12px;font-size:11px;color:#b9bdcb}.risk-callout b{color:var(--green)}
+.source-note{margin:15px auto 0;max-width:850px;padding:9px 12px;border:1px solid #7c5cff26;background:#7c5cff08;border-radius:10px;color:#8589a2;font-size:10px}
+@media(max-width:980px){.aws-list,.jira-grid{grid-template-columns:1fr}}
 </style>
 </head>
 
@@ -70,7 +77,7 @@ section{position:relative;z-index:1;padding:82px 0}.section-head{text-align:cent
     </div>
   </div>
 </section>
-
+<div class="jumpbar"><div class="container jump-inner"><span>Quick jump</span><a href="#profile">Profile</a><a href="#pm">PM Basics</a><a href="#controls">Project Control</a><a href="#risk-table">Risk Register</a><a href="#tools">Tools</a><a href="#aws">AWS</a><a href="#jira">Jira</a><a href="#questions">Q&amp;A</a></div></div>
 <main class="container" id="start">
 
 <section class="quick-grid">
@@ -240,11 +247,33 @@ section{position:relative;z-index:1;padding:82px 0}.section-head{text-align:cent
   </div>
 </section>
 
+
+<section id="risk-table">
+<div class="section-head"><span class="section-label">PROJECT RISK MANAGEMENT</span><h2>Risk register: what a PM should track</h2><p>Identify the risk, understand its impact, define a response and assign ownership.</p></div>
+<div class="risk-table-wrap"><table class="risk-table"><thead><tr><th>Risk</th><th>Example</th><th>Impact</th><th>Mitigation</th><th>Owner</th></tr></thead><tbody>
+<tr><td><b>Scope</b></td><td>Client adds a dashboard after development starts.</td><td>Rework and schedule pressure.</td><td>Assess impact, approve change and update scope/sprint.</td><td>PM + Client</td></tr>
+<tr><td><b>Schedule</b></td><td>A 3-day feature takes 7 days.</td><td>Milestone or release delay.</td><td>Find root cause, re-plan dependencies and adjust resources.</td><td>PM + Tech Lead</td></tr>
+<tr><td><b>Cost</b></td><td>Actual hours exceed estimate.</td><td>Budget overrun.</td><td>Track variance, forecast and take corrective action early.</td><td>PM</td></tr>
+<tr><td><b>Resource</b></td><td>Key developer becomes unavailable.</td><td>Knowledge gap and delay.</td><td>Backup resource, knowledge transfer and rebalancing.</td><td>PM + Engineering</td></tr>
+<tr><td><b>Technical</b></td><td>AI model accuracy is below expectation.</td><td>Rework and quality risk.</td><td>Prototype early, test assumptions and define fallback.</td><td>Tech Lead</td></tr>
+<tr><td><b>Dependency</b></td><td>Third-party API is delayed.</td><td>Feature cannot complete.</td><td>Track owner/date, use mocks or parallel work and communicate impact.</td><td>PM + Vendor</td></tr>
+<tr><td><b>Quality</b></td><td>Critical bug appears during UAT.</td><td>Release delay.</td><td>Prioritize, assign, retest and review release readiness.</td><td>QA Lead</td></tr>
+<tr><td><b>Security</b></td><td>Vulnerability found before launch.</td><td>Data/system exposure.</td><td>Assess severity, fix, test and document.</td><td>Security + Tech</td></tr>
+<tr><td><b>Communication</b></td><td>Client and developer understand a requirement differently.</td><td>Rework and conflict.</td><td>Clarify with examples and confirm acceptance criteria.</td><td>PM</td></tr>
+<tr><td><b>Stakeholder</b></td><td>Approval is delayed for one week.</td><td>Downstream work is blocked.</td><td>Escalate early and continue independent work where possible.</td><td>PM</td></tr>
+<tr><td><b>Vendor</b></td><td>External provider misses a committed date.</td><td>Integration/release delay.</td><td>Track SLA and maintain a contingency or workaround.</td><td>PM + Vendor</td></tr>
+<tr><td><b>Business</b></td><td>Client changes business priority.</td><td>Planned feature loses value.</td><td>Reassess value and reprioritize backlog.</td><td>Product + Client</td></tr>
+<tr><td><b>Compliance</b></td><td>Data handling does not meet a required rule.</td><td>Legal/launch risk.</td><td>Review requirements and add controls before release.</td><td>PM + Legal/Tech</td></tr>
+<tr><td><b>People</b></td><td>Team conflict affects productivity.</td><td>Lower delivery speed.</td><td>Discuss privately, clarify responsibilities and agree on a working approach.</td><td>PM / Manager</td></tr>
+</tbody></table></div>
+<div class="risk-callout"><b>Interview formula:</b> Identify → Assess probability &amp; impact → Prioritize → Mitigate → Assign owner → Monitor → Communicate.</div>
+</section>
+
 <section id="aws">
   <div class="section-head">
     <span class="section-label">AWS QUICK GUIDE</span>
     <h2>Speak AWS in simple words</h2>
-    <p>Don't over-explain. Know what each service is used for.</p>
+    <p>Don’t over-explain. Know what each service is used for, and give one simple project example.</p>
   </div>
   <div class="memory-cloud">
     <span>EC2 = Compute</span><span>S3 = Storage</span><span>RDS = Database</span><span>Lambda = Serverless</span><span>VPC = Network</span><span>IAM = Access</span><span>CloudWatch = Monitoring</span><span>API Gateway = APIs</span><span>SQS/SNS = Messaging</span><span>CloudFront = Content Delivery</span>
@@ -318,16 +347,36 @@ section{position:relative;z-index:1;padding:82px 0}.section-head{text-align:cent
 
 <script>
 const aws = [
-["EC2","Compute","Virtual servers to run applications."],["S3","Storage","Stores files, images, videos and backups."],
-["RDS","Database","Managed relational databases such as MySQL and PostgreSQL."],["DynamoDB","Database","Fast, scalable NoSQL database."],
-["Lambda","Serverless","Runs code without managing servers."],["ECS","Containers","Runs and manages containerized applications."],
-["ECR","Containers","Stores Docker/container images."],["CloudFront","Delivery","Delivers content faster through a global CDN."],
-["Route 53","Networking","Manages domains and routes users to applications."],["VPC","Networking","Creates a private network environment."],
-["IAM","Security","Controls users, roles and permissions."],["CloudWatch","Monitoring","Monitors applications, logs, metrics and health."],
-["API Gateway","APIs","Creates and manages APIs."],["SNS","Messaging","Sends notifications to subscribers."],
-["SQS","Messaging","Queues messages between applications."],["Elastic Beanstalk","Deployment","Simplifies web application deployment."],
-["CloudFormation","Infrastructure","Manages AWS infrastructure using templates."],["EBS","Storage","Persistent storage volumes for EC2."],
-["Bedrock","AI","Access to foundation models for generative AI."],["Rekognition","AI","Analyzes images and videos with AI."]
+["EC2","Compute","Virtual servers for running applications.","Run a web/API server.","server"],
+["S3","Storage","Object storage for files, images, videos, backups and static assets.","Store customer documents or product images.","storage"],
+["RDS","Database","Managed relational databases such as MySQL and PostgreSQL.","Store structured application data.","database"],
+["DynamoDB","NoSQL","Fast, scalable key-value/document database.","Store high-volume application records.","database"],
+["Lambda","Serverless","Runs code in response to events without managing servers.","Process an uploaded file automatically.","lambda"],
+["ECS","Containers","Runs and manages containerized applications.","Run a containerized backend service.","container"],
+["ECR","Containers","Stores and manages Docker/container images.","Store Docker images used by ECS.","container"],
+["CloudFront","Delivery","Caches and delivers content closer to users for faster response.","Speed up a global web application.","cloud"],
+["Route 53","DNS","Manages domains and routes users to applications.","Route a domain to the application.","route"],
+["VPC","Networking","Creates an isolated virtual network for AWS resources.","Separate public and private resources.","network"],
+["IAM","Security","Controls access to AWS resources with users, roles and policies.","Give a deployment role only needed permissions.","security"],
+["CloudWatch","Monitoring","Collects logs, metrics and alarms for operational visibility.","Alert when error rates rise.","monitor"],
+["API Gateway","APIs","Creates, publishes, secures and monitors APIs.","Expose a secure REST API.","api"],
+["SNS","Messaging","Publishes notifications to multiple subscribers.","Send alerts to email or another service.","message"],
+["SQS","Messaging","Queues messages for reliable asynchronous processing.","Queue background jobs for workers.","queue"],
+["Elastic Beanstalk","Deployment","Simplifies deployment and management of web applications.","Deploy a web application quickly.","deploy"],
+["CloudFormation","Infrastructure","Defines AWS infrastructure in repeatable templates.","Create consistent staging and production environments.","infra"],
+["EBS","Storage","Persistent block storage volumes for EC2.","Store application data on EC2.","disk"],
+["Bedrock","Generative AI","Provides foundation models and tools for generative-AI applications.","Build an AI assistant or RAG workflow.","ai"],
+["Rekognition","Computer Vision","Analyzes images and videos for objects, faces and other visual attributes.","Detect objects in uploaded images.","vision"],
+["Amplify","Frontend / Full Stack","Helps build, connect, deploy and host web and mobile applications using AWS.","Build and host a SaaS frontend.","amplify"],
+["Cognito","Identity","Provides sign-up, sign-in, authentication and access control.","Secure user login for a SaaS platform.","cognito"],
+["CloudTrail","Governance","Records AWS API activity for audit and security investigation.","See who changed an AWS resource.","audit"],
+["WAF","Security","Helps protect web applications from common exploits and unwanted traffic.","Protect an API or web application.","waf"],
+["Secrets Manager","Security","Stores and manages sensitive credentials and API keys.","Keep secrets out of source code.","secret"],
+["ElastiCache","Caching","Managed in-memory caching for frequently used data.","Cache repeated product or session data.","cache"],
+["Step Functions","Workflow","Coordinates multiple AWS services into reliable workflows.","Orchestrate a multi-step document workflow.","workflow"],
+["AppSync","API / GraphQL","Managed GraphQL API service for connecting applications to data and backend services.","Build a real-time GraphQL API.","graphql"],
+["SageMaker AI","Machine Learning","Builds, trains, deploys and monitors machine-learning models.","Deploy a custom prediction model.","ml"],
+["Textract","Document AI","Extracts text and structured data from documents.","Read fields from invoices or legal documents.","document"]
 ];
 const jira = [
 ["Burndown","Remaining sprint work","Are we likely to finish the sprint on time?"],
@@ -344,26 +393,39 @@ const jira = [
 ["Release Burndown","Remaining release work","Are we on track for the release?"]
 ];
 const qa = [
-["pm","Tell me about yourself","Start with your current role, team size, products, delivery responsibilities, methods and your technical/AI edge.","Use: Present role → Experience → Skills → Impact"],
-["pm","How do you analyze a project before starting?","Understand the business goal, define scope, identify assumptions and dependencies, estimate effort, plan resources and set milestones.","Use: Goal → Scope → Estimate → Resources → Risks → Plan"],
-["pm","How do you manage Agile/Scrum projects?","Maintain the backlog, break requirements into stories, plan sprints, track blockers, review delivery and use feedback for the next sprint.","Use: Backlog → Sprint → Track → Review → Improve"],
-["pm","How do you create user stories?","Understand the user goal, write the story, add acceptance criteria and review it with development and QA.","Simple format: As a [user], I want [goal], so that [value]."],
-["pm","How do you ensure on-time delivery?","Use realistic planning, milestones, owners and dependency tracking. Identify delays early and discuss options before the deadline.","Key idea: Don't wait for a blocker to become a crisis."],
-["scenario","Tell me about a time you took initiative.","Explain the third-party dependency delay, your RAG chatbot idea, two-day implementation and improved client confidence.","Use: Situation → Action → Impact"],
-["scenario","How do you handle an unhappy client?","Listen first, separate what you can control from what you cannot, give a clear action plan and communicate regularly.","Key idea: Problem + solution, not just problem."],
-["scenario","How do you handle changing requirements?","Understand the business value, assess impact on scope/time/resources/cost, discuss it with the team and client, then document the approved change.","Use: Understand → Impact → Approve → Update"],
-["scenario","How do you manage risks?","Identify early, assess probability and impact, prioritize, define mitigation, assign an owner and review regularly.","Use: Identify → Assess → Mitigate → Monitor"],
-["pm","How do you manage multiple projects?","Keep priorities, owners, deadlines and risks clear for each project, and review resource conflicts regularly.","Key idea: Prioritization + visibility."],
-["tools","How do you use Jira?","Use it for backlog management, sprint planning, issue tracking, progress monitoring and dashboards.","Mention: Burndown, Velocity, CFD, Control Chart and Sprint Report."],
-["tools","How do you use AI in project management?","Use ChatGPT and Claude for requirement analysis, user stories, reports, documentation, action items and productivity, while keeping final decisions with the PM/team.","Key idea: AI supports decisions; it does not replace ownership."],
-["pm","What is Critical Path Analysis?","It identifies activities that directly affect the project completion date. A delay in a critical activity can delay the whole project.","Simple idea: Find the tasks with no schedule flexibility."],
-["pm","What is Earned Value Management?","It compares planned value, earned value and actual cost to understand project schedule and cost performance.","Remember: Planned → Earned → Actual."],
-["pm","How do you communicate with clients?","Give regular, clear updates on progress, risks, blockers, decisions and next steps. When there is a problem, also provide options.","Key idea: No surprises."],
-["pm","Why should we hire you?","Highlight project delivery, B2B SaaS experience, cross-functional leadership, technical understanding, client communication and proactive problem-solving.","Use: Experience → Skills → Ownership → Value"]
+["pm","Tell me about yourself","I’m Kaushik Das, a Software Project Manager and Engineering Manager with over six years of experience in software delivery across B2B SaaS, AI-based solutions, web and cloud platforms. Currently I manage a 16-member cross-functional team across two B2B SaaS products, handling planning, resource allocation, client communication, risks, dependencies, QA and delivery.","Present role → Team → Products → Skills → Value"],
+["pm","How do you analyze a project before starting?","I start with the business goal and requirements, define scope and exclusions, identify dependencies and assumptions, estimate effort, check resources, create milestones and identify major risks before execution.","Goal → Scope → Estimate → Resources → Risks → Plan"],
+["pm","How do you create a functional scope document?","I document the objective, modules, functional requirements, user stories, assumptions, exclusions, dependencies, acceptance criteria, effort, milestones and delivery expectations.","Objective → Requirements → Acceptance → Estimate → Milestones"],
+["pm","How do you manage Agile/Scrum projects?","I maintain the backlog, break requirements into user stories, prioritize them, plan sprints, track progress and blockers, review completed work and use feedback to improve the next sprint.","Backlog → Sprint → Track → Review → Improve"],
+["pm","What is the difference between Agile, Scrum, Waterfall and Kanban?","Agile is a flexible delivery approach. Scrum is an Agile framework using short sprints. Waterfall is sequential with more fixed phases. Kanban visualizes continuous work and focuses on flow and work-in-progress limits.","Agile = approach • Scrum = framework • Waterfall = sequential • Kanban = flow"],
+["pm","How do you create user stories?","I understand the user goal, write the story and acceptance criteria, then review it with development and QA. A simple format is: As a user, I want a goal, so that I get a business value.","User → Goal → Value → Acceptance"],
+["pm","How do you create wireframes and flow diagrams?","I understand the user journey and use Figma or Miro to show the screens and flow. I use them as communication tools so business, design and development share the same understanding.","Journey → Flow → Wireframe → Alignment"],
+["pm","How do you ensure on-time delivery?","I use realistic estimates, milestones, clear ownership and dependency tracking. If a delay appears, I identify the cause early, assess impact and discuss options before the deadline.","Plan → Track → Act → Communicate"],
+["pm","How do you manage multiple projects?","I keep priorities, owners, deadlines, risks and resource plans clear for each project. I regularly check resource conflicts and make sure the team knows what is most important.","Priorities → Owners → Resources → Risks"],
+["scenario","Tell me about a time you took initiative.","A third-party dependency was delayed and the client was frustrated. Instead of only reporting the blocker, I suggested a RAG-based chatbot, aligned the technical team, helped define the scope and coordinated the work. We demonstrated a working solution within two days, showing progress and helping maintain client confidence.","Situation → Action → Impact"],
+["scenario","How do you handle an unhappy client?","I listen first and understand the real concern. Then I separate what we can control from what we cannot, provide a clear action plan and keep the client updated. I try to bring options, not only problems.","Listen → Understand → Options → Action"],
+["scenario","How do you handle changing requirements?","I understand why the change is needed, assess its impact on scope, timeline, cost and resources, discuss it with the team, communicate the impact to the client and document the approved change.","Understand → Impact → Approve → Document → Update"],
+["scenario","What do you do when a third-party dependency is delayed?","I identify the dependency early, understand the impact and owner, create a backup or parallel workstream where possible, and communicate the risk. My RAG chatbot example is a practical example of creating a parallel path.","Dependency → Impact → Backup → Owner → Communicate"],
+["pm","How do you monitor budget and actual cost?","I compare planned effort and resource cost with actual hours and progress. If actual effort moves above plan, I check the reason, forecast the impact and discuss corrective action or scope decisions.","Plan → Actual → Variance → Forecast → Action"],
+["pm","What is Earned Value Management?","EVM compares Planned Value, Earned Value and Actual Cost to understand schedule and cost performance.","Planned Value → Earned Value → Actual Cost"],
+["pm","What is Critical Path Analysis?","It identifies the sequence of activities that directly determines the project completion date. A delay in a critical activity can delay the whole project.","Activities → Dependencies → Float → Critical Path"],
+["pm","How do you track resources?","I check the skills needed, available capacity, current allocation and upcoming workload. I identify over-allocation or skill gaps before they affect the schedule.","Skills → Capacity → Allocation → Forecast"],
+["pm","How do you communicate project status?","I give clear, regular updates on completed work, current work, milestones, risks, issues, dependencies and decisions needed. I avoid surprises.","Progress → Risks → Issues → Decisions → Next Steps"],
+["tools","How do you use Jira?","I use Jira for backlog management, user stories, sprint planning, task assignment, blocker tracking and dashboards. I also use Burndown, Velocity, CFD, Control Chart and Sprint Report.","Backlog → Sprint → Track → Report"],
+["tools","Which Jira chart would you use for sprint progress?","Burndown shows remaining work, Velocity shows delivery capacity, Sprint Report shows completed/incomplete work, and CFD or Control Chart helps identify bottlenecks.","Burndown → Velocity → Sprint Report → CFD"],
+["tools","How do you use Power BI?","I use Power BI to turn project data into dashboards for stakeholder communication, such as progress, resource status, delivery trends and KPIs.","Data → Dashboard → Insight → Decision"],
+["tools","How do you use AI in project management?","I use ChatGPT and Claude to support requirement analysis, user stories, BRDs, SRS documents, sprint reports, meeting notes, action items and delivery handovers. AI reduces repetitive work while final decisions remain with me and the team.","AI assists → PM decides"],
+["tools","What AWS services do you know?","I understand common services such as EC2 for compute, S3 for storage, RDS for relational databases, Lambda for serverless functions, Cognito for authentication, Amplify for web/mobile development, API Gateway for APIs and CloudWatch for monitoring.","Service → Use → Example"],
+["pm","How do you handle quality?","I make quality part of delivery: clear acceptance criteria, QA coordination, defect tracking, UAT and release-readiness checks.","Acceptance → QA → Defects → UAT → Release"],
+["pm","What are your strengths?","My strengths are ownership, communication, technical understanding, client handling and practical problem-solving. My technical background helps me communicate with engineering teams while my business experience helps me understand client expectations.","Ownership → Communication → Technical → Business"],
+["pm","Why should we hire you?","I bring project management, B2B SaaS experience, cross-functional leadership, technical understanding, client communication and proactive problem-solving. I focus on outcomes and take ownership when something goes wrong.","Experience → Skills → Ownership → Value"],
+["pm","Why are you interested in this role?","The role matches the areas I enjoy: project planning, team management, client communication, project controls, reporting, risk management and process improvement. It also gives me room to grow in advanced project controls and digital delivery.","Match → Experience → Growth → Contribution"]
 ];
 
-document.getElementById("awsList").innerHTML = aws.map(x=>`<div class="aws-row"><b>${x[0]}</b><span>${x[1]}</span><p>${x[2]}</p></div>`).join("");
-document.getElementById("jiraList").innerHTML = jira.map(x=>`<div class="jira-card"><b>${x[0]}</b><span>${x[1]}</span><p>${x[2]}</p></div>`).join("");
+const awsIcon=k=>({server:"▣",storage:"S3",database:"DB",lambda:"λ",container:"⬡",cloud:"☁",route:"↗",network:"◈",security:"🛡",monitor:"◔",api:"⌘",message:"✉",queue:"☷",deploy:"🚀",infra:"⌘",disk:"EBS",ai:"✦",vision:"◉",amplify:"A",cognito:"C",audit:"✓",waf:"W",secret:"🔑",cache:"⚡",workflow:"↯",graphql:"◇",ml:"ML",document:"▤"})[k]||"AWS";
+document.getElementById("awsList").innerHTML=aws.map((x,i)=>`<article class="aws-card"><div class="aws-card-top"><div class="aws-icon">${awsIcon(x[4])}</div><div><b>${x[0]}</b><span>${x[1]}</span></div><em>${String(i+1).padStart(2,"0")}</em></div><p>${x[2]}</p><div class="aws-use"><strong>Example</strong><span>${x[3]}</span></div></article>`).join("");
+const jiraVisual=k=>{const base=`<svg viewBox="0 0 220 80">`;const end="</svg>";if(k==="burndown"||k==="release")return base+`<polyline points="8,12 55,25 100,40 145,58 205,70" class="gline"/><line x1="8" y1="70" x2="210" y2="12" class="guide"/>`+end;if(k==="burnup")return base+`<polyline points="8,68 55,56 100,43 145,29 205,14" class="gline"/><polyline points="8,60 55,52 100,48 145,28 205,8" class="gline2"/>`+end;if(k==="velocity")return base+[20,38,30,50,42].map((h,i)=>`<rect x="${15+i*40}" y="${70-h}" width="24" height="${h}" class="bar"/>`).join("")+end;if(k==="sprint")return base+[142,105,168].map((w,i)=>`<rect x="12" y="${16+i*22}" width="190" height="10" class="track"/><rect x="12" y="${16+i*22}" width="${w}" height="10" class="fill"/>`).join("")+end;if(["control","cycle","resolution","age"].includes(k))return base+`<polyline points="8,58 45,35 82,48 119,22 156,30 205,14" class="gline"/>`+end;if(k==="cfd")return base+`<path d="M8 60 L45 55 L82 52 L119 45 L156 38 L205 28 L205 68 L8 68 Z" class="area1"/><path d="M8 45 L45 43 L82 38 L119 32 L156 25 L205 18 L205 28 L156 38 L119 45 L82 52 L45 55 L8 60 Z" class="area2"/>`+end;if(k==="created")return base+`<polyline points="8,20 55,25 100,32 145,43 205,55" class="gline"/><polyline points="8,62 55,52 100,48 145,36 205,20" class="gline2"/>`+end;if(k==="workload")return base+[125,78,148].map((w,i)=>`<rect x="12" y="${16+i*22}" width="160" height="10" class="track"/><rect x="12" y="${16+i*22}" width="${w}" height="10" class="fill"/>`).join("")+end;if(k==="time")return base+`<circle cx="65" cy="40" r="26" class="circle"/><line x1="65" y1="40" x2="65" y2="20" class="hand"/><line x1="65" y1="40" x2="81" y2="49" class="hand"/><rect x="120" y="18" width="70" height="44" rx="7" class="track"/>`+end;return base+`<circle cx="40" cy="40" r="18" class="circle"/><circle cx="110" cy="40" r="18" class="circle"/><circle cx="180" cy="40" r="18" class="circle"/><path d="M58 40h34M128 40h34" class="hand"/>`+end;};
+document.getElementById("jiraList").innerHTML=jira.map((x,i)=>`<article class="jira-card"><div class="jira-head"><span class="jira-no">${String(i+1).padStart(2,"0")}</span><div><b>${x[0]}</b><small>${x[1]}</small></div></div><div class="jira-chart">${jiraVisual(x[3])}</div><p>${x[2]}</p><div class="chart-tip">Illustrative view — focus on what the chart tells the PM.</div></article>`).join("");
 
 const qaList=document.getElementById("qaList"), search=document.getElementById("qaSearch");
 let filter="all";
