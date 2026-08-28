@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaushik Das — Project Manager Interview Guide</title>
+<style>
+:root{
+  --bg:#080b10;--panel:#0f141c;--panel2:#141b25;--ink:#f4f7fb;--muted:#9aa6b5;
+  --accent:#7cf7a1;--accent2:#65d9ff;--line:#27313d;--white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.hero{
+  padding:72px 7% 64px;
+  background:
+    radial-gradient(circle at 80% 20%,#65d9ff18,transparent 28%),
+    radial-gradient(circle at 20% 80%,#7cf7a114,transparent 30%),
+    linear-gradient(180deg,#0a0e14,#080b10);
+  border-bottom:1px solid var(--line);
+}
+.hero .tag{display:inline-block;padding:7px 12px;border:1px solid #7cf7a155;border-radius:999px;font-size:12px;letter-spacing:.08em;background:#7cf7a10b;color:var(--accent)}
+h1{font-size:clamp(38px,6vw,68px);line-height:1.02;margin:18px 0 12px;letter-spacing:-.04em}
+.hero p{max-width:820px;color:#c5ced9;font-size:17px}
+nav{position:sticky;top:0;z-index:5;background:#080b10e8;backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:12px 7%;display:flex;gap:8px;flex-wrap:wrap}
+nav a{color:#cbd5e1;text-decoration:none;padding:7px 11px;border-radius:8px;font-size:13px}
+nav a:hover{background:#7cf7a112;color:var(--accent)}
+main{max-width:1200px;margin:34px auto;padding:0 24px}
+section{margin:52px 0}
+h2{font-size:28px;margin-bottom:8px;letter-spacing:-.02em}
+.sub{color:var(--muted);margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 16px 45px #00000025}
+.card h3{margin:0 0 8px;font-size:18px}
+.card p{margin:0;color:#b6c0cc}
+.num{color:var(--accent);font-weight:800;font-size:13px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
+.step{padding:10px 14px;background:#7cf7a10e;color:var(--accent);border:1px solid #7cf7a133;border-radius:10px;font-weight:700}
+.arrow{color:#667384;font-weight:900}
+.badge{display:inline-block;padding:5px 9px;border-radius:8px;background:#65d9ff0e;color:var(--accent2);border:1px solid #65d9ff2e;font-size:11px;font-weight:700;margin-bottom:10px}
+.product{position:relative;overflow:hidden}
+.product:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(#7cf7a1,#65d9ff)}
+table{width:100%;border-collapse:separate;border-spacing:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+th,td{padding:14px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#141b25;color:#dce5ef;font-size:13px}
+td{color:#b9c4d0}
+tr:last-child td{border-bottom:0}
+.search{width:100%;padding:13px 15px;border:1px solid var(--line);background:#0d1219;color:var(--ink);border-radius:10px;font-size:15px;margin:12px 0 16px}
+.search::placeholder{color:#687586}
+.callout{background:linear-gradient(135deg,#101822,#0d151c);border:1px solid #7cf7a126;color:#dbe5ee;border-radius:16px;padding:22px}
+.callout strong{color:var(--accent)}
+footer{text-align:center;padding:35px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+@media(max-width:650px){h1{font-size:38px}.hero{padding:48px 6%}main{padding:0 16px}}
+
+.interview-content{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;max-height:900px;overflow:auto}
+.interview-content pre{font-size:14px}
+.interview-content h3{color:var(--accent)}
+</style>
+</head>
+<body>
+<div style="position:absolute;top:22px;right:7%;z-index:10"><a href="https://www.thekaushikdas.com/" style="color:#9aa6b5;text-decoration:none;font-size:13px;">← Portfolio</a></div>
+<header class="hero">
+<span class="tag">PROJECT MANAGER • INTERVIEW QUICK GUIDE</span>
+<h1>Kaushik Das</h1>
+<p>Clarity and control, end to end — a practical interview reference for project planning, Agile delivery, B2B SaaS, AI-enabled workflows and stakeholder communication.</p>
+</header>
+
+<main>
+
+<section id="interview">
+<h2>Complete Interview Q&A</h2>
+<p class="sub">Interview-ready answers and guidance from the attached preparation material.</p>
+<div class="callout" style="margin-bottom:18px"><strong>How to use:</strong> Keep answers natural, use real examples, and structure problem answers as Situation → Action → Impact.</div>
+<input class="search" placeholder="Search interview questions..." onkeyup="filterInterview(this.value)">
+<div id="interviewContent" class="interview-content">
+<pre style="white-space:pre-wrap;font-family:inherit;color:#b9c4d0;margin:0;line-height:1.7">## 1. Tell me about yourself
+
+&gt; “I’m Kaushik Das, a Software Project Manager and Engineering Manager with over six years of experience in software delivery.
+
+&gt; Currently, I manage a 16-member cross-functional team working on two B2B SaaS platforms — an **Interior Design Business Management Platform and a Real Estate Business Management Platform.**
+
+&gt; My experience covers the complete project lifecycle, including requirement gathering, scope planning, sprint planning, resource allocation, client communication, risk and dependency management, QA and final delivery.
+
+&gt; I have worked with Agile, Scrum, Kanban and Waterfall, and I regularly use tools such as Jira, Trello, Asana and Monday.com.
+
+&gt; I also have a technical background, including web, mobile, cloud and AI-based projects. This helps me communicate effectively with both technical teams and business stakeholders.
+
+&gt; Overall, I see myself as someone who focuses on three things — clear planning, strong communication and successful delivery.”
+
+---
+
+# 2. How do you analyze a project before starting it?
+
+&gt; “I start by understanding the business requirement and expected outcome.
+
+&gt; Then I break the project into functional modules and identify the scope, assumptions, dependencies and major milestones.
+
+&gt; After that, I work with the technical team to estimate effort, identify the required resources and prepare a realistic timeline.
+
+&gt; I also identify risks early and check whether there are any third-party or technical dependencies that can affect delivery.
+
+&gt; Finally, I document the scope clearly so that the client and team have the same understanding before development starts.”
+
+### If they ask: What does your scope document contain?
+
+&gt; “Normally, I include the project objective, functional requirements, modules, user stories, assumptions, dependencies, exclusions, acceptance criteria, estimated effort, timeline and major milestones.”
+
+---
+
+# 3. How do you manage Agile/Scrum projects?
+
+&gt; “I normally start with a properly defined backlog.
+
+&gt; I work with the team to break requirements into user stories and smaller tasks, prioritize them and plan the sprint.
+
+&gt; During the sprint, I track progress through Jira, conduct regular discussions with the team, identify blockers and manage dependencies.
+
+&gt; At the end of the sprint, I review the completed work with the stakeholders and use the feedback for the next sprint.
+
+&gt; My main focus is to make sure the team understands what needs to be delivered and that there are no surprises for the client.”
+
+---
+
+# 4. How do you create user stories?
+
+&gt; “I first understand what the user wants to achieve and why.
+
+&gt; Then I convert the requirement into a simple user story with acceptance criteria.
+
+&gt; For example:
+
+&gt; ‘As an interior designer, I want to track project costs so that I can understand my project budget.’
+
+&gt; I then discuss the story with the development and QA teams, clarify edge cases and make sure the acceptance criteria are clear before adding it to the sprint.”
+
+---
+
+# 5. Do you create wireframes and flow diagrams?
+
+&gt; “Yes. I have worked with Figma and Miro for product discussions, wireframes and flow diagrams.
+
+&gt; My approach is to first understand the user journey, then create a simple flow or wireframe to communicate the requirement clearly to the design and development teams.
+
+&gt; I don&#x27;t see wireframes only as a design activity. For me, they are also a communication tool that helps reduce misunderstanding before development starts.”
+
+---
+
+# 6. How do you ensure projects are delivered on time?
+
+&gt; “I believe timely delivery starts with realistic planning.
+
+&gt; I break the project into smaller milestones, assign ownership, track progress regularly and monitor dependencies.
+
+&gt; If I see a delay, I don&#x27;t wait until the deadline. I identify the reason, understand the impact and discuss options with the team.
+
+&gt; Depending on the situation, we may reprioritize the scope, adjust resources or change the delivery approach.
+
+&gt; Most importantly, I communicate the situation with the client early instead of giving them a surprise at the end.”
+
+---
+
+# 7. How do you manage multiple projects?
+
+&gt; “I manage multiple projects by keeping clear priorities, owners, deadlines and risks for each project.
+
+&gt; I use project-management tools to track the work and maintain separate project views.
+
+&gt; I regularly review resource availability and identify conflicts between projects.
+
+&gt; My experience managing concurrent projects has taught me that communication and prioritization are very important. The team should always know what is the most important work at that point.”
+
+Your CV specifically supports concurrent project leadership and a 12-member team; use your **current 16-member figure** if that is your updated situation.
+
+---
+
+# 8. How do you manage risks and dependencies?
+
+&gt; “I maintain a clear view of project risks and dependencies from the beginning.
+
+&gt; For each major risk, I try to understand its probability, impact and possible mitigation.
+
+&gt; For dependencies, I identify who owns the dependency, what we need from them and when we need it.
+
+&gt; I also review these regularly during project meetings.
+
+&gt; One example was a recent project where a third-party dependency was causing delays. Instead of simply reporting the blocker, I suggested a RAG-based chatbot that the team could build independently. We were able to prepare a demo in two days, which helped maintain the client&#x27;s confidence while the dependency was being resolved.”
+
+---
+
+# 9. Tell me about a time you took initiative.
+
+This should be one of your **strongest answers**.
+
+&gt; “In a recent project, we were facing delays because of a third-party dependency, and the client was becoming frustrated.
+
+&gt; Since the dependency was outside our immediate control, I looked for something valuable that we could deliver while waiting.
+
+&gt; I suggested building a RAG-based chatbot. I discussed the idea with the technical team, helped define the scope and coordinated the implementation.
+
+&gt; Within two days, we had a working solution ready for a client demo.
+
+&gt; The client was happy to see visible progress, and it helped us maintain their confidence while the third-party dependency was being resolved.
+
+&gt; For me, this was a good example of project management — when there is a blocker, don&#x27;t just report it; find a practical way forward.”
+
+---
+
+# 10. How do you monitor project budget and cost?
+
+This is an area where you should be **careful not to overclaim**.
+
+&gt; “My approach is to first establish the estimated effort and resource requirement during planning.
+
+&gt; During execution, I track the actual effort against the planned effort and monitor whether changes in scope, resources or dependencies are affecting the project.
+
+&gt; I also keep an eye on resource utilization and delivery progress so that potential cost overruns can be identified early.
+
+&gt; I have experience with cost estimation, resource allocation and reporting, and I use project tracking and reporting tools to support these decisions.”
+
+If they specifically ask about **Earned Value Management**, don&#x27;t pretend you have deep hands-on experience if you haven&#x27;t used it.
+Say:
+
+&gt; “I understand the basic concept of Earned Value Management — comparing planned value, earned value and actual cost to understand whether a project is ahead or behind schedule and whether it is within budget. My stronger hands-on experience has been in effort tracking, cost estimation, resource planning and project reporting.”
+
+That is much safer and more credible.
+
+---
+
+# 11. What is Critical Path Analysis?
+
+A simple interview answer:
+
+&gt; “Critical Path Analysis helps identify the activities that directly determine the project completion date.
+
+&gt; These activities have very little or no flexibility. If one of them is delayed, the overall project can also be delayed.
+
+&gt; So, as a Project Manager, I would give special attention to those activities, their dependencies and their risks.”
+
+If they ask **“Have you used it?”**
+
+&gt; “I have used dependency and milestone-based planning in software projects. My understanding of Critical Path is based on identifying activities and dependencies that can directly affect the final delivery date.”
+
+---
+
+# 12. How do you communicate with clients?
+
+&gt; “I believe client communication should be regular, clear and honest.
+
+&gt; I usually keep clients updated on progress, completed work, upcoming activities, risks, blockers and any decisions required from their side.
+
+&gt; If there is a problem, I don&#x27;t just communicate the problem. I also try to provide possible options and recommendations.
+
+&gt; This helps build trust because the client knows both the current situation and what we are doing about it.”
+
+---
+
+# 13. How do you prepare project reports and dashboards?
+
+&gt; “I prepare reports based on what the stakeholder needs to know.
+
+&gt; Typically, I track overall project status, sprint progress, completed and pending work, risks, issues, dependencies, resource status and upcoming milestones.
+
+&gt; I have experience with Power BI, data analytics and reporting, and I use dashboards to make project information easier for stakeholders to understand and act upon.”
+
+---
+
+# 14. How do you use AI or automation in project management?
+
+This is a **very strong differentiator for you**.
+
+&gt; “I use AI tools such as ChatGPT and Claude as productivity and decision-support tools.
+
+&gt; For example, I use them to help with requirement analysis, user-story drafting, meeting notes, action items, risk identification, sprint reports, stakeholder updates, BRDs, SRS documents and delivery handovers.
+
+&gt; But I don&#x27;t depend on AI to make project decisions. I use it to reduce repetitive work and improve the speed of analysis, while the final decision remains with me and the team.”
+
+Your CV explicitly lists these AI-assisted PM activities.
+
+---
+
+# 15. How do you handle a change in requirements?
+
+&gt; “First, I understand why the change is required and what business value it provides.
+
+&gt; Then I assess its impact on scope, timeline, resources and cost.
+
+&gt; I discuss the impact with the technical team and clearly communicate it to the client.
+
+&gt; If the change is approved, I update the scope, backlog and project plan accordingly.
+
+&gt; I believe every change should be visible and properly documented rather than simply being added to the project without understanding its impact.”
+
+This directly connects to the JD&#x27;s **Change Control Notes** requirement.
+
+---
+
+# 16. What do you know about invoices and agreements?
+
+If you have participated in this but not owned it:
+
+&gt; “I have been involved in client and project coordination, so I understand the importance of keeping project scope, deliverables, commercial terms and approved changes properly documented.
+
+&gt; For invoices or agreements, I would make sure the project information, approved scope, milestones and delivery records are aligned before they are processed.”
+
+Don&#x27;t claim that you independently prepare legal agreements if that isn&#x27;t in your experience.
+
+---
+
+# 17. How do you handle an unhappy client?
+
+&gt; “First, I listen carefully and understand the actual concern instead of immediately trying to defend the team.
+
+&gt; Then I separate the issue into what we can control and what we cannot control.
+
+&gt; I provide a clear action plan and realistic timeline.
+
+&gt; In my experience, clients usually become more comfortable when they see ownership, transparency and regular updates.
+
+&gt; My RAG chatbot example is a good example of this approach. Instead of only explaining the third-party delay, I created another path to show progress.”
+
+---
+
+# 18. What are your strengths as a Project Manager?
+
+&gt; “I would say my main strengths are ownership, communication, technical understanding and problem-solving.
+
+&gt; Because I have worked closely with engineering teams, I can understand technical challenges without losing sight of the business requirement.
+
+&gt; At the same time, my earlier business and client-facing experience helps me communicate with clients and understand their expectations.
+
+&gt; I also believe in proactive problem-solving rather than waiting for issues to become serious.”
+
+---
+
+# 19. Why should we hire you?
+
+This is where you should connect **almost the entire JD**.
+
+&gt; “I believe I bring a combination of project management experience, technical understanding and business communication.
+
+&gt; I have experience managing multiple software projects, leading cross-functional teams, working with Agile and Scrum, managing requirements, risks and dependencies, and communicating directly with clients.
+
+&gt; I also have hands-on exposure to B2B SaaS products, AI-based solutions, Power BI and digital tools for improving project delivery.
+
+&gt; Most importantly, I take ownership of the outcome. If there is a problem, I try to find a solution rather than simply reporting the problem.
+
+&gt; I believe this combination can help me contribute effectively to your projects from both a delivery and business perspective.”
+
+---
+
+# 20. Why are you interested in this role?
+
+&gt; “This role interests me because it covers the areas I enjoy most — project planning, team management, client communication, tracking delivery, managing risks and improving processes.
+
+&gt; I also like that the role involves dashboards, data, automation and digital delivery practices.
+
+&gt; My current experience with B2B SaaS, AI-based products, Agile delivery and project reporting makes the role a strong match for my background.
+
+&gt; At the same time, I see this as an opportunity to grow further in areas such as advanced project controls, earned value management and more structured cost and schedule analysis.”
+
+That last sentence is useful because it turns some of the JD gaps into a **growth story instead of a weakness**.
+—------------------------------------------------------------------------------------------------------------------
+
+### &amp;#x20;
+
+|   |
+| - |
+
+### Risk Type
+
+|   |
+| - |
+
+### What it means
+
+|   |
+| - |
+
+### Small Example
+
+|   |
+| - |
+
+### 1. Scope Risk
+
+|   |
+| - |
+
+### Project requirements may change or become unclear.
+
+|   |
+| - |
+
+### Client adds a new dashboard after development has started.
+
+|   |
+| - |
+
+### 2. Schedule Risk
+
+|   |
+| - |
+
+### A delay in one activity may delay the project.
+
+|   |
+| - |
+
+### A feature planned for 3 days takes 7 days to complete.
+
+|   |
+| - |
+
+### 3. Cost / Budget Risk
+
+|   |
+| - |
+
+### Actual project cost may exceed the planned budget.
+
+|   |
+| - |
+
+### Extra development hours increase the project cost by 15%.
+
+|   |
+| - |
+
+### 4. Resource Risk
+
+|   |
+| - |
+
+### Required people or skills may not be available.
+
+|   |
+| - |
+
+### The only senior backend developer leaves during a critical sprint.
+
+|   |
+| - |
+
+### 5. Technical Risk
+
+|   |
+| - |
+
+### A technical solution may not work as expected.
+
+|   |
+| - |
+
+### A new AI model gives inaccurate results during testing.
+
+|   |
+| - |
+
+### 6. Dependency Risk
+
+|   |
+| - |
+
+### The project depends on another team, system or service.
+
+|   |
+| - |
+
+### A third-party API is delayed and blocks the payment feature.
+
+|   |
+| - |
+
+### 7. Quality Risk
+
+|   |
+| - |
+
+### The product may not meet the required quality level.
+
+|   |
+| - |
+
+### A critical bug is found during UAT just before release.
+
+|   |
+| - |
+
+### 8. Security Risk
+
+|   |
+| - |
+
+### The system or data may be exposed to security threats.
+
+|   |
+| - |
+
+### A vulnerability is found in the login system before launch.
+
+|   |
+| - |
+
+### 9. Operational Risk
+
+|   |
+| - |
+
+### Problems may occur when the product is used in real operations.
+
+|   |
+| - |
+
+### The application works in testing but becomes slow with real users.
+
+|   |
+| - |
+
+### 10. Communication Risk
+
+|   |
+| - |
+
+### Poor communication can create misunderstanding or mistakes.
+
+|   |
+| - |
+
+### The client expects one feature, while the developer understands it differently.
+
+|   |
+| - |
+
+### 11. Stakeholder Risk
+
+|   |
+| - |
+
+### Stakeholder decisions or approvals may affect delivery.
+
+|   |
+| - |
+
+### The client delays design approval for one week.
+
+|   |
+| - |
+
+### 12. Vendor / Third-Party Risk
+
+|   |
+| - |
+
+### An external company may fail to deliver as expected.
+
+|   |
+| - |
+
+### A cloud or software vendor fails to provide a required service on time.
+
+|   |
+| - |
+
+### 13. Business Risk
+
+|   |
+| - |
+
+### Business changes may affect the project&#x27;s priority or value.
+
+|   |
+| - |
+
+### The client changes its business strategy and cancels a planned feature.
+
+|   |
+| - |
+
+### 14. Compliance / Legal Risk
+
+|   |
+| - |
+
+### The project may not meet legal or regulatory requirements.
+
+|   |
+| - |
+
+### An application stores customer data without meeting required data rules.
+
+|   |
+| - |
+
+### 15. People Risk
+
+|   |
+| - |
+
+### Team-related issues can affect project delivery.
+
+|   |
+| - |
+
+### Conflict between two team members reduces productivity during a sprint.
+
+### Easy interview answer
+
+If asked **“What are the major types of project risks?”**, you can say:
+
+&gt; **“The major risks I normally look at are Scope, Schedule, Cost, Resource, Technical, Dependency, Quality, Security, Vendor, Stakeholder, Communication and Business risks. I identify them early, assess their probability and impact, assign an owner, define a mitigation plan and review them regularly.”**
+
+**\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_**
+
+### Simple Risk Management Workflow
+
+**Identify → Assess → Prioritize → Mitigate → Assign Owner → Monitor → Communicate**
+A useful phrase to remember for your interview:
+
+&gt; **“A good PM should not only identify a risk; they should understand its impact, plan a response and monitor it until it is closed.”**
+
+---
+
+## Your 30-second closing statement
+
+If they ask **“Do you have anything else to add?”**, finish strongly:
+
+&gt; **“Yes. I would just like to add that I see project management as more than tracking tasks and deadlines. For me, it is about understanding the business goal, keeping people aligned, identifying problems early and making sure the project reaches the right outcome. My technical background, business experience and current leadership role allow me to work comfortably with both clients and engineering teams. I’m confident that I can bring that ownership and practical approach to this role.”**
+
+### Your key interview message
+
+Try to make the interviewer remember these **5 points** about you:
+**B2B SaaS → 16-member team → Agile delivery → AI/technical understanding → proactive problem solver**
+And don&#x27;t try to sound overly technical. For this JD, your best impression will come from sounding like a **calm, structured PM who understands technology and takes ownership when things go wrong**.
+
+**—-----------------------------------------------------------------------------------------------------------------**
+A strong, universal PM workflow would be:
+**Analyze → Prioritize → Plan → Discuss → Execute → Monitor → Document → Communicate → Review**
+For an interview, an even shorter version is easier to remember:
+
+&gt; **Analyze → Prioritize → Plan → Execute → Monitor → Communicate → Close**
+
+**One-line explanation:**
+ **Understand the problem → decide what matters most → make a plan → execute → track progress → keep stakeholders informed → close and learn.**
+
+| **Methodology** | **Description**                                                                                                                                                                                              |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Agile**       | Agile is an approach where projects are delivered in small, frequent parts with continuous feedback and changes. It focuses on flexibility, customer collaboration and quick delivery.                       |
+| **Waterfall**   | Waterfall follows a fixed step-by-step process where each phase is completed before the next begins. It works well when requirements are clear and unlikely to change.                                       |
+| **Scrum**       | Scrum is an Agile framework where work is divided into short **sprints**, usually 1–4 weeks, with defined goals and regular reviews. It uses roles, ceremonies and a prioritized backlog to manage delivery. |
+| **Kanban**      | Kanban manages work continuously by visualizing tasks on a board such as **To Do → In Progress → Done**. It focuses on limiting work in progress and improving the flow of work.                             |</pre>
+</div>
+</section>
+
+<section id="products">
+<h2>B2B SaaS Platforms</h2><p class="sub">Two products currently managed as part of a 16-member cross-functional team.</p>
+<div class="grid">
+<div class="card product"><span class="badge">B2B SaaS • INTERIOR DESIGN</span><h3>Interior Design Business Management</h3><p>Helps manage products, contractors, vendors, clients and accounts, while allowing teams to check project work status.</p></div>
+<div class="card product"><span class="badge">B2B SaaS • REAL ESTATE</span><h3>Real Estate Business Management</h3><p>Connects leads from third-party platforms; Seller Agent communicates with leads and categorizes them as Hot, Warm or Cold.</p><p style="margin-top:10px"><b>Nurture Agent:</b> Shares matching property updates and communicates with inactive leads.</p><p style="margin-top:10px"><b>Prospecting Agent:</b> Schedules realtor and lead meetings to check properties.</p><p style="margin-top:10px"><b>Admin Agent:</b> Simplifies and automates the final purchase process, including finance and legal documents for final handoff.</p></div>
+</div>
+</section>
+
+<section id="workflow"><h2>Universal Project Management Workflow</h2><p class="sub">A simple sequence to approach almost any project problem.</p>
+<div class="flow"><span class="step">Analyze</span><span class="arrow">→</span><span class="step">Prioritize</span><span class="arrow">→</span><span class="step">Plan</span><span class="arrow">→</span><span class="step">Execute</span><span class="arrow">→</span><span class="step">Monitor</span><span class="arrow">→</span><span class="step">Communicate</span><span class="arrow">→</span><span class="step">Close</span></div>
+</section>
+
+<section id="aws"><h2>AWS Services</h2><p class="sub">Quick one-line explanations for interviews.</p>
+<input class="search" placeholder="Search AWS services..." onkeyup="filterTable('awsTable', this.value)">
+<table id="awsTable"><thead><tr><th>Service</th><th>Use</th></tr></thead><tbody>
+<tr><td><b>EC2</b></td><td>Provides virtual servers to run applications and software.</td></tr><tr><td><b>S3</b></td><td>Stores files, images, videos, backups and other objects securely.</td></tr><tr><td><b>RDS</b></td><td>Provides managed relational databases such as MySQL and PostgreSQL.</td></tr><tr><td><b>DynamoDB</b></td><td>Provides a fast, scalable NoSQL database for applications.</td></tr><tr><td><b>Lambda</b></td><td>Runs code without managing servers, based on events or requests.</td></tr><tr><td><b>ECS</b></td><td>Runs and manages containerized applications.</td></tr><tr><td><b>ECR</b></td><td>Stores and manages Docker/container images.</td></tr><tr><td><b>CloudFront</b></td><td>Delivers websites and content faster through a global CDN.</td></tr><tr><td><b>Route 53</b></td><td>Manages domain names and routes users to applications.</td></tr><tr><td><b>VPC</b></td><td>Creates a private and controlled network environment for AWS resources.</td></tr><tr><td><b>IAM</b></td><td>Controls user access, roles and permissions for AWS resources.</td></tr><tr><td><b>CloudWatch</b></td><td>Monitors applications, servers, logs, metrics and system health.</td></tr><tr><td><b>API Gateway</b></td><td>Creates, manages and secures APIs for applications.</td></tr><tr><td><b>SNS</b></td><td>Sends notifications and messages to multiple subscribers.</td></tr><tr><td><b>SQS</b></td><td>Queues messages between applications to support reliable communication.</td></tr><tr><td><b>Elastic Beanstalk</b></td><td>Simplifies deploying and managing web applications on AWS.</td></tr><tr><td><b>CloudFormation</b></td><td>Creates and manages AWS infrastructure using templates.</td></tr><tr><td><b>EBS</b></td><td>Provides persistent storage volumes for EC2 servers.</td></tr><tr><td><b>Bedrock</b></td><td>Provides access to foundation AI models for building generative-AI applications.</td></tr><tr><td><b>Rekognition</b></td><td>Uses AI to analyze images and videos for objects, faces and other visual information.</td></tr>
+</tbody></table>
+<div class="callout" style="margin-top:18px"><strong>Memory shortcut:</strong> EC2 = Compute • S3 = Storage • RDS = Database • Lambda = Serverless • VPC = Network • IAM = Security/Access • CloudWatch = Monitoring • API Gateway = APIs • SQS/SNS = Messaging • CloudFront = Content Delivery</div>
+</section>
+
+<section id="jira"><h2>Jira Charts & Reports</h2><p class="sub">Use these to explain how you track project, sprint and team performance.</p>
+<input class="search" placeholder="Search Jira charts..." onkeyup="filterTable('jiraTable', this.value)">
+<table id="jiraTable"><thead><tr><th>Chart / Report</th><th>Use</th></tr></thead><tbody>
+<tr><td><b>Burndown Chart</b></td><td>Tracks remaining work in a sprint and shows whether the team is likely to complete it on time.</td></tr><tr><td><b>Burnup Chart</b></td><td>Shows completed work against total scope and helps identify scope changes.</td></tr><tr><td><b>Velocity Chart</b></td><td>Tracks how much work the team completes in each sprint to help with future planning.</td></tr><tr><td><b>Sprint Report</b></td><td>Shows completed, incomplete and added work during a sprint.</td></tr><tr><td><b>Control Chart</b></td><td>Measures how long issues take to move through the workflow and helps identify delays.</td></tr><tr><td><b>Cumulative Flow Diagram (CFD)</b></td><td>Shows work across different stages and helps identify bottlenecks.</td></tr><tr><td><b>Cycle Time Report</b></td><td>Measures the time taken from starting work to completing it.</td></tr><tr><td><b>Created vs Resolved Chart</b></td><td>Compares new issues with resolved issues to understand whether the backlog is growing or reducing.</td></tr><tr><td><b>Resolution Time Report</b></td><td>Shows how quickly issues are being resolved over time.</td></tr><tr><td><b>Average Age Chart</b></td><td>Shows how long unresolved issues have been open.</td></tr><tr><td><b>Version Report</b></td><td>Tracks progress toward completing work planned for a specific release/version.</td></tr><tr><td><b>Release Burndown</b></td><td>Shows remaining work against the planned release timeline.</td></tr><tr><td><b>Time Tracking Report</b></td><td>Compares estimated effort with the actual time spent on issues.</td></tr><tr><td><b>Workload Pie Chart</b></td><td>Shows how work is distributed among team members.</td></tr><tr><td><b>Team Workload / Assignee Report</b></td><td>Helps identify whether work is evenly distributed or someone is overloaded.</td></tr><tr><td><b>Epic Report</b></td><td>Tracks progress of an epic and its related stories/tasks.</td></tr><tr><td><b>Dashboard Gadgets</b></td><td>Combines key project, sprint and team metrics into a single view for stakeholders.</td></tr>
+</tbody></table>
+</section>
+
+<section id="risks"><h2>Project Risks</h2><p class="sub">Risk type → meaning → practical example.</p>
+<input class="search" placeholder="Search risk types..." onkeyup="filterTable('riskTable', this.value)">
+<table id="riskTable"><thead><tr><th>Risk</th><th>What it means</th><th>Small example</th></tr></thead><tbody>
+<tr><td><b>Scope</b></td><td>Requirements may change or become unclear.</td><td>Client adds a new dashboard after development has started.</td></tr><tr><td><b>Schedule</b></td><td>A delay in one activity may delay the project.</td><td>A feature planned for 3 days takes 7 days.</td></tr><tr><td><b>Cost / Budget</b></td><td>Actual project cost may exceed the planned budget.</td><td>Extra development hours increase project cost.</td></tr><tr><td><b>Resource</b></td><td>Required people or skills may not be available.</td><td>A key developer becomes unavailable during a critical sprint.</td></tr><tr><td><b>Technical</b></td><td>A technical solution may not work as expected.</td><td>An AI model gives inaccurate results during testing.</td></tr><tr><td><b>Dependency</b></td><td>The project depends on another team, system or service.</td><td>A third-party API delay blocks a payment feature.</td></tr><tr><td><b>Quality</b></td><td>The product may not meet the required quality level.</td><td>A critical bug is found during UAT before release.</td></tr><tr><td><b>Security</b></td><td>The system or data may be exposed to security threats.</td><td>A vulnerability is found in the login system.</td></tr><tr><td><b>Operational</b></td><td>Problems may occur when the product is used in real operations.</td><td>The app works in testing but becomes slow with real users.</td></tr><tr><td><b>Communication</b></td><td>Poor communication can create misunderstanding or mistakes.</td><td>The client and developer understand a requirement differently.</td></tr><tr><td><b>Stakeholder</b></td><td>Stakeholder decisions or approvals may affect delivery.</td><td>The client delays design approval for one week.</td></tr><tr><td><b>Vendor / Third-Party</b></td><td>An external company may fail to deliver as expected.</td><td>A vendor fails to provide a required service on time.</td></tr><tr><td><b>Business</b></td><td>Business changes may affect project priority or value.</td><td>The client changes strategy and cancels a planned feature.</td></tr><tr><td><b>Compliance / Legal</b></td><td>The project may not meet legal or regulatory requirements.</td><td>An app stores customer data without meeting required rules.</td></tr><tr><td><b>People</b></td><td>Team-related issues can affect project delivery.</td><td>Conflict between team members reduces sprint productivity.</td></tr>
+</tbody></table>
+<div class="callout" style="margin-top:18px"><strong>Risk workflow:</strong> Identify → Assess → Prioritize → Mitigate → Assign Owner → Monitor → Communicate</div>
+</section>
+
+<section id="methods"><h2>Delivery Methods</h2>
+<div class="grid">
+<div class="card"><h3>Agile</h3><p>Delivers work in small, frequent parts with regular feedback and room for change.</p></div>
+<div class="card"><h3>Waterfall</h3><p>Uses a fixed step-by-step process where one phase is completed before the next begins.</p></div>
+<div class="card"><h3>Scrum</h3><p>An Agile framework that organizes work into short sprints with a backlog, goals and regular reviews.</p></div>
+<div class="card"><h3>Kanban</h3><p>Visualizes work such as To Do → In Progress → Done and focuses on smooth flow and limiting work in progress.</p></div>
+</div>
+</section>
+</main>
+<footer>Prepared as an interview study reference • Keep answers simple, structured and supported by real examples.</footer>
+<script>
+function filterTable(id,q){
+  q=q.toLowerCase();
+  document.querySelectorAll('#'+id+' tbody tr').forEach(r=>r.style.display=r.innerText.toLowerCase().includes(q)?'':'none');
+}
+
+function filterInterview(q){
+  const box=document.getElementById('interviewContent');
+  if(!q){box.style.display=''; return;}
+  const text=box.innerText.toLowerCase();
+  box.style.display=text.includes(q.toLowerCase())?'':'none';
+}
+</script>
+</body></html>
