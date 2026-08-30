@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amita Balaram Das — Yoga, Wellness &amp; Spiritual Healing</title>
+<meta name="description" content="Amita Balaram Das — Yoga instructor, wellness coach and spiritual healer in Atlanta, rooted in the Vedic tradition and ISKCON community service.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,460;0,9..144,560;0,9..144,650;1,9..144,460;1,9..144,560&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* ---- Core palette (bright, warm, Vedic) ---- */
+    --cream:        #FFF9F1;
+    --cream-deep:   #FFF1DE;
+    --cream-rose:   #FFF0EC;
+    --paper:        #FFFDFA;
+    --ink:          #2B211A;
+    --ink-soft:     #5E4E3E;
+    --ink-faint:    #8A7A67;
+
+    --saffron:      #FF8A3D;
+    --saffron-2:    #FFC24B;
+    --marigold:     #FFA53A;
+    --rose:         #F0617D;
+    --rose-2:       #FF9C7A;
+    --peacock:      #0E7C86;
+    --peacock-2:    #145E75;
+    --indigo:       #223A78;
+    --gold:         #D9A441;
+    --leaf:         #4F8F52;
+    --leaf-2:       #86B96B;
+
+    --grad-warm:     linear-gradient(135deg, var(--saffron) 0%, var(--saffron-2) 100%);
+    --grad-highlight:linear-gradient(100deg, var(--rose) 0%, var(--saffron) 55%, var(--gold) 100%);
+    --grad-peacock:  linear-gradient(135deg, var(--peacock) 0%, var(--peacock-2) 100%);
+    --grad-leaf:     linear-gradient(135deg, var(--leaf) 0%, var(--leaf-2) 100%);
+    --grad-panel:    linear-gradient(135deg, #0E7C86 0%, #145E75 55%, #1F3E63 100%);
+
+    --line: rgba(43,33,26,0.12);
+    --shadow-soft: 0 18px 45px -22px rgba(43,33,26,0.35);
+    --shadow-btn:  0 12px 26px -10px rgba(255,138,61,0.55);
+
+    --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    --container: 1180px;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *,*::before,*::after{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
+  }
+
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ margin:0; padding:0; list-style:none; }
+  section{ position:relative; }
+  h1,h2,h3,h4{ font-family:var(--serif); font-weight:560; margin:0; color:var(--ink); }
+
+  .wrap{ max-width:var(--container); margin:0 auto; padding:0 32px; }
+
+  .eyebrow{
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:460;
+    font-size:1.05rem;
+    color:var(--peacock-2);
+    margin:0 0 14px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px; height:2px;
+    background:var(--grad-warm);
+    border-radius:2px;
+    display:inline-block;
+  }
+
+  .grad-text{
+    background:var(--grad-highlight);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:15px 30px;
+    border-radius:999px;
+    font-family:var(--sans);
+    font-weight:700;
+    font-size:0.98rem;
+    border:none;
+    cursor:pointer;
+    transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, filter .35s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:var(--grad-warm);
+    color:#3A1C05;
+    box-shadow:var(--shadow-btn);
+  }
+  .btn-primary:hover{ transform:translateY(-3px); box-shadow:0 18px 32px -12px rgba(255,138,61,0.6); filter:saturate(1.08); }
+  .btn-primary:active{ transform:translateY(-1px) scale(.99); }
+
+  .btn-ghost{
+    background:transparent;
+    color:var(--ink);
+    border:1.5px solid var(--line);
+  }
+  .btn-ghost:hover{ border-color:var(--peacock); color:var(--peacock-2); transform:translateY(-2px); }
+
+  .btn-light{
+    background:linear-gradient(135deg,#FFFFFF,#FFF3E4);
+    color:var(--peacock-2);
+    box-shadow:0 14px 30px -14px rgba(0,0,0,0.45);
+  }
+  .btn-light:hover{ transform:translateY(-3px); filter:brightness(1.03); }
+
+  .btn-whatsapp{
+    background:var(--grad-leaf);
+    color:#0C2410;
+    box-shadow:0 14px 28px -12px rgba(79,143,82,0.55);
+  }
+  .btn-whatsapp:hover{ transform:translateY(-3px); }
+
+  .btn-block{ width:100%; }
+
+  /* ---------- Nav ---------- */
+  .nav{
+    position:sticky; top:0; z-index:80;
+    background:rgba(255,249,241,0.86);
+    backdrop-filter:blur(14px) saturate(140%);
+    -webkit-backdrop-filter:blur(14px) saturate(140%);
+    border-bottom:1px solid var(--line);
+  }
+  .nav .wrap{ display:flex; align-items:center; justify-content:space-between; height:78px; }
+  .brand{ display:flex; align-items:center; gap:12px; font-family:var(--serif); font-weight:560; font-size:1.18rem; color:var(--ink); }
+  .brand .mark{
+    width:38px; height:38px; border-radius:50%;
+    background:var(--grad-warm);
+    display:flex; align-items:center; justify-content:center;
+    color:#fff8ee; font-size:1.15rem; font-family:var(--serif);
+    box-shadow:0 6px 16px -6px rgba(255,138,61,0.7);
+  }
+  .brand small{ display:block; font-family:var(--sans); font-weight:600; font-size:0.66rem; letter-spacing:.02em; color:var(--ink-faint); margin-top:1px; }
+
+  .nav-links{ display:flex; align-items:center; gap:30px; }
+  .nav-links a{
+    font-weight:600; font-size:0.94rem; color:var(--ink-soft);
+    position:relative; padding:6px 0;
+    transition:color .25s ease;
+  }
+  .nav-links a::after{
+    content:""; position:absolute; left:0; bottom:0; height:2px; width:0;
+    background:var(--grad-warm); border-radius:2px;
+    transition:width .3s ease;
+  }
+  .nav-links a:hover, .nav-links a.active{ color:var(--ink); }
+  .nav-links a:hover::after, .nav-links a.active::after{ width:100%; }
+
+  .nav-cta{ display:flex; align-items:center; gap:16px; }
+  .nav .btn-primary{ padding:11px 22px; font-size:0.9rem; }
+
+  .burger{ display:none; width:42px; height:42px; border-radius:12px; border:1.5px solid var(--line); background:var(--paper); align-items:center; justify-content:center; cursor:pointer; }
+  .burger span, .burger span::before, .burger span::after{
+    content:""; display:block; width:18px; height:2px; background:var(--ink); border-radius:2px; position:relative; transition:.3s ease;
+  }
+  .burger span::before{ position:absolute; top:-6px; }
+  .burger span::after{ position:absolute; top:6px; }
+  .burger.open span{ background:transparent; }
+  .burger.open span::before{ top:0; transform:rotate(45deg); }
+  .burger.open span::after{ top:0; transform:rotate(-45deg); }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:96px 0 110px;
+    overflow:hidden;
+    background:
+      radial-gradient(700px 420px at 88% -8%, rgba(255,194,75,0.30), transparent 62%),
+      radial-gradient(620px 480px at -8% 92%, rgba(14,124,134,0.14), transparent 60%),
+      radial-gradient(500px 400px at 60% 110%, rgba(240,97,125,0.12), transparent 60%),
+      var(--cream);
+  }
+  .hero .wrap{ display:grid; grid-template-columns:1.05fr 0.9fr; gap:56px; align-items:center; }
+
+  .mandala{
+    position:absolute; top:-140px; right:-160px; width:640px; height:640px;
+    opacity:0.16; pointer-events:none;
+    animation:spin 90s linear infinite;
+  }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+
+  .hero h1{
+    font-size:clamp(2.5rem, 4.4vw, 3.7rem);
+    line-height:1.08;
+    letter-spacing:-0.01em;
+    margin-bottom:22px;
+  }
+  .hero p.lead{
+    font-size:1.12rem; color:var(--ink-soft); max-width:52ch; margin-bottom:34px;
+  }
+  .hero-ctas{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom:38px; }
+
+  .hero-stats{ display:flex; gap:34px; flex-wrap:wrap; }
+  .hero-stats div{ display:flex; flex-direction:column; }
+  .hero-stats strong{ font-family:var(--serif); font-size:1.5rem; color:var(--peacock-2); }
+  .hero-stats span{ font-size:0.86rem; color:var(--ink-faint); }
+
+  .hero-art{ position:relative; }
+  .hero-art .ring{
+    position:absolute; inset:-26px;
+    border-radius:52% 48% 62% 38% / 48% 44% 56% 52%;
+    background:var(--grad-warm);
+    opacity:0.22; filter:blur(2px);
+    z-index:0;
+  }
+  .hero-art .frame{
+    position:relative; z-index:1;
+    border-radius:52% 48% 62% 38% / 48% 44% 56% 52%;
+    overflow:hidden;
+    box-shadow:var(--shadow-soft);
+    border:5px solid var(--paper);
+    aspect-ratio: 1 / 1.04;
+  }
+  .hero-art .frame img{ width:100%; height:100%; object-fit:cover; }
+
+  .hero-badge{
+    position:absolute; left:-26px; bottom:22px; z-index:2;
+    background:var(--paper);
+    border-radius:18px;
+    padding:16px 20px;
+    box-shadow:0 18px 34px -16px rgba(43,33,26,0.4);
+    display:flex; align-items:center; gap:12px;
+    max-width:230px;
+    border:1px solid var(--line);
+  }
+  .hero-badge .ic{
+    width:38px; height:38px; border-radius:50%;
+    background:var(--grad-peacock); flex:none;
+    display:flex; align-items:center; justify-content:center; color:#fff;
+  }
+  .hero-badge strong{ display:block; font-size:0.86rem; color:var(--ink); }
+  .hero-badge span{ font-size:0.76rem; color:var(--ink-faint); }
+
+  .petal{ position:absolute; opacity:0.55; animation:float 7s ease-in-out infinite; }
+  @keyframes float{ 0%,100%{ transform:translateY(0) rotate(0deg);} 50%{ transform:translateY(-14px) rotate(8deg);} }
+
+  /* ---------- Section shells ---------- */
+  .section{ padding:104px 0; }
+  .section.tone-deep{ background:var(--cream-deep); }
+  .section-head{ max-width:640px; margin-bottom:56px; }
+  .section-head h2{ font-size:clamp(1.9rem, 3vw, 2.5rem); line-height:1.15; margin-bottom:16px; }
+  .section-head p{ color:var(--ink-soft); font-size:1.04rem; }
+  .section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+  .section-head.center .eyebrow{ justify-content:center; }
+
+  /* ---------- Gallery (masonry) ---------- */
+  .gallery{ position:relative; }
+  .gallery-blob{ position:absolute; top:60px; left:-120px; width:340px; height:340px; border-radius:50%; background:var(--grad-leaf); opacity:0.10; filter:blur(30px); }
+  .masonry{
+    columns:4 220px; column-gap:18px;
+  }
+  .masonry figure{
+    margin:0 0 18px; break-inside:avoid;
+    border-radius:20px; overflow:hidden; position:relative;
+    box-shadow:0 10px 26px -16px rgba(43,33,26,0.35);
+    cursor:zoom-in;
+  }
+  .masonry figure img{ width:100%; display:block; transition:transform .6s cubic-bezier(.2,.8,.2,1); }
+  .masonry figure:hover img{ transform:scale(1.06); }
+  .masonry figure::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(to top, rgba(20,15,10,0.42), transparent 46%);
+    opacity:0; transition:opacity .35s ease;
+  }
+  .masonry figure:hover::after{ opacity:1; }
+  .masonry figure figcaption{
+    position:absolute; left:14px; bottom:12px; right:14px;
+    color:#fff; font-size:0.82rem; font-weight:600;
+    opacity:0; transform:translateY(6px);
+    transition:opacity .35s ease, transform .35s ease;
+  }
+  .masonry figure:hover figcaption{ opacity:1; transform:translateY(0); }
+
+  /* lightbox */
+  .lightbox{
+    position:fixed; inset:0; background:rgba(20,14,10,0.86);
+    display:none; align-items:center; justify-content:center; z-index:200;
+    padding:40px;
+  }
+  .lightbox.open{ display:flex; }
+  .lightbox img{ max-width:min(900px,90vw); max-height:86vh; border-radius:14px; box-shadow:0 30px 70px rgba(0,0,0,0.5); }
+  .lightbox-close{
+    position:absolute; top:26px; right:30px; width:44px; height:44px; border-radius:50%;
+    background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.35); color:#fff;
+    font-size:1.3rem; cursor:pointer; display:flex; align-items:center; justify-content:center;
+  }
+
+  /* ---------- Services ---------- */
+  .services-list{ display:grid; grid-template-columns:repeat(2, 1fr); gap:20px; }
+  .service-row{
+    display:flex; gap:20px; align-items:flex-start;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:22px;
+    padding:26px 24px;
+    transition:border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+  }
+  .service-row:hover{ transform:translateY(-4px); border-color:transparent; box-shadow:0 20px 40px -22px rgba(43,33,26,0.4); }
+  .service-icon{
+    flex:none; width:52px; height:52px; border-radius:16px;
+    background:var(--grad-warm);
+    display:flex; align-items:center; justify-content:center;
+    color:#3A1C05;
+  }
+  .service-row:nth-child(2n) .service-icon{ background:var(--grad-peacock); color:#eafbfb; }
+  .service-row:nth-child(3n) .service-icon{ background:var(--grad-leaf); color:#0e2210; }
+  .service-row h3{ font-size:1.14rem; margin-bottom:8px; }
+  .service-row p{ color:var(--ink-soft); font-size:0.96rem; margin:0; }
+
+  /* ---------- About ---------- */
+  .about .wrap{ display:grid; grid-template-columns:0.8fr 1.15fr; gap:64px; align-items:center; }
+  .about-art{ position:relative; }
+  .about-art .frame{
+    border-radius:26px; overflow:hidden; box-shadow:var(--shadow-soft);
+    border:6px solid var(--paper);
+  }
+  .about-art .frame img{ width:100%; }
+  .about-art .glow{
+    position:absolute; inset:18px -18px -18px 18px; z-index:-1;
+    border-radius:26px; background:var(--grad-peacock); opacity:0.18; filter:blur(2px);
+  }
+  .about-leaf{ position:absolute; width:64px; opacity:0.9; }
+
+  .about-copy p{ color:var(--ink-soft); margin:0 0 18px; font-size:1.02rem; }
+  .role-line{ display:flex; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:22px; }
+  .role-line span{ font-family:var(--serif); font-style:italic; color:var(--peacock-2); font-size:1.06rem; }
+  .role-sep{ width:6px; height:6px; border-radius:50%; background:var(--grad-warm); display:inline-block; }
+
+  .timeline{ margin-top:28px; display:flex; flex-direction:column; gap:14px; }
+  .timeline li{
+    display:flex; gap:14px; align-items:flex-start;
+    padding:16px 18px; background:var(--cream-deep); border-radius:16px;
+  }
+  .timeline .dot{ width:10px; height:10px; border-radius:50%; background:var(--grad-warm); margin-top:6px; flex:none; }
+  .timeline strong{ display:block; font-size:0.96rem; color:var(--ink); }
+  .timeline span{ font-size:0.85rem; color:var(--ink-faint); }
+
+  /* ---------- Connect ---------- */
+  .connect{
+    background:var(--grad-panel);
+    color:#F4FBFB;
+    overflow:hidden;
+    position:relative;
+  }
+  .connect::before{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(480px 300px at 12% 20%, rgba(255,194,75,0.20), transparent 60%),
+               radial-gradient(420px 320px at 90% 85%, rgba(240,97,125,0.22), transparent 60%);
+  }
+  .connect .wrap{ position:relative; }
+  .connect .section-head h2{ color:#FBF6ED; }
+  .connect .section-head p{ color:rgba(244,251,251,0.82); }
+  .connect .eyebrow{ color:#FFD79A; }
+  .connect .eyebrow::before{ background:linear-gradient(135deg,#FFD79A,#FF9C7A); }
+
+  .connect-cards{ display:grid; grid-template-columns:repeat(2, 1fr); gap:22px; max-width:760px; }
+  .connect-card{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.18);
+    border-radius:22px;
+    padding:28px;
+    backdrop-filter:blur(6px);
+    display:flex; flex-direction:column; gap:16px;
+    transition:transform .3s ease, background .3s ease;
+  }
+  .connect-card:hover{ transform:translateY(-5px); background:rgba(255,255,255,0.13); }
+  .connect-card .cico{
+    width:48px; height:48px; border-radius:14px; display:flex; align-items:center; justify-content:center;
+  }
+  .connect-card.fb .cico{ background:linear-gradient(135deg,#4C7CF3,#2E4FA8); }
+  .connect-card.wa .cico{ background:var(--grad-leaf); }
+  .connect-card h3{ color:#FBF6ED; font-size:1.12rem; margin:0; }
+  .connect-card p{ color:rgba(244,251,251,0.78); font-size:0.92rem; margin:0; }
+
+  /* ---------- Booking ---------- */
+  .booking .wrap{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:60px; align-items:flex-start; }
+  .booking-copy p{ color:var(--ink-soft); margin-bottom:22px; }
+  .booking-points{ display:flex; flex-direction:column; gap:16px; }
+  .booking-points li{ display:flex; gap:12px; align-items:flex-start; font-size:0.96rem; color:var(--ink-soft); }
+  .booking-points .tick{
+    flex:none; width:24px; height:24px; border-radius:50%; background:var(--grad-warm);
+    display:flex; align-items:center; justify-content:center; color:#3A1C05; font-size:0.78rem; margin-top:2px;
+  }
+
+  .book-card{
+    background:var(--paper);
+    border-radius:26px;
+    padding:38px;
+    box-shadow:var(--shadow-soft);
+    border:1px solid var(--line);
+  }
+  .form-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .field{ display:flex; flex-direction:column; gap:8px; margin-bottom:20px; }
+  .field.full{ grid-column:1 / -1; }
+  .field label{ font-size:0.86rem; font-weight:700; color:var(--ink); }
+  .field input, .field select, .field textarea{
+    font-family:var(--sans); font-size:0.96rem; color:var(--ink);
+    padding:13px 15px; border-radius:12px; border:1.5px solid var(--line);
+    background:var(--cream); outline:none;
+    transition:border-color .25s ease, box-shadow .25s ease;
+  }
+  .field textarea{ resize:vertical; min-height:110px; font-family:var(--sans); }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    border-color:var(--saffron);
+    box-shadow:0 0 0 4px rgba(255,138,61,0.18);
+  }
+  .form-note{ font-size:0.84rem; color:var(--ink-faint); margin-top:14px; text-align:center; }
+  .form-success{
+    display:none; align-items:center; gap:10px; background:#EAF6EC; color:#2A5A2D;
+    border-radius:12px; padding:14px 16px; font-size:0.9rem; margin-bottom:18px; font-weight:600;
+  }
+  .form-success.show{ display:flex; }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:#1C2C33;
+    color:#DDEEEF;
+    padding:56px 0 28px;
+  }
+  .foot-top{ display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; margin-bottom:36px; }
+  .foot-brand{ display:flex; align-items:center; gap:12px; }
+  .foot-brand .mark{
+    width:40px; height:40px; border-radius:50%; background:var(--grad-warm);
+    display:flex; align-items:center; justify-content:center; color:#3A1C05; font-family:var(--serif);
+  }
+  .foot-brand strong{ font-family:var(--serif); font-size:1.15rem; color:#F4FBFB; display:block; }
+  .foot-brand span{ font-size:0.82rem; color:#9FC0C3; }
+  .foot-links{ display:flex; gap:34px; flex-wrap:wrap; }
+  .foot-links a{ font-size:0.9rem; color:#BFDBDD; transition:color .2s ease; }
+  .foot-links a:hover{ color:#FFC24B; }
+  .foot-bottom{
+    border-top:1px solid rgba(255,255,255,0.12);
+    padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+    font-size:0.82rem; color:#8FADAF;
+  }
+
+  .to-top{
+    position:fixed; right:24px; bottom:24px; width:48px; height:48px; border-radius:50%;
+    background:var(--grad-warm); color:#3A1C05; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 14px 26px -10px rgba(255,138,61,0.6); border:none; cursor:pointer;
+    opacity:0; pointer-events:none; transition:opacity .3s ease, transform .3s ease;
+    z-index:60;
+  }
+  .to-top.show{ opacity:1; pointer-events:auto; }
+  .to-top:hover{ transform:translateY(-3px); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 980px){
+    .hero .wrap{ grid-template-columns:1fr; }
+    .hero-art{ order:-1; max-width:420px; margin:0 auto 20px; }
+    .about .wrap{ grid-template-columns:1fr; }
+    .about-art{ max-width:420px; margin:0 auto; }
+    .booking .wrap{ grid-template-columns:1fr; }
+    .services-list{ grid-template-columns:1fr; }
+    .connect-cards{ grid-template-columns:1fr; }
+    .masonry{ columns:3 200px; }
+  }
+  @media (max-width: 760px){
+    .nav-links, .nav-cta .btn-primary{ display:none; }
+    .burger{ display:flex; }
+    .nav.menu-open .nav-links{
+      display:flex; position:absolute; top:78px; left:0; right:0; background:var(--paper);
+      flex-direction:column; padding:24px 32px; gap:18px; border-bottom:1px solid var(--line);
+      box-shadow:0 20px 30px -20px rgba(0,0,0,0.3);
+    }
+    .section{ padding:76px 0; }
+    .hero{ padding:64px 0 76px; }
+    .form-grid{ grid-template-columns:1fr; }
+    .masonry{ columns:2 160px; }
+    .foot-top{ flex-direction:column; gap:24px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="siteNav">
+    <div class="wrap">
+      <a href="#home" class="brand">
+        <span class="mark">ॐ</span>
+        <span>Amita Balaram Das<small>Yoga · Wellness · Spiritual Healing</small></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#services">Services</a>
+        <a href="#about">About Me</a>
+        <a href="#connect">Connect</a>
+        <a href="#book">Book Now</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="#book" class="btn btn-primary">Book a Session</a>
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HOME / HERO ================= -->
+  <section class="hero" id="home">
+    <svg class="mandala" viewBox="0 0 200 200" aria-hidden="true">
+      <g fill="none" stroke="#0E7C86" stroke-width="0.6">
+        <circle cx="100" cy="100" r="94"/>
+        <circle cx="100" cy="100" r="78" stroke-dasharray="2 4"/>
+        <circle cx="100" cy="100" r="60"/>
+        <circle cx="100" cy="100" r="40" stroke-dasharray="1 3"/>
+      </g>
+      <g fill="#FFA53A" opacity="0.7">
+        <circle cx="100" cy="6" r="2.4"/><circle cx="100" cy="194" r="2.4"/>
+        <circle cx="6" cy="100" r="2.4"/><circle cx="194" cy="100" r="2.4"/>
+        <circle cx="33" cy="33" r="2"/><circle cx="167" cy="33" r="2"/>
+        <circle cx="33" cy="167" r="2"/><circle cx="167" cy="167" r="2"/>
+      </g>
+    </svg>
+
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">Yoga, wellness coaching and spiritual healing</p>
+        <h1>Yoga for the body.<br><span class="grad-text">Peace for the soul.</span></h1>
+        <p class="lead">Amita Balaram Das guides students through classical Hatha and Vedic yoga, mindful living, and the timeless wisdom of the Bhagavad-gita — shared with the warmth of a lifelong service devotee rooted in the Krishna-conscious tradition.</p>
+        <div class="hero-ctas">
+          <a href="#book" class="btn btn-primary">Book a session</a>
+          <a href="#services" class="btn btn-ghost">See how I can help</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>ISKCON</strong><span>Atlanta community leader</span></div>
+          <div><strong>S-VYASA</strong><span>Certified, Bangalore</span></div>
+          <div><strong>Food4Lives</strong><span>Director, seva &amp; service</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="ring" aria-hidden="true"></div>
+        <div class="frame">
+          <img src="assets/hero.jpg" alt="Amita Balaram Das in traditional attire, smiling with hands folded in a gesture of greeting">
+        </div>
+        <div class="hero-badge">
+          <span class="ic">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c2 3 3 5.2 3 7.5A3 3 0 0 1 9 10.5C9 8.2 10 6 12 3Z"/><path d="M6 21c0-4 2.5-6.5 6-6.5S18 17 18 21"/></svg>
+          </span>
+          <div>
+            <strong>Rooted in tradition</strong>
+            <span>Grounded in classical Vedic practice</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY ================= -->
+  <section class="section gallery" id="gallery">
+    <div class="gallery-blob" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Moments of practice and service</p>
+        <h2>Glimpses from classes, kirtans and years of seva</h2>
+        <p>A few frames from the journey — teaching, travelling, and serving alongside the ISKCON community across the world.</p>
+      </div>
+
+      <div class="masonry" id="masonry">
+        <figure data-full="assets/gallery-01.jpg"><img src="assets/gallery-01.jpeg" loading="lazy" alt="Amita with a senior devotee at an ISKCON temple, greeting with folded hands"><figcaption>Temple visit &amp; blessings</figcaption></figure>
+        <figure data-full="assets/gallery-08.jpg"><img src="assets/gallery-08.jpeg" loading="lazy" alt="Amita with a group of fellow devotees indoors, celebrating together"><figcaption>Community &amp; fellowship</figcaption></figure>
+        <figure data-full="assets/gallery-06.jpg"><img src="assets/gallery-06.jpg" loading="lazy" alt="Ratha Yatra festival with colourful flower garlands"><figcaption>Ratha Yatra festival</figcaption></figure>
+        <figure data-full="assets/gallery-10.jpg"><img src="assets/gallery-10.jpeg" loading="lazy" alt="Amita sharing a copy of the Bhagavad-gita with friends"><figcaption>Sharing the Gita</figcaption></figure>
+        <figure data-full="assets/gallery-04.jpg"><img src="assets/gallery-04.jpg" loading="lazy" alt="Graduation day with a fellow student"><figcaption>Graduation day</figcaption></figure>
+        <figure data-full="assets/gallery-02.jpg"><img src="assets/gallery-02.jpeg" loading="lazy" alt="Amita walking in a devotional procession in New York City"><figcaption>Devotional procession, NYC</figcaption></figure>
+        <figure data-full="assets/gallery-07.jpg"><img src="assets/gallery-07.jpg" loading="lazy" alt="Book table with Bhagavad-gita and spiritual literature"><figcaption>Sharing sacred texts</figcaption></figure>
+        <figure data-full="assets/gallery-03.jpg"><img src="assets/gallery-03.jpg" loading="lazy" alt="Amita visiting a peaceful garden in Korea"><figcaption>Travels &amp; reflection</figcaption></figure>
+        <figure data-full="assets/gallery-09.jpg"><img src="assets/gallery-09.jpg" loading="lazy" alt="Group photo with fellow devotees under green trees"><figcaption>Fellowship amid nature</figcaption></figure>
+        <figure data-full="assets/gallery-05.jpg"><img src="assets/gallery-05.jpg" loading="lazy" alt="Four devotees standing together outdoors"><figcaption>Standing together in service</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="section tone-deep" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Ways we can walk this path together</p>
+        <h2>Personalised support for the <span class="grad-text">body, mind and spirit</span></h2>
+        <p>Every offering blends classical yogic discipline with practical, everyday guidance — so the practice actually fits your life.</p>
+      </div>
+
+      <div class="services-list">
+        <div class="service-row">
+          <span class="service-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c2 3 3 5.2 3 7.5A3 3 0 0 1 9 10.5C9 8.2 10 6 12 3Z"/><path d="M6 21c0-4 2.5-6.5 6-6.5S18 17 18 21"/><path d="M3 14c1.5 1 3 1.2 4 .6M21 14c-1.5 1-3 1.2-4 .6"/></svg>
+          </span>
+          <div>
+            <h3>Hatha &amp; Vedic Yoga</h3>
+            <p>Private and small-group asana and pranayama sessions grounded firmly in the classical yogic tradition, for every level of experience.</p>
+          </div>
+        </div>
+
+        <div class="service-row">
+          <span class="service-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+          </span>
+          <div>
+            <h3>Wellness Coaching</h3>
+            <p>One-on-one guidance for stress, sleep and daily rhythm, blending modern wellbeing insight with the discipline of yogic living.</p>
+          </div>
+        </div>
+
+        <div class="service-row">
+          <span class="service-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3"/><circle cx="6" cy="16" r="2"/><circle cx="18" cy="16" r="2"/><circle cx="12" cy="20" r="1.6"/><path d="M12 11v0M8 15l2-2M16 15l-2-2M12 17.5v1"/></svg>
+          </span>
+          <div>
+            <h3>Spiritual Healing &amp; Counsel</h3>
+            <p>Quiet, one-on-one conversations rooted in meditation, mantra and the Bhagavad-gita, to ease the mind and steady the heart.</p>
+          </div>
+        </div>
+
+        <div class="service-row">
+          <span class="service-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.35-9.3-8.4C1.2 9.2 3 6 6.4 6c2 0 3.4 1.1 4.1 2.1M12 21s7-4.35 9.3-8.4C22.8 9.2 21 6 17.6 6c-2 0-3.4 1.1-4.1 2.1"/></svg>
+          </span>
+          <div>
+            <h3>Kirtan &amp; Satsang</h3>
+            <p>Community chanting and spiritual discourse that bring people together in shared devotion, reflection and joy.</p>
+          </div>
+        </div>
+
+        <div class="service-row">
+          <span class="service-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="9" r="3"/><path d="M2 20c0-3 2.5-5 6-5s6 2 6 5M12 20c0-2.5 2-4.5 5-4.5s5 2 5 4.5"/></svg>
+          </span>
+          <div>
+            <h3>Corporate &amp; Group Workshops</h3>
+            <p>Mindfulness and yoga programs designed for organisations, communities and groups looking to practice together.</p>
+          </div>
+        </div>
+
+        <div class="service-row">
+          <span class="service-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12c0 4.4 3.6 8 8 8s8-3.6 8-8"/><path d="M4 12a8 8 0 0 1 16 0"/><path d="M12 4v4"/></svg>
+          </span>
+          <div>
+            <h3>Food4Lives Seva</h3>
+            <p>Community food-seva initiatives led as Director at Food4Lives — serving those in need with care, dignity and devotion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section about" id="about">
+    <div class="wrap">
+      <div class="about-art">
+        <div class="glow" aria-hidden="true"></div>
+        <div class="frame">
+          <img src="assets/about.jpg" alt="Amita Balaram Das speaking and sharing the Bhagavad-gita at a community event">
+        </div>
+      </div>
+
+      <div class="about-copy">
+        <p class="eyebrow">About me</p>
+        <h2>A life shaped by <span class="grad-text">devotion and service</span></h2>
+
+        <div class="role-line">
+          <span>Yoga Instructor</span><i class="role-sep"></i>
+          <span>Wellness Coach</span><i class="role-sep"></i>
+          <span>Spiritual Healer</span>
+        </div>
+
+        <p>Born in Kolkata — the very city where Śrīla A. C. Bhaktivedanta Swami Prabhupāda began his own journey — Amita Balaram Das grew up close to the roots of the Vedic tradition he now shares with students across the world.</p>
+        <p>He serves as an active leader, service devotee and community organiser with <strong>ISKCON Atlanta</strong>, and is the Director at <strong>Food4Lives</strong>, where care for the body and care for the soul meet through community seva.</p>
+        <p>His teaching draws on formal study in the United States and years of dedicated training in India, bringing together modern wellness thinking and the classical science of yoga.</p>
+
+        <ul class="timeline">
+          <li>
+            <span class="dot"></span>
+            <div><strong>S-VYASA Yoga University, Bangalore, India</strong><span>Advanced training in yoga science and practice</span></div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div><strong>Kidee School</strong><span>Bachelor of Science in Yoga</span></div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div><strong>Gwinnett College, Georgia, USA</strong><span>Undergraduate studies</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONNECT ================= -->
+  <section class="section connect" id="connect">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Let's stay connected</p>
+        <h2>Reach out for classes, satsang invitations, or a quiet conversation</h2>
+        <p>Whether you have a question about a session or simply wish to say hello, I'd love to hear from you.</p>
+      </div>
+
+      <div class="connect-cards">
+        <a class="connect-card fb" href="https://www.facebook.com/amitavajps.india" target="_blank" rel="noopener">
+          <span class="cico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M13.5 21v-7.2h2.4l.4-2.8h-2.8v-1.8c0-.8.2-1.4 1.4-1.4h1.5V5.3c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.1H8v2.8h2.5V21h3z"/></svg>
+          </span>
+          <div>
+            <h3>Follow on Facebook</h3>
+            <p>Class updates, kirtan invitations and everyday reflections.</p>
+          </div>
+        </a>
+
+        <a class="connect-card wa" href="https://wa.me/16787022039" target="_blank" rel="noopener">
+          <span class="cico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.7-1.2A9 9 0 1 0 12 3Zm5.2 12.8c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.6.7 1.9.8 2 .1.2.1.4 0 .6-.1.2-.1.3-.3.5-.1.2-.3.4-.4.5-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.8.8.3.1.5.2.5.3.1.2.1.5-.1 1Z"/></svg>
+          </span>
+          <div>
+            <h3>Message on WhatsApp</h3>
+            <p>+1 (678) 702-2039 — the fastest way to reach me directly.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BOOK NOW ================= -->
+  <section class="section booking" id="book">
+    <div class="wrap">
+      <div class="booking-copy">
+        <p class="eyebrow">Book a session</p>
+        <h2>Begin with a <span class="grad-text">single, simple step</span></h2>
+        <p>Share a few details below and I will personally confirm your session over WhatsApp — no long forms, no waiting.</p>
+        <ul class="booking-points">
+          <li><span class="tick">✓</span> Sessions offered one-on-one, in small groups, or for organisations</li>
+          <li><span class="tick">✓</span> Choose a date and time that genuinely works for you</li>
+          <li><span class="tick">✓</span> Every request is answered personally, with care</li>
+        </ul>
+      </div>
+
+      <div class="book-card">
+        <div class="form-success" id="formSuccess">Your request is ready — continue in WhatsApp to send it.</div>
+        <form id="bookingForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="bDate">Date</label>
+              <input type="date" id="bDate" name="date" required>
+            </div>
+            <div class="field">
+              <label for="bTime">Time</label>
+              <input type="time" id="bTime" name="time" required>
+            </div>
+          </div>
+
+          <div class="field full">
+            <label for="bService">Service type</label>
+            <select id="bService" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option>Hatha &amp; Vedic Yoga</option>
+              <option>Wellness Coaching</option>
+              <option>Spiritual Healing &amp; Counsel</option>
+              <option>Kirtan &amp; Satsang</option>
+              <option>Corporate &amp; Group Workshop</option>
+              <option>Food4Lives Seva</option>
+              <option>Something else</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="bDetails">Details</label>
+            <textarea id="bDetails" name="details" placeholder="Tell me a little about what you're looking for — experience level, location, or anything else that helps."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-whatsapp btn-block">Send booking request via WhatsApp</button>
+          <p class="form-note">This opens WhatsApp with your details pre-filled — you'll confirm and send it yourself.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <span class="mark">ॐ</span>
+          <div>
+            <strong>Amita Balaram Das</strong>
+            <span>Yoga · Wellness · Spiritual Healing</span>
+          </div>
+        </div>
+        <nav class="foot-links">
+          <a href="#home">Home</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#services">Services</a>
+          <a href="#about">About Me</a>
+          <a href="#connect">Connect</a>
+          <a href="#book">Book Now</a>
+        </nav>
+      </div>
+      <div class="foot-bottom">
+        <span>© <span id="year"></span> Amita Balaram Das. Made with devotion.</span>
+        <span>Atlanta, Georgia, USA</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <img src="" alt="" id="lightboxImg">
+  </div>
+
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile nav
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('siteNav');
+  burger.addEventListener('click', () => {
+    const open = nav.classList.toggle('menu-open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('menu-open'); burger.classList.remove('open'); burger.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Active link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('.nav-links a');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + entry.target.id));
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  sections.forEach(s => io.observe(s));
+
+  // Back to top
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', () => {
+    toTop.classList.toggle('show', window.scrollY > 500);
+  });
+  toTop.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  document.querySelectorAll('.masonry figure').forEach(fig => {
+    fig.addEventListener('click', () => {
+      lightboxImg.src = fig.getAttribute('data-full');
+      lightboxImg.alt = fig.querySelector('img').alt;
+      lightbox.classList.add('open');
+    });
+  });
+  const closeLightbox = () => lightbox.classList.remove('open');
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeLightbox(); });
+
+  // Booking form -> WhatsApp
+  const form = document.getElementById('bookingForm');
+  const successMsg = document.getElementById('formSuccess');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const date = document.getElementById('bDate').value;
+    const time = document.getElementById('bTime').value;
+    const service = document.getElementById('bService').value;
+    const details = document.getElementById('bDetails').value;
+
+    if(!date || !time || !service){
+      form.reportValidity();
+      return;
+    }
+
+    const message =
+`Hare Krishna Amita, I would like to book a session.
+Service: ${service}
+Date: ${date}
+Time: ${time}
+Details: ${details || '—'}`;
+
+    const url = 'https://wa.me/16787022039?text=' + encodeURIComponent(message);
+    successMsg.classList.add('show');
+    window.open(url, '_blank', 'noopener');
+  });
+</script>
+</body>
+</html>
