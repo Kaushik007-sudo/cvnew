@@ -1,0 +1,16 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Generated local website snapshot is safe but can be regenerated.
+# Keep it tracked if you want a fixed KB snapshot; uncomment to ignore:
+# knowledge_base/website_knowledge.txt
+
+# Logs
+*.log
