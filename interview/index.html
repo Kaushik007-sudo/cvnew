@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaushik Das — Project Manager Interview Guide</title>
+<style>
+:root{--bg:#07070d;--soft:#0c0c16;--panel:#111120;--panel2:#17172a;--line:rgba(255,255,255,.09);--text:#f1f2fb;--muted:#a0a0bf;--faint:#70708e;--violet:#7c5cff;--blue:#3b9dff;--cyan:#37e6e6;--green:#5af0a0;--grad:linear-gradient(120deg,var(--violet),var(--blue));--radius:20px;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}h1,h2,h3{font-family:Sora,Inter,sans-serif;margin:0;letter-spacing:-.025em}p{margin:0;color:var(--muted)}a{color:inherit;text-decoration:none}.container{max-width:var(--max);margin:auto;padding:0 24px}
+.grain{position:fixed;inset:0;z-index:10;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}.orb{position:fixed;border-radius:50%;filter:blur(100px);opacity:.18;z-index:0;pointer-events:none}.orb-1{width:500px;height:500px;background:var(--violet);top:-200px;left:-180px}.orb-2{width:450px;height:450px;background:var(--blue);top:30%;right:-220px}.orb-3{width:400px;height:400px;background:var(--cyan);bottom:-220px;left:30%}
+.topbar{position:sticky;top:0;z-index:20;background:#07070de8;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.topbar-inner{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{font:700 1.18rem Sora}.brand span{background:var(--grad);-webkit-background-clip:text;color:transparent}.top-actions{display:flex;align-items:center;gap:12px}.status{font-size:12px;color:#b8bdd1;border:1px solid var(--line);padding:7px 11px;border-radius:100px}.status i{display:inline-block;width:7px;height:7px;background:var(--green);border-radius:50%;margin-right:7px}.icon-btn{width:36px;height:36px;border:1px solid var(--line);border-radius:50%;background:#ffffff08;color:#fff}
+.hero{position:relative;z-index:1;min-height:520px;padding:80px 0;background:radial-gradient(circle at 75% 50%,#3b9dff12,transparent 30%)}.hero-inner{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center}.eyebrow,.section-label{font-size:11px;font-weight:800;letter-spacing:.14em;color:#a9a0ff}.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.02;margin:18px 0}.hero h1 span{background:var(--grad);-webkit-background-clip:text;color:transparent}.hero-copy>p{font-size:17px;max-width:650px}.hero-actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:10px;border-radius:100px;padding:13px 22px;font-weight:700;font-size:14px;transition:.25s}.btn.primary{background:var(--grad);box-shadow:0 15px 45px #503cdc44}.btn.primary:hover{transform:translateY(-3px)}.btn.ghost{border:1px solid var(--line);background:#ffffff05}.btn.ghost:hover{background:#ffffff0b}
+.hero-card{background:linear-gradient(145deg,#15152a,#0e1019);border:1px solid var(--line);border-radius:28px;padding:32px;display:flex;gap:22px;align-items:center;box-shadow:0 30px 80px #00000040}.hero-card p{font-size:13px;margin-top:7px}.ring{width:118px;height:118px;border-radius:50%;padding:5px;background:conic-gradient(var(--violet),var(--cyan),var(--blue),var(--violet));flex-shrink:0}.ring-inner{height:100%;border-radius:50%;background:#0d0f17;display:flex;flex-direction:column;align-items:center;justify-content:center}.ring strong{font:800 27px Sora}.ring small{color:var(--green);font-size:10px;font-weight:800;letter-spacing:.15em}
+.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-24px;position:relative;z-index:3}.quick-card{background:#111120ee;border:1px solid var(--line);border-radius:16px;padding:17px;display:flex;gap:12px;align-items:center;transition:.3s}.quick-card:hover{transform:translateY(-5px);border-color:#7c5cff55}.quick-card b,.quick-card small{display:block}.quick-card small{font-size:12px;color:var(--muted);margin-top:3px}.qicon{font-size:22px}
+section{position:relative;z-index:1;padding:82px 0}.section-head{text-align:center;margin-bottom:34px}.section-head.left{text-align:left}.section-head h2{font-size:clamp(27px,4vw,42px);margin:10px 0}.section-head p{max-width:700px;margin:auto}.section-head.left p{margin:0}
+.learning-map{padding-bottom:40px}.map{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}.map-step{display:flex;gap:10px;align-items:center;padding:13px 15px;background:var(--panel);border:1px solid var(--line);border-radius:14px;min-width:170px;transition:.25s}.map-step:hover{border-color:#7c5cff66;transform:translateY(-3px)}.map-step>span{font:800 12px Sora;color:var(--cyan)}.map-step b,.map-step small{display:block}.map-step small{color:var(--muted);font-size:11px}.map>i{color:#65677b}
+.profile-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.big-profile,.mini-stack>div{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:28px}.big-profile{background:linear-gradient(145deg,#16152a,#10121b)}.profile-tag{font-size:10px;color:var(--cyan);font-weight:800;letter-spacing:.14em}.big-profile h3{font-size:27px;margin:13px 0}.profile-points{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.profile-points span{font-size:12px;padding:8px 10px;border-radius:100px;background:#ffffff06;border:1px solid var(--line);color:#c5c8d7}.mini-stack{display:grid;gap:12px}.mini-stack b,.mini-stack span,.mini-stack small{display:block}.mini-stack span{font:600 15px Sora;margin:5px 0}.mini-stack small{font-size:12px}
+.dark-section{background:linear-gradient(180deg,#0a0a12,#0d0e18);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.product-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.product-card{padding:28px;background:var(--panel);border:1px solid var(--line);border-radius:22px;transition:.3s}.product-card:hover{transform:translateY(-5px);border-color:#7c5cff55}.product-top{display:flex;justify-content:space-between;color:var(--cyan);font-size:11px;letter-spacing:.1em}.product-card h3{font-size:22px;margin:16px 0 9px}.flowline{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:22px}.flowline span{padding:7px 9px;background:#ffffff06;border:1px solid var(--line);border-radius:8px;font-size:11px}.flowline i{color:#6e7190}.agent-list{display:grid;gap:8px;margin-top:20px}.agent-list div{padding:11px 13px;border-left:2px solid #7c5cff88;background:#ffffff04;border-radius:0 9px 9px 0}.agent-list strong,.agent-list small{display:block}.agent-list strong{font-size:12px;color:#d9d7ff}.agent-list small{font-size:11px;margin-top:2px}
+.method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.method{padding:23px;border-radius:18px;border:1px solid var(--line);background:var(--panel);transition:.3s}.method:hover{transform:translateY(-5px)}.method>span{font-size:10px;font-weight:800;letter-spacing:.13em;color:var(--cyan)}.method h3{margin:10px 0;font-size:19px}.method p{font-size:13px}.when{font-size:11px;color:#8e91a9;margin-top:16px;padding-top:13px;border-top:1px solid var(--line)}
+.framework{padding:20px 0 70px}.framework-card{display:flex;align-items:center;gap:18px;padding:23px;border-radius:18px;background:linear-gradient(110deg,#18152e,#101c26);border:1px solid #7c5cff44}.framework-icon{font-size:28px}.framework-card h3{font-size:19px;margin:4px 0}.framework-card p{font-size:12px}
+.control-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.control-card{padding:22px;background:var(--panel);border:1px solid var(--line);border-radius:18px}.control-no{font:800 12px Sora;color:var(--violet)}.control-card h3{margin:8px 0;font-size:19px}.control-card p{font-size:13px}.control-card b{display:block;font-size:10px;color:#a7abc0;margin-top:15px}
+.problem-flow{padding-top:40px}.formula{display:flex;justify-content:center;align-items:stretch;gap:8px;flex-wrap:wrap}.formula>div{min-width:120px;text-align:center;padding:17px 11px;border:1px solid var(--line);background:var(--panel);border-radius:15px}.formula>div:first-child{border-color:#7c5cff55}.formula b,.formula small{display:block}.formula b{font-size:12px;margin-top:5px}.formula small{font-size:10px;color:var(--faint)}.formula>span{display:flex;align-items:center;color:#666a80}
+.risk-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.risk-cards>div{padding:15px 17px;background:var(--panel);border:1px solid var(--line);border-radius:13px}.risk-cards b{display:block;color:#c9c3ff;font-size:13px}.risk-cards span{display:block;color:var(--muted);font-size:11px;margin-top:4px}.risk-workflow{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:24px;padding:17px;background:#ffffff03;border:1px solid var(--line);border-radius:14px;font-size:11px;color:#b9bdd0}.risk-workflow span{color:#666a80}
+.tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tool-card{display:flex;gap:14px;padding:19px;background:#111120;border:1px solid var(--line);border-radius:16px}.tool-logo{width:42px;height:42px;border-radius:11px;background:var(--grad-soft);border:1px solid #7c5cff44;display:grid;place-items:center;font:800 14px Sora;color:#cfc9ff;flex-shrink:0}.tool-card h3{font-size:16px}.tool-card p{font-size:11px;margin-top:4px}
+.memory-cloud{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:22px}.memory-cloud span{padding:9px 12px;border:1px solid #7c5cff44;background:#7c5cff0c;border-radius:100px;color:#c7c2ff;font-size:11px;font-weight:700}.aws-list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.aws-row{display:grid;grid-template-columns:100px 85px 1fr;gap:10px;align-items:center;padding:12px 14px;border:1px solid var(--line);background:var(--panel);border-radius:11px}.aws-row b{font-size:12px}.aws-row span{font-size:9px;text-transform:uppercase;color:var(--cyan);letter-spacing:.08em}.aws-row p{font-size:11px}
+.jira-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.jira-card{padding:19px;background:var(--panel);border:1px solid var(--line);border-radius:16px}.jira-card b,.jira-card span,.jira-card p{display:block}.jira-card b{font:600 16px Sora}.jira-card span{font-size:10px;color:var(--cyan);margin:5px 0}.jira-card p{font-size:11px}
+.qa-toolbar{display:flex;gap:12px;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap}.qa-toolbar input{flex:1;min-width:250px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;color:#fff;font-size:13px;outline:none}.filters{display:flex;gap:6px;flex-wrap:wrap}.filters button{background:var(--panel);color:var(--muted);border:1px solid var(--line);border-radius:100px;padding:8px 12px;font-size:11px;cursor:pointer}.filters button.active{background:var(--grad);color:#fff;border-color:transparent}.qa-list{display:grid;gap:8px}.qa-item{background:var(--panel);border:1px solid var(--line);border-radius:15px;overflow:hidden}.qa-item summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:44px 1fr 28px;align-items:center;gap:10px;padding:17px}.qa-item summary::-webkit-details-marker{display:none}.qa-item summary i{font-style:normal;text-align:center;color:#777b94}.qnum{font:800 11px Sora;color:var(--violet)}.qa-answer{padding:0 17px 18px 71px}.qa-answer p{font-size:13px;color:#c1c4d0}.answer-tip{display:flex;gap:9px;align-items:center;margin-top:12px;padding:10px 12px;background:#7c5cff0b;border:1px solid #7c5cff2b;border-radius:10px}.answer-tip strong{font-size:10px;color:var(--cyan);white-space:nowrap}.answer-tip span{font-size:10px;color:#a9acc0}
+.initiative{padding:28px;background:linear-gradient(130deg,#17132c,#0e1820);border:1px solid #7c5cff55;border-radius:23px}.initiative-copy h2{font-size:30px;margin:8px 0}.initiative-copy p{font-size:13px}.story{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}.story>div{padding:17px;background:#00000025;border:1px solid var(--line);border-radius:14px}.story span{font:800 10px Sora;color:var(--cyan);letter-spacing:.1em}.story p{font-size:12px;margin-top:7px}.story-line{margin-top:16px;color:#c9cbd8;font-size:12px}.story-line b{color:#fff}
+.final-check{padding-top:50px}.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.check-grid label{display:flex;gap:10px;align-items:center;padding:13px 15px;background:var(--panel);border:1px solid var(--line);border-radius:12px;color:#c2c5d3;font-size:12px}.check-grid input{accent-color:var(--violet)}
+.closing{text-align:center;padding:80px 0 100px}.closing-mark{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;margin:0 auto 18px;background:var(--grad);font-size:25px}.closing h2{font-size:32px}.closing p{max-width:570px;margin:10px auto 24px;font-size:14px}footer{border-top:1px solid var(--line);padding:26px;text-align:center;color:var(--faint);font-size:11px}footer a{color:#a9a0ff}
+.quick-card,.map-step,.product-card,.method,.control-card,.risk-cards>div,.tool-card,.jira-card,.aws-row,.qa-item,.initiative,.final-check,.section-head{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.show{opacity:1;transform:none}
+@media(max-width:980px){.hero-inner,.profile-grid,.product-grid{grid-template-columns:1fr}.hero-card{max-width:520px}.quick-grid{grid-template-columns:repeat(2,1fr)}.method-grid{grid-template-columns:repeat(2,1fr)}.control-grid,.tool-grid,.jira-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.container{padding:0 17px}.hero{padding:55px 0}.hero h1{font-size:43px}.hero-card{padding:22px}.ring{width:85px;height:85px}.quick-grid,.method-grid,.control-grid,.tool-grid,.jira-grid,.risk-cards,.aws-list,.story,.check-grid{grid-template-columns:1fr}.map>i{display:none}.map-step{min-width:100%;}.formula>span{display:none}.aws-row{grid-template-columns:85px 70px 1fr}.qa-answer{padding-left:17px}.qa-item summary{grid-template-columns:35px 1fr 25px}.status{display:none}}
+
+.jumpbar{position:sticky;top:68px;z-index:18;background:#080811ed;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.jump-inner{display:flex;gap:8px;align-items:center;overflow:auto;padding-top:9px;padding-bottom:9px}.jump-inner span{font-size:10px;color:var(--faint);white-space:nowrap}.jump-inner a{font-size:10px;color:#aaaec4;padding:7px 10px;border:1px solid var(--line);border-radius:100px;white-space:nowrap}.jump-inner a:hover{color:#fff;border-color:#7c5cff66}
+.aws-list{grid-template-columns:repeat(2,1fr)}.aws-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:17px;transition:.25s}.aws-card:hover{transform:translateY(-4px);border-color:#7c5cff55}.aws-card-top{display:flex;gap:12px;align-items:center}.aws-icon{width:43px;height:43px;border-radius:11px;background:#ff990012;border:1px solid #ff990044;display:grid;place-items:center;color:#ffb43d;font-weight:900;font-size:17px;flex-shrink:0}.aws-card-top b{display:block;font:700 15px Sora}.aws-card-top span{display:block;font-size:9px;color:var(--cyan);text-transform:uppercase;letter-spacing:.1em}.aws-card-top em{margin-left:auto;font-style:normal;font:800 10px Sora;color:#62667d}.aws-card>p{font-size:11px;margin:13px 0;color:#afb3c3}.aws-use{display:grid;grid-template-columns:auto 1fr;gap:8px;padding:9px 10px;background:#ffffff04;border:1px solid var(--line);border-radius:9px}.aws-use strong{font-size:9px;color:#a9a0ff;text-transform:uppercase}.aws-use span{font-size:10px;color:#a5a9ba}
+.jira-grid{grid-template-columns:repeat(2,1fr)}.jira-head{display:flex;gap:11px;align-items:center}.jira-no{font:800 10px Sora;color:var(--violet)}.jira-head b,.jira-head small{display:block}.jira-head b{font:600 16px Sora}.jira-head small{font-size:10px;color:var(--cyan)}.jira-chart{height:92px;margin:12px 0 9px;padding:8px;background:#080a10;border:1px solid var(--line);border-radius:10px}.jira-chart svg{width:100%;height:100%}.jira-chart .gline{fill:none;stroke:#8b7cff;stroke-width:3}.jira-chart .gline2{fill:none;stroke:#37e6e6;stroke-width:2.5}.jira-chart .guide{stroke:#5f6376;stroke-width:1.2;stroke-dasharray:4 4}.jira-chart .bar,.jira-chart .fill{fill:#7c5cff}.jira-chart .track{fill:#282b3a}.jira-chart .area1{fill:#7c5cff55}.jira-chart .area2{fill:#37e6e655}.jira-chart .circle{fill:none;stroke:#37e6e6;stroke-width:3}.jira-chart .hand{stroke:#8b7cff;stroke-width:3}.chart-tip{font-size:9px;color:#6f7388;margin-top:9px}
+.risk-table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px;background:var(--panel)}.risk-table{width:100%;min-width:900px;border-collapse:collapse}.risk-table th,.risk-table td{padding:13px 14px;text-align:left;border-bottom:1px solid var(--line);font-size:11px;vertical-align:top}.risk-table th{background:#17172a;color:#b7b0ff;font-size:10px;text-transform:uppercase;letter-spacing:.08em}.risk-table td{color:#aeb2c3}.risk-table tr:last-child td{border-bottom:0}.risk-table td:first-child{color:#fff}.risk-callout{margin-top:15px;padding:14px 16px;border:1px solid #5af0a033;background:#5af0a008;border-radius:12px;font-size:11px;color:#b9bdcb}.risk-callout b{color:var(--green)}
+.source-note{margin:15px auto 0;max-width:850px;padding:9px 12px;border:1px solid #7c5cff26;background:#7c5cff08;border-radius:10px;color:#8589a2;font-size:10px}
+@media(max-width:980px){.aws-list,.jira-grid{grid-template-columns:1fr}}
+</style>
+</head>
+
+<body>
+<div class="grain"></div>
+<div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="https://www.thekaushikdas.com/">Kaushik <span>Das</span></a>
+    <div class="top-actions">
+      <span class="status"><i></i> Interview Mode</span>
+      <button class="icon-btn" id="themeHint" title="Interview guide">✦</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow">PROJECT MANAGER • INTERVIEW PLAYBOOK</div>
+      <h1>Prepare smarter.<br><span>Speak with confidence.</span></h1>
+      <p>A visual, beginner-friendly guide to help you understand Project Management concepts, remember key points, and answer interview questions naturally.</p>
+      <div class="hero-actions">
+        <a href="#start" class="btn primary">Start Preparing <span>↓</span></a>
+        <a href="#questions" class="btn ghost">Jump to Q&amp;A</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="ring">
+        <div class="ring-inner"><strong>PM</strong><small>READY</small></div>
+      </div>
+      <div>
+        <b>Learn → Practice → Answer</b>
+        <p>Don't memorize. Understand the idea and explain it in your own words.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="jumpbar"><div class="container jump-inner"><span>Quick jump</span><a href="#profile">Profile</a><a href="#pm">PM Basics</a><a href="#controls">Project Control</a><a href="#risk-table">Risk Register</a><a href="#tools">Tools</a><a href="#aws">AWS</a><a href="#jira">Jira</a><a href="#questions">Q&amp;A</a></div></div>
+<main class="container" id="start">
+
+<section class="quick-grid">
+  <div class="quick-card"><span class="qicon">🎯</span><div><b>Know the concept</b><small>Understand what it means.</small></div></div>
+  <div class="quick-card"><span class="qicon">🧩</span><div><b>Use a real example</b><small>Connect it to your project.</small></div></div>
+  <div class="quick-card"><span class="qicon">💬</span><div><b>Answer simply</b><small>Clear beats complicated.</small></div></div>
+  <div class="quick-card"><span class="qicon">🚀</span><div><b>Show ownership</b><small>Explain what you did.</small></div></div>
+</section>
+
+<section class="learning-map" id="map">
+  <div class="section-head left">
+    <span class="section-label">YOUR ROADMAP</span>
+    <h2>From beginner to interview-ready</h2>
+    <p>Follow the sections in order, or jump directly to the topic you need.</p>
+  </div>
+  <div class="map">
+    <a href="#profile" class="map-step"><span>01</span><div><b>Your Story</b><small>Tell me about yourself</small></div></a>
+    <i>→</i>
+    <a href="#pm" class="map-step"><span>02</span><div><b>PM Basics</b><small>Agile, Scrum &amp; delivery</small></div></a>
+    <i>→</i>
+    <a href="#controls" class="map-step"><span>03</span><div><b>Project Control</b><small>Scope, time, cost &amp; risk</small></div></a>
+    <i>→</i>
+    <a href="#tools" class="map-step"><span>04</span><div><b>Tools</b><small>Jira, AWS &amp; Power BI</small></div></a>
+    <i>→</i>
+    <a href="#questions" class="map-step"><span>05</span><div><b>Practice</b><small>Interview Q&amp;A</small></div></a>
+  </div>
+</section>
+
+<section id="profile">
+  <div class="section-head">
+    <span class="section-label">01 • YOUR STORY</span>
+    <h2>Know your own profile first</h2>
+    <p>These are the points you should be able to explain without looking at notes.</p>
+  </div>
+  <div class="profile-grid">
+    <div class="big-profile">
+      <span class="profile-tag">YOUR 30-SECOND INTRO</span>
+      <h3>“I manage people, projects and delivery.”</h3>
+      <p>Kaushik Das is a Software Project Manager and Engineering Manager with 6+ years of software delivery experience across B2B SaaS, AI-based solutions, web and cloud platforms.</p>
+      <div class="profile-points">
+        <span>👥 16-member team</span><span>☁️ B2B SaaS</span><span>🤖 AI / ML exposure</span><span>⚡ Agile / Scrum</span><span>📊 Power BI</span><span>🧭 Risk &amp; dependency management</span>
+      </div>
+    </div>
+    <div class="mini-stack">
+      <div><b>Current focus</b><span>Two B2B SaaS platforms</span><small>Interior Design Business Management + Real Estate Business Management</small></div>
+      <div><b>Leadership</b><span>Cross-functional team management</span><small>Planning, allocation, coordination, client communication and delivery.</small></div>
+      <div><b>Technical edge</b><span>AI + software understanding</span><small>Helps bridge business needs and engineering execution.</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="dark-section">
+  <div class="section-head">
+    <span class="section-label">YOUR PRODUCTS</span>
+    <h2>Explain your B2B SaaS projects like a PM</h2>
+  </div>
+  <div class="product-grid">
+    <article class="product-card">
+      <div class="product-top"><span>01</span><b>B2B SaaS</b></div>
+      <h3>Interior Design Business Management</h3>
+      <p>Helps an interior design business manage products, contractors, vendors, clients and accounts, while tracking work status.</p>
+      <div class="flowline"><span>Products</span><i>→</i><span>People</span><i>→</i><span>Accounts</span><i>→</i><span>Work Status</span></div>
+    </article>
+    <article class="product-card">
+      <div class="product-top"><span>02</span><b>B2B SaaS + AI</b></div>
+      <h3>Real Estate Business Management</h3>
+      <p>Connects leads from third-party platforms and supports the journey from first contact to property purchase.</p>
+      <div class="agent-list">
+        <div><strong>Seller Agent</strong><small>Communicates with leads and categorizes them as Hot, Warm or Cold.</small></div>
+        <div><strong>Nurture Agent</strong><small>Shares matching property updates and communicates with inactive leads.</small></div>
+        <div><strong>Prospecting Agent</strong><small>Schedules realtor and lead meetings to check properties.</small></div>
+        <div><strong>Admin Agent</strong><small>Simplifies the final purchase, finance and legal document handoff.</small></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="pm">
+  <div class="section-head">
+    <span class="section-label">02 • PM BASICS</span>
+    <h2>Understand the four delivery approaches</h2>
+    <p>Use these simple definitions in an interview.</p>
+  </div>
+  <div class="method-grid">
+    <div class="method agile"><span>AGILE</span><h3>Flexible delivery</h3><p>Deliver small pieces, get feedback, and adapt as requirements change.</p><div class="when">Best when: <b>requirements may change</b></div></div>
+    <div class="method scrum"><span>SCRUM</span><h3>Agile framework</h3><p>Organize work into short sprints with a backlog, goals, reviews and regular team discussions.</p><div class="when">Think: <b>Sprint + Backlog + Review</b></div></div>
+    <div class="method waterfall"><span>WATERFALL</span><h3>Step-by-step</h3><p>Complete one phase before moving to the next, with a more fixed plan.</p><div class="when">Best when: <b>requirements are stable</b></div></div>
+    <div class="method kanban"><span>KANBAN</span><h3>Continuous flow</h3><p>Visualize work such as To Do → In Progress → Done and limit work in progress.</p><div class="when">Think: <b>Flow + WIP limits</b></div></div>
+  </div>
+</section>
+
+<section class="framework">
+  <div class="framework-card">
+    <div class="framework-icon">🧠</div>
+    <div><span class="section-label">REMEMBER THIS</span><h3>Agile is the approach. Scrum is a framework.</h3><p>Waterfall is sequential. Kanban focuses on continuous flow.</p></div>
+  </div>
+</section>
+
+<section id="controls">
+  <div class="section-head">
+    <span class="section-label">03 • PROJECT CONTROL</span>
+    <h2>How a PM keeps a project under control</h2>
+  </div>
+  <div class="control-grid">
+    <div class="control-card"><div class="control-no">01</div><h3>Scope</h3><p>What are we building? What is included and excluded?</p><b>Tools: BRD • SRS • User Stories</b></div>
+    <div class="control-card"><div class="control-no">02</div><h3>Timeline</h3><p>When should each milestone and deliverable be completed?</p><b>Tools: Jira • Sprint Plan • Dependencies</b></div>
+    <div class="control-card"><div class="control-no">03</div><h3>Cost</h3><p>Are actual hours and cost staying within the plan?</p><b>Track: Estimate vs Actual</b></div>
+    <div class="control-card"><div class="control-no">04</div><h3>Resources</h3><p>Do we have the right people and skills at the right time?</p><b>Track: Capacity • Allocation</b></div>
+    <div class="control-card"><div class="control-no">05</div><h3>Risk</h3><p>What could go wrong, and what can we do before it becomes a blocker?</p><b>Track: Probability • Impact • Owner</b></div>
+    <div class="control-card"><div class="control-no">06</div><h3>Communication</h3><p>Does everyone know progress, blockers, decisions and next steps?</p><b>Track: Reports • Dashboards • Meetings</b></div>
+  </div>
+</section>
+
+<section class="problem-flow">
+  <div class="section-head">
+    <span class="section-label">THE PM FORMULA</span>
+    <h2>Use this for almost any project problem</h2>
+  </div>
+  <div class="formula">
+    <div>🔎<b>Analyze</b><small>Understand the problem</small></div><span>→</span>
+    <div>🎯<b>Prioritize</b><small>Decide what matters most</small></div><span>→</span>
+    <div>🗺️<b>Plan</b><small>Create practical options</small></div><span>→</span>
+    <div>⚙️<b>Execute</b><small>Take action</small></div><span>→</span>
+    <div>📈<b>Monitor</b><small>Check the result</small></div><span>→</span>
+    <div>💬<b>Communicate</b><small>Keep stakeholders aligned</small></div>
+  </div>
+</section>
+
+<section id="risks">
+  <div class="section-head">
+    <span class="section-label">PROJECT RISKS</span>
+    <h2>Risk = something that might go wrong</h2>
+    <p>Remember: <b>Risk → Impact → Action</b></p>
+  </div>
+  <div class="risk-cards">
+    <div><b>Scope</b><span>Client adds a dashboard after development starts.</span></div>
+    <div><b>Schedule</b><span>A 3-day feature takes 7 days.</span></div>
+    <div><b>Cost</b><span>Extra hours increase project cost.</span></div>
+    <div><b>Resource</b><span>A key developer becomes unavailable.</span></div>
+    <div><b>Technical</b><span>An AI model gives inaccurate results.</span></div>
+    <div><b>Dependency</b><span>A third-party API is delayed.</span></div>
+    <div><b>Quality</b><span>A critical bug appears during UAT.</span></div>
+    <div><b>Security</b><span>A vulnerability is found before launch.</span></div>
+    <div><b>Operational</b><span>The app slows down with real users.</span></div>
+    <div><b>Communication</b><span>Client and developer understand a requirement differently.</span></div>
+    <div><b>Stakeholder</b><span>Client delays an important approval.</span></div>
+    <div><b>Vendor</b><span>An external provider misses a delivery date.</span></div>
+    <div><b>Business</b><span>Client changes its business priority.</span></div>
+    <div><b>Compliance</b><span>Product does not meet a required data rule.</span></div>
+    <div><b>People</b><span>Team conflict affects productivity.</span></div>
+  </div>
+  <div class="risk-workflow"><b>Identify</b><span>→</span><b>Assess</b><span>→</span><b>Prioritize</b><span>→</span><b>Mitigate</b><span>→</span><b>Owner</b><span>→</span><b>Monitor</b></div>
+</section>
+
+<section id="tools" class="dark-section">
+  <div class="section-head">
+    <span class="section-label">04 • TOOLS</span>
+    <h2>Tools you should be ready to discuss</h2>
+  </div>
+  <div class="tool-grid">
+    <div class="tool-card"><div class="tool-logo">J</div><div><h3>Jira</h3><p>Sprint planning, issue tracking, backlog and project dashboards.</p></div></div>
+    <div class="tool-card"><div class="tool-logo">P</div><div><h3>Power BI</h3><p>Dashboards and visual reporting for project and stakeholder communication.</p></div></div>
+    <div class="tool-card"><div class="tool-logo">F</div><div><h3>Figma</h3><p>Wireframes and product-flow discussions.</p></div></div>
+    <div class="tool-card"><div class="tool-logo">M</div><div><h3>Miro</h3><p>Collaboration, flows, workshops and visual planning.</p></div></div>
+    <div class="tool-card"><div class="tool-logo">A</div><div><h3>Asana / Monday / Trello</h3><p>Planning, task tracking and team coordination.</p></div></div>
+    <div class="tool-card"><div class="tool-logo">AI</div><div><h3>ChatGPT / Claude</h3><p>Requirement analysis, documentation, reports and productivity support.</p></div></div>
+  </div>
+</section>
+
+
+<section id="risk-table">
+<div class="section-head"><span class="section-label">PROJECT RISK MANAGEMENT</span><h2>Risk register: what a PM should track</h2><p>Identify the risk, understand its impact, define a response and assign ownership.</p></div>
+<div class="risk-table-wrap"><table class="risk-table"><thead><tr><th>Risk</th><th>Example</th><th>Impact</th><th>Mitigation</th><th>Owner</th></tr></thead><tbody>
+<tr><td><b>Scope</b></td><td>Client adds a dashboard after development starts.</td><td>Rework and schedule pressure.</td><td>Assess impact, approve change and update scope/sprint.</td><td>PM + Client</td></tr>
+<tr><td><b>Schedule</b></td><td>A 3-day feature takes 7 days.</td><td>Milestone or release delay.</td><td>Find root cause, re-plan dependencies and adjust resources.</td><td>PM + Tech Lead</td></tr>
+<tr><td><b>Cost</b></td><td>Actual hours exceed estimate.</td><td>Budget overrun.</td><td>Track variance, forecast and take corrective action early.</td><td>PM</td></tr>
+<tr><td><b>Resource</b></td><td>Key developer becomes unavailable.</td><td>Knowledge gap and delay.</td><td>Backup resource, knowledge transfer and rebalancing.</td><td>PM + Engineering</td></tr>
+<tr><td><b>Technical</b></td><td>AI model accuracy is below expectation.</td><td>Rework and quality risk.</td><td>Prototype early, test assumptions and define fallback.</td><td>Tech Lead</td></tr>
+<tr><td><b>Dependency</b></td><td>Third-party API is delayed.</td><td>Feature cannot complete.</td><td>Track owner/date, use mocks or parallel work and communicate impact.</td><td>PM + Vendor</td></tr>
+<tr><td><b>Quality</b></td><td>Critical bug appears during UAT.</td><td>Release delay.</td><td>Prioritize, assign, retest and review release readiness.</td><td>QA Lead</td></tr>
+<tr><td><b>Security</b></td><td>Vulnerability found before launch.</td><td>Data/system exposure.</td><td>Assess severity, fix, test and document.</td><td>Security + Tech</td></tr>
+<tr><td><b>Communication</b></td><td>Client and developer understand a requirement differently.</td><td>Rework and conflict.</td><td>Clarify with examples and confirm acceptance criteria.</td><td>PM</td></tr>
+<tr><td><b>Stakeholder</b></td><td>Approval is delayed for one week.</td><td>Downstream work is blocked.</td><td>Escalate early and continue independent work where possible.</td><td>PM</td></tr>
+<tr><td><b>Vendor</b></td><td>External provider misses a committed date.</td><td>Integration/release delay.</td><td>Track SLA and maintain a contingency or workaround.</td><td>PM + Vendor</td></tr>
+<tr><td><b>Business</b></td><td>Client changes business priority.</td><td>Planned feature loses value.</td><td>Reassess value and reprioritize backlog.</td><td>Product + Client</td></tr>
+<tr><td><b>Compliance</b></td><td>Data handling does not meet a required rule.</td><td>Legal/launch risk.</td><td>Review requirements and add controls before release.</td><td>PM + Legal/Tech</td></tr>
+<tr><td><b>People</b></td><td>Team conflict affects productivity.</td><td>Lower delivery speed.</td><td>Discuss privately, clarify responsibilities and agree on a working approach.</td><td>PM / Manager</td></tr>
+</tbody></table></div>
+<div class="risk-callout"><b>Interview formula:</b> Identify → Assess probability &amp; impact → Prioritize → Mitigate → Assign owner → Monitor → Communicate.</div>
+</section>
+
+<section id="aws">
+  <div class="section-head">
+    <span class="section-label">AWS QUICK GUIDE</span>
+    <h2>Speak AWS in simple words</h2>
+    <p>Don’t over-explain. Know what each service is used for, and give one simple project example.</p>
+  </div>
+  <div class="memory-cloud">
+    <span>EC2 = Compute</span><span>S3 = Storage</span><span>RDS = Database</span><span>Lambda = Serverless</span><span>VPC = Network</span><span>IAM = Access</span><span>CloudWatch = Monitoring</span><span>API Gateway = APIs</span><span>SQS/SNS = Messaging</span><span>CloudFront = Content Delivery</span>
+  </div>
+  <div class="aws-list" id="awsList"></div>
+</section>
+
+<section id="jira">
+  <div class="section-head">
+    <span class="section-label">JIRA REPORTING</span>
+    <h2>Which chart should you use?</h2>
+  </div>
+  <div class="jira-grid" id="jiraList"></div>
+</section>
+
+<section id="questions">
+  <div class="section-head">
+    <span class="section-label">05 • PRACTICE</span>
+    <h2>Interview questions &amp; answer patterns</h2>
+    <p>Read the idea first, then say it naturally. The goal is confidence, not memorization.</p>
+  </div>
+  <div class="qa-toolbar">
+    <input id="qaSearch" placeholder="🔎 Search questions: risk, Agile, client, budget...">
+    <div class="filters" id="filters">
+      <button class="active" data-filter="all">All</button><button data-filter="pm">PM</button><button data-filter="scenario">Scenarios</button><button data-filter="tools">Tools</button>
+    </div>
+  </div>
+  <div class="qa-list" id="qaList"></div>
+</section>
+
+<section class="initiative">
+  <div class="initiative-copy">
+    <span class="section-label">YOUR BEST STORY</span>
+    <h2>The RAG chatbot example</h2>
+    <p>This is your strongest example of ownership and problem-solving.</p>
+  </div>
+  <div class="story">
+    <div><span>Situation</span><p>Third-party dependency caused delays and the client was frustrated.</p></div>
+    <div><span>Action</span><p>Suggested a RAG-based chatbot, aligned the team, defined scope and coordinated implementation.</p></div>
+    <div><span>Impact</span><p>A working solution was demonstrated within two days, showing progress and helping rebuild client confidence.</p></div>
+  </div>
+  <div class="story-line">Remember: <b>“When there is a blocker, don't just report it — find a practical way forward.”</b></div>
+</section>
+
+<section class="final-check">
+  <div class="section-head">
+    <span class="section-label">FINAL 5-MINUTE CHECK</span>
+    <h2>Before you join the interview</h2>
+  </div>
+  <div class="check-grid">
+    <label><input type="checkbox"> I can introduce myself in 30–45 seconds.</label>
+    <label><input type="checkbox"> I can explain my two B2B SaaS products.</label>
+    <label><input type="checkbox"> I can explain Agile, Scrum, Waterfall and Kanban.</label>
+    <label><input type="checkbox"> I can explain my RAG initiative using Situation → Action → Impact.</label>
+    <label><input type="checkbox"> I can explain common Jira charts.</label>
+    <label><input type="checkbox"> I can give examples of project risks.</label>
+    <label><input type="checkbox"> I can explain AWS services in simple words.</label>
+    <label><input type="checkbox"> I can explain how I handle clients and blockers.</label>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="closing-mark">✓</div>
+  <h2>Be clear. Be practical. Show ownership.</h2>
+  <p>You don't need to know every answer. Show how you think, how you communicate, and how you move a project forward.</p>
+  <a href="#start" class="btn primary">Back to Top ↑</a>
+</section>
+
+</main>
+<footer>© Kaushik Das • Project Manager Interview Guide • <a href="https://www.thekaushikdas.com/">thekaushikdas.com</a></footer>
+
+<script>
+const aws = [
+["EC2","Compute","Virtual servers for running applications.","Run a web/API server.","server"],
+["S3","Storage","Object storage for files, images, videos, backups and static assets.","Store customer documents or product images.","storage"],
+["RDS","Database","Managed relational databases such as MySQL and PostgreSQL.","Store structured application data.","database"],
+["DynamoDB","NoSQL","Fast, scalable key-value/document database.","Store high-volume application records.","database"],
+["Lambda","Serverless","Runs code in response to events without managing servers.","Process an uploaded file automatically.","lambda"],
+["ECS","Containers","Runs and manages containerized applications.","Run a containerized backend service.","container"],
+["ECR","Containers","Stores and manages Docker/container images.","Store Docker images used by ECS.","container"],
+["CloudFront","Delivery","Caches and delivers content closer to users for faster response.","Speed up a global web application.","cloud"],
+["Route 53","DNS","Manages domains and routes users to applications.","Route a domain to the application.","route"],
+["VPC","Networking","Creates an isolated virtual network for AWS resources.","Separate public and private resources.","network"],
+["IAM","Security","Controls access to AWS resources with users, roles and policies.","Give a deployment role only needed permissions.","security"],
+["CloudWatch","Monitoring","Collects logs, metrics and alarms for operational visibility.","Alert when error rates rise.","monitor"],
+["API Gateway","APIs","Creates, publishes, secures and monitors APIs.","Expose a secure REST API.","api"],
+["SNS","Messaging","Publishes notifications to multiple subscribers.","Send alerts to email or another service.","message"],
+["SQS","Messaging","Queues messages for reliable asynchronous processing.","Queue background jobs for workers.","queue"],
+["Elastic Beanstalk","Deployment","Simplifies deployment and management of web applications.","Deploy a web application quickly.","deploy"],
+["CloudFormation","Infrastructure","Defines AWS infrastructure in repeatable templates.","Create consistent staging and production environments.","infra"],
+["EBS","Storage","Persistent block storage volumes for EC2.","Store application data on EC2.","disk"],
+["Bedrock","Generative AI","Provides foundation models and tools for generative-AI applications.","Build an AI assistant or RAG workflow.","ai"],
+["Rekognition","Computer Vision","Analyzes images and videos for objects, faces and other visual attributes.","Detect objects in uploaded images.","vision"],
+["Amplify","Frontend / Full Stack","Helps build, connect, deploy and host web and mobile applications using AWS.","Build and host a SaaS frontend.","amplify"],
+["Cognito","Identity","Provides sign-up, sign-in, authentication and access control.","Secure user login for a SaaS platform.","cognito"],
+["CloudTrail","Governance","Records AWS API activity for audit and security investigation.","See who changed an AWS resource.","audit"],
+["WAF","Security","Helps protect web applications from common exploits and unwanted traffic.","Protect an API or web application.","waf"],
+["Secrets Manager","Security","Stores and manages sensitive credentials and API keys.","Keep secrets out of source code.","secret"],
+["ElastiCache","Caching","Managed in-memory caching for frequently used data.","Cache repeated product or session data.","cache"],
+["Step Functions","Workflow","Coordinates multiple AWS services into reliable workflows.","Orchestrate a multi-step document workflow.","workflow"],
+["AppSync","API / GraphQL","Managed GraphQL API service for connecting applications to data and backend services.","Build a real-time GraphQL API.","graphql"],
+["SageMaker AI","Machine Learning","Builds, trains, deploys and monitors machine-learning models.","Deploy a custom prediction model.","ml"],
+["Textract","Document AI","Extracts text and structured data from documents.","Read fields from invoices or legal documents.","document"]
+];
+const jira = [
+["Burndown","Remaining sprint work","Are we likely to finish the sprint on time?"],
+["Burnup","Completed work vs total scope","Did scope change during the project?"],
+["Velocity","Work completed per sprint","How much can the team plan for future sprints?"],
+["Sprint Report","Completed, incomplete and added work","What happened in this sprint?"],
+["Control Chart","Issue cycle time","Where are delays happening?"],
+["Cumulative Flow","Work across workflow stages","Where is the bottleneck?"],
+["Cycle Time","Time from start to completion","How quickly does work move?"],
+["Created vs Resolved","New vs resolved issues","Is the backlog growing or shrinking?"],
+["Time Tracking","Estimated vs actual effort","Are we using more effort than planned?"],
+["Workload","Work by team member","Is work distributed fairly?"],
+["Epic Report","Epic progress","How much of an epic is complete?"],
+["Release Burndown","Remaining release work","Are we on track for the release?"]
+];
+const qa = [
+["pm","Tell me about yourself","I’m Kaushik Das, a Software Project Manager and Engineering Manager with over six years of experience in software delivery across B2B SaaS, AI-based solutions, web and cloud platforms. Currently I manage a 16-member cross-functional team across two B2B SaaS products, handling planning, resource allocation, client communication, risks, dependencies, QA and delivery.","Present role → Team → Products → Skills → Value"],
+["pm","How do you analyze a project before starting?","I start with the business goal and requirements, define scope and exclusions, identify dependencies and assumptions, estimate effort, check resources, create milestones and identify major risks before execution.","Goal → Scope → Estimate → Resources → Risks → Plan"],
+["pm","How do you create a functional scope document?","I document the objective, modules, functional requirements, user stories, assumptions, exclusions, dependencies, acceptance criteria, effort, milestones and delivery expectations.","Objective → Requirements → Acceptance → Estimate → Milestones"],
+["pm","How do you manage Agile/Scrum projects?","I maintain the backlog, break requirements into user stories, prioritize them, plan sprints, track progress and blockers, review completed work and use feedback to improve the next sprint.","Backlog → Sprint → Track → Review → Improve"],
+["pm","What is the difference between Agile, Scrum, Waterfall and Kanban?","Agile is a flexible delivery approach. Scrum is an Agile framework using short sprints. Waterfall is sequential with more fixed phases. Kanban visualizes continuous work and focuses on flow and work-in-progress limits.","Agile = approach • Scrum = framework • Waterfall = sequential • Kanban = flow"],
+["pm","How do you create user stories?","I understand the user goal, write the story and acceptance criteria, then review it with development and QA. A simple format is: As a user, I want a goal, so that I get a business value.","User → Goal → Value → Acceptance"],
+["pm","How do you create wireframes and flow diagrams?","I understand the user journey and use Figma or Miro to show the screens and flow. I use them as communication tools so business, design and development share the same understanding.","Journey → Flow → Wireframe → Alignment"],
+["pm","How do you ensure on-time delivery?","I use realistic estimates, milestones, clear ownership and dependency tracking. If a delay appears, I identify the cause early, assess impact and discuss options before the deadline.","Plan → Track → Act → Communicate"],
+["pm","How do you manage multiple projects?","I keep priorities, owners, deadlines, risks and resource plans clear for each project. I regularly check resource conflicts and make sure the team knows what is most important.","Priorities → Owners → Resources → Risks"],
+["scenario","Tell me about a time you took initiative.","A third-party dependency was delayed and the client was frustrated. Instead of only reporting the blocker, I suggested a RAG-based chatbot, aligned the technical team, helped define the scope and coordinated the work. We demonstrated a working solution within two days, showing progress and helping maintain client confidence.","Situation → Action → Impact"],
+["scenario","How do you handle an unhappy client?","I listen first and understand the real concern. Then I separate what we can control from what we cannot, provide a clear action plan and keep the client updated. I try to bring options, not only problems.","Listen → Understand → Options → Action"],
+["scenario","How do you handle changing requirements?","I understand why the change is needed, assess its impact on scope, timeline, cost and resources, discuss it with the team, communicate the impact to the client and document the approved change.","Understand → Impact → Approve → Document → Update"],
+["scenario","What do you do when a third-party dependency is delayed?","I identify the dependency early, understand the impact and owner, create a backup or parallel workstream where possible, and communicate the risk. My RAG chatbot example is a practical example of creating a parallel path.","Dependency → Impact → Backup → Owner → Communicate"],
+["pm","How do you monitor budget and actual cost?","I compare planned effort and resource cost with actual hours and progress. If actual effort moves above plan, I check the reason, forecast the impact and discuss corrective action or scope decisions.","Plan → Actual → Variance → Forecast → Action"],
+["pm","What is Earned Value Management?","EVM compares Planned Value, Earned Value and Actual Cost to understand schedule and cost performance.","Planned Value → Earned Value → Actual Cost"],
+["pm","What is Critical Path Analysis?","It identifies the sequence of activities that directly determines the project completion date. A delay in a critical activity can delay the whole project.","Activities → Dependencies → Float → Critical Path"],
+["pm","How do you track resources?","I check the skills needed, available capacity, current allocation and upcoming workload. I identify over-allocation or skill gaps before they affect the schedule.","Skills → Capacity → Allocation → Forecast"],
+["pm","How do you communicate project status?","I give clear, regular updates on completed work, current work, milestones, risks, issues, dependencies and decisions needed. I avoid surprises.","Progress → Risks → Issues → Decisions → Next Steps"],
+["tools","How do you use Jira?","I use Jira for backlog management, user stories, sprint planning, task assignment, blocker tracking and dashboards. I also use Burndown, Velocity, CFD, Control Chart and Sprint Report.","Backlog → Sprint → Track → Report"],
+["tools","Which Jira chart would you use for sprint progress?","Burndown shows remaining work, Velocity shows delivery capacity, Sprint Report shows completed/incomplete work, and CFD or Control Chart helps identify bottlenecks.","Burndown → Velocity → Sprint Report → CFD"],
+["tools","How do you use Power BI?","I use Power BI to turn project data into dashboards for stakeholder communication, such as progress, resource status, delivery trends and KPIs.","Data → Dashboard → Insight → Decision"],
+["tools","How do you use AI in project management?","I use ChatGPT and Claude to support requirement analysis, user stories, BRDs, SRS documents, sprint reports, meeting notes, action items and delivery handovers. AI reduces repetitive work while final decisions remain with me and the team.","AI assists → PM decides"],
+["tools","What AWS services do you know?","I understand common services such as EC2 for compute, S3 for storage, RDS for relational databases, Lambda for serverless functions, Cognito for authentication, Amplify for web/mobile development, API Gateway for APIs and CloudWatch for monitoring.","Service → Use → Example"],
+["pm","How do you handle quality?","I make quality part of delivery: clear acceptance criteria, QA coordination, defect tracking, UAT and release-readiness checks.","Acceptance → QA → Defects → UAT → Release"],
+["pm","What are your strengths?","My strengths are ownership, communication, technical understanding, client handling and practical problem-solving. My technical background helps me communicate with engineering teams while my business experience helps me understand client expectations.","Ownership → Communication → Technical → Business"],
+["pm","Why should we hire you?","I bring project management, B2B SaaS experience, cross-functional leadership, technical understanding, client communication and proactive problem-solving. I focus on outcomes and take ownership when something goes wrong.","Experience → Skills → Ownership → Value"],
+["pm","Why are you interested in this role?","The role matches the areas I enjoy: project planning, team management, client communication, project controls, reporting, risk management and process improvement. It also gives me room to grow in advanced project controls and digital delivery.","Match → Experience → Growth → Contribution"]
+];
+
+const awsIcon=k=>({server:"▣",storage:"S3",database:"DB",lambda:"λ",container:"⬡",cloud:"☁",route:"↗",network:"◈",security:"🛡",monitor:"◔",api:"⌘",message:"✉",queue:"☷",deploy:"🚀",infra:"⌘",disk:"EBS",ai:"✦",vision:"◉",amplify:"A",cognito:"C",audit:"✓",waf:"W",secret:"🔑",cache:"⚡",workflow:"↯",graphql:"◇",ml:"ML",document:"▤"})[k]||"AWS";
+document.getElementById("awsList").innerHTML=aws.map((x,i)=>`<article class="aws-card"><div class="aws-card-top"><div class="aws-icon">${awsIcon(x[4])}</div><div><b>${x[0]}</b><span>${x[1]}</span></div><em>${String(i+1).padStart(2,"0")}</em></div><p>${x[2]}</p><div class="aws-use"><strong>Example</strong><span>${x[3]}</span></div></article>`).join("");
+const jiraVisual=k=>{const base=`<svg viewBox="0 0 220 80">`;const end="</svg>";if(k==="burndown"||k==="release")return base+`<polyline points="8,12 55,25 100,40 145,58 205,70" class="gline"/><line x1="8" y1="70" x2="210" y2="12" class="guide"/>`+end;if(k==="burnup")return base+`<polyline points="8,68 55,56 100,43 145,29 205,14" class="gline"/><polyline points="8,60 55,52 100,48 145,28 205,8" class="gline2"/>`+end;if(k==="velocity")return base+[20,38,30,50,42].map((h,i)=>`<rect x="${15+i*40}" y="${70-h}" width="24" height="${h}" class="bar"/>`).join("")+end;if(k==="sprint")return base+[142,105,168].map((w,i)=>`<rect x="12" y="${16+i*22}" width="190" height="10" class="track"/><rect x="12" y="${16+i*22}" width="${w}" height="10" class="fill"/>`).join("")+end;if(["control","cycle","resolution","age"].includes(k))return base+`<polyline points="8,58 45,35 82,48 119,22 156,30 205,14" class="gline"/>`+end;if(k==="cfd")return base+`<path d="M8 60 L45 55 L82 52 L119 45 L156 38 L205 28 L205 68 L8 68 Z" class="area1"/><path d="M8 45 L45 43 L82 38 L119 32 L156 25 L205 18 L205 28 L156 38 L119 45 L82 52 L45 55 L8 60 Z" class="area2"/>`+end;if(k==="created")return base+`<polyline points="8,20 55,25 100,32 145,43 205,55" class="gline"/><polyline points="8,62 55,52 100,48 145,36 205,20" class="gline2"/>`+end;if(k==="workload")return base+[125,78,148].map((w,i)=>`<rect x="12" y="${16+i*22}" width="160" height="10" class="track"/><rect x="12" y="${16+i*22}" width="${w}" height="10" class="fill"/>`).join("")+end;if(k==="time")return base+`<circle cx="65" cy="40" r="26" class="circle"/><line x1="65" y1="40" x2="65" y2="20" class="hand"/><line x1="65" y1="40" x2="81" y2="49" class="hand"/><rect x="120" y="18" width="70" height="44" rx="7" class="track"/>`+end;return base+`<circle cx="40" cy="40" r="18" class="circle"/><circle cx="110" cy="40" r="18" class="circle"/><circle cx="180" cy="40" r="18" class="circle"/><path d="M58 40h34M128 40h34" class="hand"/>`+end;};
+document.getElementById("jiraList").innerHTML=jira.map((x,i)=>`<article class="jira-card"><div class="jira-head"><span class="jira-no">${String(i+1).padStart(2,"0")}</span><div><b>${x[0]}</b><small>${x[1]}</small></div></div><div class="jira-chart">${jiraVisual(x[3])}</div><p>${x[2]}</p><div class="chart-tip">Illustrative view — focus on what the chart tells the PM.</div></article>`).join("");
+
+const qaList=document.getElementById("qaList"), search=document.getElementById("qaSearch");
+let filter="all";
+function renderQA(){
+  const q=(search.value||"").toLowerCase();
+  qaList.innerHTML=qa.filter(x=>(filter==="all"||x[0]===filter)&&(!q||x.join(" ").toLowerCase().includes(q))).map((x,i)=>`
+  <details class="qa-item" ${i===0&& !q ? "open":""}>
+    <summary><span class="qnum">${String(i+1).padStart(2,"0")}</span><b>${x[1]}</b><i>+</i></summary>
+    <div class="qa-answer"><p>${x[2]}</p><div class="answer-tip"><strong>Easy answer pattern</strong><span>${x[3]}</span></div></div>
+  </details>`).join("");
+}
+renderQA();
+search.addEventListener("input",renderQA);
+document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("#filters button").forEach(x=>x.classList.remove("active"));b.classList.add("active");filter=b.dataset.filter;renderQA();}));
+
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.08});
+document.querySelectorAll(".section-head,.quick-card,.map-step,.product-card,.method,.control-card,.risk-cards>div,.tool-card,.jira-card,.aws-row,.qa-item,.initiative,.final-check").forEach(x=>obs.observe(x));
+</script>
+</body>
+</body></html>
