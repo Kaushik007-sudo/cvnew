@@ -153,7 +153,15 @@ export default function App() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: trimmedInput }),
       });
-      const data = await response.json();
+      const responseText = await response.text();
+      let data;
+      try {
+        data = JSON.parse(responseText);
+      } catch {
+        throw new Error(response.ok
+          ? 'The chatbot returned an invalid response. Please try again shortly.'
+          : `The chatbot service returned an unexpected response (${response.status}).`);
+      }
       if (!response.ok) throw new Error(data.detail || 'The chatbot is temporarily unavailable.');
       setChatMessages((messages) => [...messages, {
         role: 'assistant',
