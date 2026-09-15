@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwLnwb0G1HcwWBbk7NLFdVlcWTyyulxCadTzLbcc-zjwjfoTjowgaPrC6zAhrjjVaH7Uw/exec';
-const CHAT_API_URL = `${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'}/api/chat`;
+const CHAT_API_URL = `${import.meta.env.VITE_API_BASE_URL || ''}/api/chat`;
 const ABUSIVE_WORDS = [
   'asshole', 'bastard', 'bitch', 'bullshit', 'cunt', 'dick', 'fuck', 'motherfucker', 'shit', 'slut', 'whore',
   'bhenchod', 'behenchod', 'bhosdi', 'chudai', 'chutiya', 'gaand', 'gandu', 'harami', 'madarchod', 'randi',
