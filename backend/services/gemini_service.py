@@ -3,6 +3,7 @@ import time
 from typing import Any
 
 from google import genai
+from google.genai import types
 
 
 SYSTEM_INSTRUCTIONS = """
@@ -31,7 +32,11 @@ class GeminiRAGService:
         if not api_key:
             raise RuntimeError("GEMINI_API_KEY is missing from .env")
 
-        self.client = genai.Client(api_key=api_key)
+        timeout_ms = int(os.getenv("GEMINI_TIMEOUT_MS", "8000"))
+        self.client = genai.Client(
+            api_key=api_key,
+            http_options=types.HttpOptions(timeout=timeout_ms),
+        )
         self.model = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
         self.store_name = os.getenv("GEMINI_FILE_SEARCH_STORE_NAME")
 

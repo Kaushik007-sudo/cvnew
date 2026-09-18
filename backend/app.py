@@ -81,6 +81,6 @@ def chat(request: ChatRequest):
 
     except Exception as exc:
         raise HTTPException(
-            status_code=500,
+            status_code=503,
             detail="The chatbot is temporarily unavailable.",
         ) from exc
