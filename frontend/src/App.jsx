@@ -151,26 +151,47 @@ export default function App() {
     setChatLoading(true);
 
     try {
+      const history = chatMessages
+        .slice(-10)
+        .map(({ role, content }) => ({
+          role: role === 'assistant' ? 'model' : 'user',
+          content,
+        }));
       const response = await fetch(CHAT_API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: trimmedInput }),
+        body: JSON.stringify({ message: trimmedInput, history }),
       });
-      const responseText = await response.text();
-      let data;
-      try {
-        data = JSON.parse(responseText);
-      } catch {
-        throw new Error(response.ok
-          ? 'The chatbot returned an invalid response. Please try again shortly.'
-          : `The chatbot service returned an unexpected response (${response.status}).`);
+      if (!response.ok) throw new Error(`The chatbot service returned an unexpected response (${response.status}).`);
+      if (!response.body) throw new Error('The chatbot returned an empty response.');
+
+      setChatMessages((messages) => [...messages, { role: 'assistant', content: '' }]);
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
+      while (true) {
+        const { value, done } = await reader.read();
+        buffer += decoder.decode(value || new Uint8Array(), { stream: !done });
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || '';
+        for (const line of lines) {
+          if (!line.trim()) continue;
+          const event = JSON.parse(line);
+          if (event.type === 'error') throw new Error(event.detail);
+          if (event.type === 'chunk') {
+            setChatMessages((messages) => {
+              const nextMessages = [...messages];
+              const lastMessage = nextMessages[nextMessages.length - 1];
+              nextMessages[nextMessages.length - 1] = {
+                ...lastMessage,
+                content: `${lastMessage.content}${event.text}`,
+              };
+              return nextMessages;
+            });
+          }
+        }
+        if (done) break;
       }
-      if (!response.ok) throw new Error(data.detail || 'The chatbot is temporarily unavailable.');
-      setChatMessages((messages) => [...messages, {
-        role: 'assistant',
-        content: data.answer,
-        citations: data.citations,
-      }]);
     } catch (error) {
       setChatMessages((messages) => [...messages, {
         role: 'assistant',

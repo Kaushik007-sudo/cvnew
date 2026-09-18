@@ -1,10 +1,12 @@
 import os
 import re
+import json
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
+from starlette.responses import StreamingResponse
 
 from services.rag_service import RAGService
 
@@ -50,11 +52,7 @@ def contains_abusive_language(message: str) -> bool:
 
 class ChatRequest(BaseModel):
     message: str = Field(..., min_length=1, max_length=4000)
-
-
-class ChatResponse(BaseModel):
-    answer: str
-    citations: list[dict] = []
+    history: list[dict[str, str]] = Field(default_factory=list, max_length=10)
 
 
 @app.get("/api/health")
@@ -62,7 +60,7 @@ def health():
     return {"status": "ok"}
 
 
-@app.post("/api/chat", response_model=ChatResponse)
+@app.post("/api/chat")
 def chat(request: ChatRequest):
     global _rag
 
@@ -75,12 +73,15 @@ def chat(request: ChatRequest):
     try:
         if _rag is None:
             _rag = RAGService()
-
-        result = _rag.answer(request.message)
-        return ChatResponse(**result)
-
     except Exception as exc:
-        raise HTTPException(
-            status_code=503,
-            detail="The chatbot is temporarily unavailable.",
-        ) from exc
+        raise HTTPException(status_code=503, detail="The chatbot is temporarily unavailable.") from exc
+
+    def events():
+        try:
+            for text in _rag.gemini.stream_answer(request.message, request.history):
+                yield json.dumps({"type": "chunk", "text": text}) + "\n"
+            yield json.dumps({"type": "done", "citations": []}) + "\n"
+        except Exception:
+            yield json.dumps({"type": "error", "detail": "The chatbot is temporarily unavailable."}) + "\n"
+
+    return StreamingResponse(events(), media_type="application/x-ndjson")

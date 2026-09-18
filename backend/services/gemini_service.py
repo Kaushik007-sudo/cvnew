@@ -1,5 +1,6 @@
 import os
 import time
+from collections.abc import Iterator
 from typing import Any
 
 from google import genai
@@ -32,7 +33,7 @@ class GeminiRAGService:
         if not api_key:
             raise RuntimeError("GEMINI_API_KEY is missing from .env")
 
-        timeout_ms = int(os.getenv("GEMINI_TIMEOUT_MS", "8000"))
+        timeout_ms = int(os.getenv("GEMINI_TIMEOUT_MS", "120000"))
         self.client = genai.Client(
             api_key=api_key,
             http_options=types.HttpOptions(timeout=timeout_ms),
@@ -46,50 +47,41 @@ class GeminiRAGService:
                 "Run `python index_knowledge.py` first."
             )
 
-    def ask(self, question: str) -> dict[str, Any]:
-        interaction = self.client.interactions.create(
-            model=self.model,
-            input=f"{SYSTEM_INSTRUCTIONS}\n\nUSER QUESTION:\n{question}",
-            tools=[{
-                "type": "file_search",
-                "file_search_store_names": [self.store_name],
-            }],
-        )
+    def stream_answer(
+        self,
+        question: str,
+        history: list[dict[str, str]] | None = None,
+    ) -> Iterator[str]:
+        messages = [
+            {
+                "role": item["role"],
+                "parts": [{"text": item["content"]}],
+            }
+            for item in (history or [])[-10:]
+            if item.get("role") in {"user", "model"} and item.get("content")
+        ]
+        messages.append({"role": "user", "parts": [{"text": question}]})
 
-        answer = getattr(interaction, "output_text", None)
-        if not answer:
-            answer = self._extract_output(interaction)
-
-        citations = self._extract_citations(interaction)
-
-        return {
-            "answer": answer or "I couldn't generate an answer from the knowledge base.",
-            "citations": citations,
-        }
-
-    @staticmethod
-    def _extract_output(interaction) -> str:
-        for step in getattr(interaction, "steps", []) or []:
-            if getattr(step, "type", None) != "model_output":
-                continue
-            for block in getattr(step, "content", []) or []:
-                text = getattr(block, "text", None)
-                if text:
-                    return text
-        return ""
-
-    @staticmethod
-    def _extract_citations(interaction) -> list[dict[str, Any]]:
-        results = []
-        for step in getattr(interaction, "steps", []) or []:
-            if getattr(step, "type", None) != "model_output":
-                continue
-            for block in getattr(step, "content", []) or []:
-                for annotation in getattr(block, "annotations", []) or []:
-                    if getattr(annotation, "type", None) == "file_citation":
-                        results.append({
-                            "file_name": getattr(annotation, "file_name", None),
-                            "source": getattr(annotation, "source", None),
-                            "page_number": getattr(annotation, "page_number", None),
-                        })
-        return results
+        for attempt in range(3):
+            emitted_text = False
+            try:
+                stream = self.client.models.generate_content_stream(
+                    model=self.model,
+                    contents=messages,
+                    config=types.GenerateContentConfig(
+                        system_instruction=SYSTEM_INSTRUCTIONS,
+                        tools=[types.Tool(file_search=types.FileSearch(
+                            file_search_store_names=[self.store_name],
+                        ))],
+                    ),
+                )
+                for chunk in stream:
+                    text = getattr(chunk, "text", None)
+                    if text:
+                        emitted_text = True
+                        yield text
+                return
+            except Exception:
+                if emitted_text or attempt == 2:
+                    raise
+                time.sleep(0.5 * (attempt + 1))
