@@ -78,6 +78,7 @@ def chat(request: ChatRequest):
 
     def events():
         try:
+            yield json.dumps({"type": "status", "message": "Thinking..."}) + "\n"
             for text in _rag.gemini.stream_answer(request.message, request.history):
                 yield json.dumps({"type": "chunk", "text": text}) + "\n"
             yield json.dumps({"type": "done", "citations": []}) + "\n"
