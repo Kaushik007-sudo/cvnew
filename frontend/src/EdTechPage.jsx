@@ -102,7 +102,7 @@ function EdTechPage() {
           <div className="edtech-hero-inner">
             <div className="edtech-hero-copy">
               <div className="edtech-eyebrow"><span /> COMPUTER EDUCATION · TEACHING PORTFOLIO</div>
-              <h1>Technology makes sense when <em>everyone</em> can use it.</h1>
+              <h1>Technology makes learning <em>limitless</em></h1>
               <p className="edtech-hero-lead">I’m Kaushik Das, a computer educator who helps learners move from curiosity to confident, practical understanding.</p>
               <div className="edtech-hero-actions">
                 <a className="edtech-button edtech-button-primary" href="#videos">Explore teaching videos <span aria-hidden="true">↓</span></a>
