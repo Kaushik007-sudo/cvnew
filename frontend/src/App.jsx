@@ -226,6 +226,7 @@ export default function App() {
       <a href="#" className="logo">Kaushik <span>Das</span></a>
       <ul className={`nav-links${menuOpen ? " open" : ""}`} id="navLinks">
         <li><a href="#about" onClick={closeMenu}>About</a></li>
+        <li><a href="/edtech" onClick={closeMenu}>EdTech</a></li>
         <li><a href="#workflow" onClick={closeMenu}>Workflow</a></li>
         <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
         <li><a href="#mlwork" onClick={closeMenu}>ML Work</a></li>
