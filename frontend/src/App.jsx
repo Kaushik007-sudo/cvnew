@@ -1,4 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
+import aboutImage from '../images/about.jpg';
+import cvDocument from '../images/cv_kaushik_pm.pdf';
+import heroImage from '../images/hero.png';
+import workImage0 from '../images/work-0.jpg';
+import workImage1 from '../images/work-1.jpg';
+import workImage2 from '../images/work-2.jpg';
+import workImage3 from '../images/work-3.jpg';
+import workImage4 from '../images/work-4.jpg';
+import workImage5 from '../images/work-5.jpg';
+import workImage6 from '../images/work-6.jpg';
+import workImage7 from '../images/work-7.jpg';
+import workImage8 from '../images/work-8.jpg';
+
+const workImages = [workImage0, workImage1, workImage2, workImage3, workImage4, workImage5, workImage6, workImage7, workImage8];
 
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwLnwb0G1HcwWBbk7NLFdVlcWTyyulxCadTzLbcc-zjwjfoTjowgaPrC6zAhrjjVaH7Uw/exec';
 const defaultApiBaseUrl = window.location.hostname === 'localhost'
@@ -233,7 +247,7 @@ export default function App() {
         <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
       </ul>
       <div className="nav-cta">
-        <a href="images/cv_kaushik_pm.pdf" download className="btn btn-primary btn-sm"><span><i className="fa-solid fa-download"></i> Download CV</span></a>
+        <a href={cvDocument} download className="btn btn-primary btn-sm"><span><i className="fa-solid fa-download"></i> Download CV</span></a>
         <i className="fa-solid fa-bars burger" onClick={openMenu}></i>
       </div>
     </nav>
@@ -273,7 +287,7 @@ export default function App() {
   </div>
   <div className="hero-visual reveal in">
     <div className="hero-frame">
-      <img src="images/hero.png" alt="Kaushik Das, Product Manager" />
+      <img src={heroImage} alt="Kaushik Das, Product Manager" />
     </div>
     <div className="float-card fc-1"><span className="ic">🏆</span><div><strong>12+ Years</strong><small>Experience</small></div></div>
     <div className="float-card fc-2"><span className="ic">💼</span><div><strong>$2M+ Budgets</strong><small>Managed</small></div></div>
@@ -286,7 +300,7 @@ export default function App() {
   <div className="container">
     <div className="about-grid">
       <div className="about-photo reveal">
-        <img src="images/about.jpg" alt="Kaushik Das" />
+        <img src={aboutImage} alt="Kaushik Das" />
         <div className="stat-strip">
           <div className="stat-box"><strong>12+</strong><small>Years Exp.</small></div>
           <div className="stat-box"><strong>15</strong><small>Devs Led</small></div>
@@ -415,7 +429,7 @@ export default function App() {
     <div className="work-grid">
 
       <div className="work-card reveal">
-        <img src="images/work-0.jpg" alt="Farmers Market Online" />
+        <img src={workImages[0]} alt="Farmers Market Online" />
         <div className="work-layer">
           <h3>Farmers Market Online</h3>
           <p>Interactive platform for farmers and customers.</p>
@@ -424,7 +438,7 @@ export default function App() {
       </div>
 
       <div className="work-card reveal">
-        <img src="images/work-1.jpg" alt="Chase the Zen" />
+        <img src={workImages[1]} alt="Chase the Zen" />
         <div className="work-layer">
           <h3>Chase the Zen</h3>
           <p>A mindful running app with dynamic audio playback.</p>
@@ -433,7 +447,7 @@ export default function App() {
       </div>
 
       <div className="work-card reveal">
-        <img src="images/work-2.jpg" alt="Dream Crazy" />
+        <img src={workImages[2]} alt="Dream Crazy" />
         <div className="work-layer">
           <h3>Dream Crazy</h3>
           <p>Facilitates users building new habits and maintaining the perfect daily routine.</p>
@@ -442,7 +456,7 @@ export default function App() {
       </div>
 
       <div className="work-card reveal">
-        <img src="images/work-3.jpg" alt="Inspection-360" />
+        <img src={workImages[3]} alt="Inspection-360" />
         <div className="work-layer">
           <h3>Inspection-360</h3>
           <p>Property management platform for owners, renters & maintenance teams.</p>
@@ -451,7 +465,7 @@ export default function App() {
       </div>
 
       <div className="work-card reveal">
-        <img src="images/work-4.jpg" alt="RM-Fantasy" />
+        <img src={workImages[4]} alt="RM-Fantasy" />
         <div className="work-layer">
           <h3>RM-Fantasy</h3>
           <p>Motocross fantasy game platform.</p>
@@ -460,7 +474,7 @@ export default function App() {
       </div>
 
       <div className="work-card reveal">
-        <img src="images/work-5.jpg" alt="Four Stripes" />
+        <img src={workImages[5]} alt="Four Stripes" />
         <div className="work-layer">
           <h3>Four Stripes</h3>
           <p>Interior decoration project management tool.</p>
@@ -469,7 +483,7 @@ export default function App() {
       </div>
 
       <div className="work-card reveal">
-        <img src="images/work-6.jpg" alt="Echo" />
+        <img src={workImages[6]} alt="Echo" />
         <div className="work-layer">
           <h3>Echo</h3>
           <p>Push-to-talk radio app with hands-free voice commands and overlay controls.</p>
@@ -478,7 +492,7 @@ export default function App() {
       </div>
 
       <div className="work-card reveal">
-        <img src="images/work-7.jpg" alt="PECE" />
+        <img src={workImages[7]} alt="PECE" />
         <div className="work-layer">
           <h3>PECE</h3>
           <p>Complete solution for ANS testing analytics and encounter form preparation.</p>
@@ -487,7 +501,7 @@ export default function App() {
       </div>
 
       <div className="work-card reveal">
-        <img src="images/work-8.jpg" alt="Bio-Energetics" />
+        <img src={workImages[8]} alt="Bio-Energetics" />
         <div className="work-layer">
           <h3>Bio-Energetics</h3>
           <p>Advanced treatment management platform for drug-free chronic pain relief.</p>
@@ -496,7 +510,7 @@ export default function App() {
       </div>
 
       <div className="work-card reveal">
-        <img src="images/work-8.jpg" alt="Grace Medical" />
+        <img src={workImages[8]} alt="Grace Medical" />
         <div className="work-layer">
           <h3>Grace Medical</h3>
           <p>A contact point platform connecting patients with medical service providers.</p>
@@ -505,7 +519,7 @@ export default function App() {
       </div>
 
       <div className="work-card reveal">
-        <img src="images/work-8.jpg" alt="Montessori Sprouts" />
+        <img src={workImages[8]} alt="Montessori Sprouts" />
         <div className="work-layer">
           <h3>Montessori Sprouts</h3>
           <p>A student management platform for early-years education.</p>
@@ -514,7 +528,7 @@ export default function App() {
       </div>
 
       <div className="work-card reveal">
-        <img src="images/work-8.jpg" alt="Transcendent Pagan Institute" />
+        <img src={workImages[8]} alt="Transcendent Pagan Institute" />
         <div className="work-layer">
           <h3>Transcendent Pagan Institute</h3>
           <p>A blended mystery school combining online and in-person learning.</p>
@@ -580,7 +594,7 @@ export default function App() {
           <a href="https://wa.me/+918436327900" target="_blank"><i className="fa-brands fa-whatsapp"></i></a>
         </div>
         <div className="cta-row">
-          <a href="images/cv_kaushik_pm.pdf" download className="btn btn-primary"><span><i className="fa-solid fa-download"></i> Download CV</span></a>
+          <a href={cvDocument} download className="btn btn-primary"><span><i className="fa-solid fa-download"></i> Download CV</span></a>
           <a href="tel:+918436327900" className="btn btn-ghost"><i className="fa-solid fa-phone"></i> Call Now</a>
         </div>
       </div>
