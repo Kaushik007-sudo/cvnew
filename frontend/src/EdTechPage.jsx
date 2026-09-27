@@ -202,7 +202,7 @@ function EdTechPage() {
 
         <section className="edtech-contact">
           <div><div className="edtech-kicker">READY FOR THE NEXT CLASSROOM</div><h2>Let’s make learning<br />click.</h2></div>
-          <div className="edtech-contact-action"><p>For a computer faculty opportunity or an interview conversation, I’d be glad to connect.</p><a className="edtech-button edtech-button-primary" href="mailto:connect@thekaushikdas.com">Start a conversation <span aria-hidden="true">↗</span></a></div>
+          <div className="edtech-contact-action"><p>For a computer faculty opportunity or an interview conversation, I’d be glad to connect.</p><a className="edtech-button edtech-button-primary" href="https://wa.me/918436327900" target="_blank" rel="noreferrer">Start a conversation <span aria-hidden="true">↗</span></a></div>
         </section>
       </main>
 
