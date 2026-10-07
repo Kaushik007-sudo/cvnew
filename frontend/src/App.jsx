@@ -245,7 +245,7 @@ export default function App() {
         <li><a href="#about" onClick={closeMenu}>About</a></li>
         <li><a href="/edtech" onClick={closeMenu}>EdTech</a></li>
         <li><a href="#workflow" onClick={closeMenu}>Workflow</a></li>
-        <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
+        <li><a href="/my-projects" onClick={closeMenu}>My Projects</a></li>
         <li><a href="#mlwork" onClick={closeMenu}>ML Work</a></li>
         <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
       </ul>
@@ -582,7 +582,7 @@ export default function App() {
       </div>
 
     </div>
-    <div className="see-more reveal"><a href="#" className="btn btn-ghost">See more</a></div>
+    <div className="see-more reveal"><a href="/my-projects" className="btn btn-ghost">Explore My Projects</a></div>
   </div>
 </section>
 
