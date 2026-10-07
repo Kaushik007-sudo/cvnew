@@ -11,6 +11,9 @@ import workImage5 from '../images/work-5.jpg';
 import workImage6 from '../images/work-6.jpg';
 import workImage7 from '../images/work-7.jpg';
 import workImage8 from '../images/work-8.jpg';
+import balanceUpImage from '../images/project-balanceup-thumbnail.webp';
+import allyoImage from '../images/project-allyo-thumbnail.webp';
+import sewaMartImage from '../images/project-sewamart-thumbnail.webp';
 
 const workImages = [workImage0, workImage1, workImage2, workImage3, workImage4, workImage5, workImage6, workImage7, workImage8];
 
@@ -427,6 +430,48 @@ export default function App() {
       <p>Products and platforms I've helped plan, build and ship.</p>
     </div>
     <div className="work-grid">
+
+      <div className="work-entry reveal project-entry">
+        <div className="work-card project-card" tabIndex={0}>
+          <img src={balanceUpImage} alt="BalanceUp campaign artwork paired with expense tracking and settlement app screens" loading="lazy" />
+          <div className="project-info">
+            <h3>BalanceUp</h3>
+            <p>Personal ledgers and shared expense splitting, with balances that work offline.</p>
+          </div>
+        </div>
+        <div className="project-links">
+          <a href="https://balanceup.iencodetech.com/" target="_blank" rel="noopener noreferrer">Website</a>
+          <a href="https://play.google.com/store/apps/details?id=com.ietbalanceup" target="_blank" rel="noopener noreferrer">Play Store</a>
+        </div>
+      </div>
+
+      <div className="work-entry reveal project-entry">
+        <div className="work-card project-card" tabIndex={0}>
+          <img src={allyoImage} alt="Allyo campaign artwork paired with a privacy-focused app screen" loading="lazy" />
+          <div className="project-info">
+            <h3>Allyo</h3>
+            <p>A people-to-people marketplace for discovering and booking everyday help and experiences.</p>
+          </div>
+        </div>
+        <div className="project-links">
+          <a href="https://allyoapp.com/" target="_blank" rel="noopener noreferrer">Website</a>
+          <a href="https://play.google.com/store/apps/details?id=com.allyoapp&hl=en_IN" target="_blank" rel="noopener noreferrer">Play Store</a>
+        </div>
+      </div>
+
+      <div className="work-entry reveal project-entry">
+        <div className="work-card project-card" tabIndex={0}>
+          <img src={sewaMartImage} alt="SewaMart local services artwork paired with a service discovery app screen" loading="lazy" />
+          <div className="project-info">
+            <h3>SewaMart</h3>
+            <p>A local marketplace connecting customers with trusted home-service providers.</p>
+          </div>
+        </div>
+        <div className="project-links">
+          <a href="https://sewamart.com/" target="_blank" rel="noopener noreferrer">Website</a>
+          <a href="https://play.google.com/store/apps/details?id=com.sewamart&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">Play Store</a>
+        </div>
+      </div>
 
       <div className="work-card reveal">
         <img src={workImages[0]} alt="Farmers Market Online" />
