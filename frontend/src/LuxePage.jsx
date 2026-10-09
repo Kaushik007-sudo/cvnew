@@ -138,6 +138,7 @@ function LuxePage() {
         <div className="lx-header-inner">
           <a className="lx-brand" href="#top" aria-label="Kaushik Das hospitality profile">
             <LuxeMark />
+            <span className="lx-brand-resort-bar" aria-hidden="true"></span>
             <span className="lx-brand-text"><span className="lx-brand-name">KAUSHIK DAS</span><small>HOSPITALITY · GUEST EXPERIENCE</small></span>
           </a>
           <nav className="lx-nav" aria-label="Main navigation">
@@ -171,11 +172,12 @@ function LuxePage() {
               <div className="lx-photo-frame">
                 <img src={heroImage} alt="Kaushik Das" fetchPriority="high" />
                 <div className="lx-photo-shade"></div>
-                <div className="lx-photo-caption"><span>KAUSHIK DAS</span><small>Hospitality · Guest Experience</small></div>
               </div>
-              <div className="lx-floating-note"><span className="lx-note-icon">✦</span><span><strong>Guest-first,</strong><small>always</small></span></div>
-              <div className="lx-portrait-stamp"><span>THE ART OF</span><strong>Hospitality</strong><i>✦</i></div>
-              <div className="lx-photo-index"><span>01</span> / GUEST EXPERIENCE</div>
+              <div className="lx-photo-index">
+                <span className="lx-photo-index-number">01</span>
+                <i aria-hidden="true"></i>
+                <span className="lx-photo-index-label">GUEST-FIRST SERVICE</span>
+              </div>
             </div>
           </div>
           <a className="lx-scroll-hint" href="#profile"><span></span> DISCOVER MY APPROACH</a>
@@ -266,11 +268,19 @@ function LuxePage() {
             </div>
           </div>
           <div className="lx-contact-watermark" aria-hidden="true">KD</div>
+          <div className="lx-contact-resort" aria-hidden="true">
+            <svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="379" cy="91" r="43" />
+              <path d="M34 313h455M77 313v-72l72-51 72 51v72M100 313v-50a22 22 0 0 1 44 0v50m22 0v-48a19 19 0 0 1 38 0v48M77 241h144M109 218v-22h83v22M127 196v-27h46v27" />
+              <path d="M307 314V150m0 25c-24-34-49-36-72-30 19 25 42 34 72 34Zm0 18c25-36 50-39 74-34-19 25-43 36-74 38Zm0 16c-24-32-47-34-68-28 18 22 39 31 68 32Zm0 17c22-31 44-34 66-29-17 22-38 32-66 33Z" />
+              <path d="M250 332c44-13 86-13 130 0m-130 14c44-13 86-13 130 0M25 338c32-9 61-9 93 0" />
+            </svg>
+          </div>
         </section>
       </div>
 
       <footer className="lx-footer">
-        <a className="lx-brand" href="#top"><LuxeMark /><span className="lx-brand-text"><span className="lx-brand-name">KAUSHIK DAS</span><small>HOSPITALITY · GUEST EXPERIENCE</small></span></a>
+        <a className="lx-brand" href="#top"><LuxeMark /><span className="lx-brand-resort-bar" aria-hidden="true"></span><span className="lx-brand-text"><span className="lx-brand-name">KAUSHIK DAS</span><small>HOSPITALITY · GUEST EXPERIENCE</small></span></a>
         <span>Attentive service. Thoughtful experiences.</span>
         <a href="#top">Back to top ↑</a>
       </footer>
