@@ -68,6 +68,24 @@ const hospitalitySkills = [
   'Food safety & hygiene',
 ];
 
+function LuxeMark() {
+  return (
+    <svg className="lx-brand-mark" viewBox="0 0 48 48" role="img" aria-label="Kaushik Das monogram">
+      <defs>
+        <linearGradient id="lx-mark-gradient" x1="5" y1="4" x2="43" y2="44" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#eed9a7" />
+          <stop offset=".5" stopColor="#bd9858" />
+          <stop offset="1" stopColor="#8f6d37" />
+        </linearGradient>
+      </defs>
+      <circle cx="24" cy="24" r="22" fill="url(#lx-mark-gradient)" />
+      <circle cx="24" cy="24" r="19" fill="#17362e" stroke="#f5e5bc" strokeOpacity=".72" />
+      <path d="M14 32V16m0 8 11-8m-11 8 12 8m-2-12h9a4 4 0 0 1 0 8h-9" fill="none" stroke="#fbf5e8" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" />
+      <path d="M9 10h4M35 38h4" stroke="#e8cb8c" strokeLinecap="round" strokeWidth="1.2" />
+    </svg>
+  );
+}
+
 function LuxePage() {
   const downloadCv = () => {
     const pdf = createLuxeCvPdf();
@@ -113,8 +131,8 @@ function LuxePage() {
       <header className="lx-header">
         <div className="lx-header-inner">
           <a className="lx-brand" href="#top" aria-label="Kaushik Das hospitality profile">
-            <span className="lx-brand-mark">K<span>D</span></span>
-            <span className="lx-brand-text">KAUSHIK DAS<small>HOSPITALITY · GUEST EXPERIENCE</small></span>
+            <LuxeMark />
+            <span className="lx-brand-text"><span className="lx-brand-name">KAUSHIK DAS</span><small>HOSPITALITY · GUEST EXPERIENCE</small></span>
           </a>
           <nav className="lx-nav" aria-label="Main navigation">
             <a href="#profile">Profile</a>
@@ -243,7 +261,7 @@ function LuxePage() {
       </div>
 
       <footer className="lx-footer">
-        <a className="lx-brand" href="#top"><span className="lx-brand-mark">K<span>D</span></span><span className="lx-brand-text">KAUSHIK DAS<small>HOSPITALITY · GUEST EXPERIENCE</small></span></a>
+        <a className="lx-brand" href="#top"><LuxeMark /><span className="lx-brand-text"><span className="lx-brand-name">KAUSHIK DAS</span><small>HOSPITALITY · GUEST EXPERIENCE</small></span></a>
         <span>Attentive service. Thoughtful experiences.</span>
         <a href="#top">Back to top ↑</a>
       </footer>
