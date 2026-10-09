@@ -70,18 +70,24 @@ const hospitalitySkills = [
 
 function LuxeMark() {
   return (
-    <svg className="lx-brand-mark" viewBox="0 0 48 48" role="img" aria-label="Kaushik Das monogram">
+    <svg className="lx-brand-mark" viewBox="0 0 56 56" role="img" aria-label="Kaushik Das monogram">
       <defs>
-        <linearGradient id="lx-mark-gradient" x1="5" y1="4" x2="43" y2="44" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#eed9a7" />
-          <stop offset=".5" stopColor="#bd9858" />
-          <stop offset="1" stopColor="#8f6d37" />
+        <linearGradient id="lx-mark-gradient" x1="5" y1="5" x2="51" y2="51" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#9ee6d1" />
+          <stop offset=".48" stopColor="#69a9c3" />
+          <stop offset="1" stopColor="#c49be6" />
+        </linearGradient>
+        <linearGradient id="lx-mark-type" x1="16" y1="18" x2="41" y2="40" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#317f77" />
+          <stop offset=".55" stopColor="#7359a5" />
+          <stop offset="1" stopColor="#c57b79" />
         </linearGradient>
       </defs>
-      <circle cx="24" cy="24" r="22" fill="url(#lx-mark-gradient)" />
-      <circle cx="24" cy="24" r="19" fill="#17362e" stroke="#f5e5bc" strokeOpacity=".72" />
-      <path d="M14 32V16m0 8 11-8m-11 8 12 8m-2-12h9a4 4 0 0 1 0 8h-9" fill="none" stroke="#fbf5e8" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" />
-      <path d="M9 10h4M35 38h4" stroke="#e8cb8c" strokeLinecap="round" strokeWidth="1.2" />
+      <circle cx="28" cy="28" r="27" fill="url(#lx-mark-gradient)" />
+      <circle cx="28" cy="28" r="23.5" fill="#fffdf9" stroke="white" strokeOpacity=".9" strokeWidth="1.3" />
+      <path d="M19 38V18m0 10 13-11m-13 11 14 10m-2-16h7a5 5 0 0 1 0 10h-7" fill="none" stroke="url(#lx-mark-type)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.7" />
+      <circle cx="42.5" cy="13.5" r="3.2" fill="#f1aa91" />
+      <circle cx="12.5" cy="39.5" r="2.1" fill="#76b6a4" />
     </svg>
   );
 }
@@ -160,12 +166,15 @@ function LuxePage() {
             </div>
 
             <div className="lx-hero-visual lx-reveal" aria-label="Portrait of Kaushik Das">
+              <div className="lx-portrait-orbit lx-portrait-orbit-one" aria-hidden="true"></div>
+              <div className="lx-portrait-orbit lx-portrait-orbit-two" aria-hidden="true"></div>
               <div className="lx-photo-frame">
                 <img src={heroImage} alt="Kaushik Das" fetchPriority="high" />
                 <div className="lx-photo-shade"></div>
                 <div className="lx-photo-caption"><span>KAUSHIK DAS</span><small>Hospitality · Guest Experience</small></div>
               </div>
               <div className="lx-floating-note"><span className="lx-note-icon">✦</span><span><strong>Guest-first,</strong><small>always</small></span></div>
+              <div className="lx-portrait-stamp"><span>THE ART OF</span><strong>Hospitality</strong><i>✦</i></div>
               <div className="lx-photo-index"><span>01</span> / GUEST EXPERIENCE</div>
             </div>
           </div>
