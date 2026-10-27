@@ -1,4 +1,5 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { pptxToHtml } from '@jvmr/pptx-to-html';
 import aboutPortrait from '../images/about.jpg';
 import cvDocument from '../images/cv_kaushik_pm.pdf';
 import './edtech.css';
@@ -11,6 +12,34 @@ const teachingVideos = [
   '66e8_LhwLB4',
   'KIV8LYQTB58',
   'l8vknu678OA',
+];
+
+const teachingPresentations = [
+  {
+    title: 'Types of Computers',
+    subtitle: 'Meet the four computer friends',
+    file: '/demo/Types_of_Computers.pptx',
+  },
+  {
+    title: 'Parts of a Computer',
+    subtitle: 'Get to know the essential parts',
+    file: '/demo/Parts_of_a_Computer.pptx',
+  },
+  {
+    title: 'Hardware and Software',
+    subtitle: 'What can we touch, and what can’t we?',
+    file: '/demo/Hardware_and_Software.pptx',
+  },
+  {
+    title: 'Operating Systems',
+    subtitle: 'Explore Windows, Linux, and the OS',
+    file: '/demo/Operating_Systems.pptx',
+  },
+  {
+    title: 'The Internet',
+    subtitle: 'Discover how the world connects',
+    file: '/demo/The_Internet.pptx',
+  },
 ];
 
 const teachingPrinciples = [
@@ -75,13 +104,59 @@ const futureReadyPrinciples = [
 ];
 
 function EdTechPage() {
+  const [activePresentation, setActivePresentation] = useState(teachingPresentations[0]);
+  const [presentationSlides, setPresentationSlides] = useState([]);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [presentationLoading, setPresentationLoading] = useState(true);
+  const [presentationError, setPresentationError] = useState('');
+
   useEffect(() => {
     document.title = 'Teaching with Tech | Kaushik Das — Computer Faculty';
     const description = document.querySelector('meta[name="description"]');
     if (description) {
-      description.content = 'Computer education experience and teaching video portfolio of Kaushik Das, including five years as Computer Faculty at Chakdaha Model School.';
+      description.content = 'Computer education experience and teaching portfolio of Kaushik Das, including classroom presentations and videos.';
     }
   }, []);
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    async function loadPresentation() {
+      setPresentationLoading(true);
+      setPresentationError('');
+      setPresentationSlides([]);
+      setActiveSlide(0);
+
+      try {
+        const response = await fetch(activePresentation.file, { signal: controller.signal });
+        if (!response.ok) {
+          throw new Error(`Could not load presentation (${response.status}).`);
+        }
+
+        const slides = await pptxToHtml(await response.arrayBuffer(), {
+          width: 960,
+          height: 540,
+          scaleToFit: true,
+          letterbox: true,
+        });
+
+        if (!controller.signal.aborted) {
+          setPresentationSlides(slides);
+        }
+      } catch (error) {
+        if (!controller.signal.aborted) {
+          setPresentationError(error instanceof Error ? error.message : 'The presentation could not be displayed.');
+        }
+      } finally {
+        if (!controller.signal.aborted) {
+          setPresentationLoading(false);
+        }
+      }
+    }
+
+    loadPresentation();
+    return () => controller.abort();
+  }, [activePresentation]);
 
   return (
     <div className="edtech-page">
@@ -92,6 +167,7 @@ function EdTechPage() {
           <nav className="edtech-nav" aria-label="EdTech page navigation">
             <a href="/">Portfolio home</a>
             <a href="#experience">Teaching experience</a>
+            <a href="#presentations">Classroom slides</a>
             <a className="edtech-nav-cta" href="#videos">Watch lessons <span aria-hidden="true">↘</span></a>
           </nav>
         </div>
@@ -197,6 +273,57 @@ function EdTechPage() {
                 <div className="edtech-video-meta"><span>LESSON {String(index + 1).padStart(2, '0')}</span><a href={`https://youtu.be/${videoId}`} target="_blank" rel="noreferrer">Open on YouTube <span aria-hidden="true">↗</span></a></div>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="edtech-presentations" id="presentations" aria-labelledby="presentations-heading">
+          <div className="edtech-section-heading">
+            <div>
+              <div className="edtech-kicker">CLASSROOM RESOURCES</div>
+              <h2 id="presentations-heading">Computer lessons,<br />ready to explore.</h2>
+            </div>
+            <p>Browse these classroom presentations in the local slide viewer. Choose a topic, then move through its slides.</p>
+          </div>
+          <div className="edtech-presentation-layout">
+            <div className="edtech-presentation-list" role="group" aria-label="Choose a classroom presentation">
+              {teachingPresentations.map((presentation, index) => (
+                <button
+                  className={`edtech-presentation-choice${activePresentation.file === presentation.file ? ' is-active' : ''}`}
+                  type="button"
+                  key={presentation.file}
+                  aria-pressed={activePresentation.file === presentation.file}
+                  onClick={() => setActivePresentation(presentation)}
+                >
+                  <span className="edtech-presentation-number">{String(index + 1).padStart(2, '0')}</span>
+                  <span className="edtech-presentation-label"><strong>{presentation.title}</strong><small>{presentation.subtitle}</small></span>
+                  <span className="edtech-presentation-arrow" aria-hidden="true">↗</span>
+                </button>
+              ))}
+            </div>
+            <div className="edtech-presentation-panel">
+              <div className="edtech-presentation-panel-heading">
+                <div><span className="edtech-kicker">NOW VIEWING</span><h3>{activePresentation.title}</h3></div>
+                <div className="edtech-presentation-actions">
+                  <a href={activePresentation.file} target="_blank" rel="noreferrer">Open file <span aria-hidden="true">↗</span></a>
+                  <a href={activePresentation.file} download>Download <span aria-hidden="true">↓</span></a>
+                </div>
+              </div>
+              <div className="edtech-presentation-viewer" aria-live="polite">
+                {presentationLoading && <p className="edtech-presentation-status">Loading presentation…</p>}
+                {!presentationLoading && presentationError && <p className="edtech-presentation-status edtech-presentation-error" role="alert">{presentationError}</p>}
+                {!presentationLoading && !presentationError && presentationSlides.length > 0 && (
+                  <>
+                    <div className="edtech-rendered-slide" dangerouslySetInnerHTML={{ __html: presentationSlides[activeSlide] }} />
+                    <div className="edtech-slide-controls">
+                      <button type="button" onClick={() => setActiveSlide((slide) => Math.max(0, slide - 1))} disabled={activeSlide === 0}>← Previous</button>
+                      <span>Slide {activeSlide + 1} of {presentationSlides.length}</span>
+                      <button type="button" onClick={() => setActiveSlide((slide) => Math.min(presentationSlides.length - 1, slide + 1))} disabled={activeSlide === presentationSlides.length - 1}>Next →</button>
+                    </div>
+                  </>
+                )}
+              </div>
+              <p className="edtech-presentation-note">Slides are rendered in your browser from the local presentation file.</p>
+            </div>
           </div>
         </section>
 

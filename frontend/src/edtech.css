@@ -43,3 +43,32 @@
 @media(max-width:900px){.edtech-hero-inner{min-height:0;padding-top:75px;padding-bottom:92px;grid-template-columns:1fr .82fr;gap:34px}.edtech-hero h1{font-size:clamp(2.7rem,6vw,4rem)}.edtech-section-heading{grid-template-columns:1fr .8fr;gap:32px}.edtech-role{grid-template-columns:140px 1fr;gap:24px}.edtech-role-main{grid-template-columns:1fr;gap:18px}.edtech-role-details{padding-left:0;border-left:0}.edtech-approach{grid-template-columns:1fr;gap:40px}.edtech-future-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.edtech-video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.edtech-video-featured{grid-column:span 2;grid-row:auto}}
 @media(max-width:620px){.edtech-header-inner,.edtech-footer,.edtech-hero-inner,.edtech-hero-baseline,.edtech-experience,.edtech-videos,.edtech-future{width:calc(100% - 36px)}.edtech-header-inner{min-height:66px}.edtech-nav{gap:14px;font-size:.72rem}.edtech-nav>a:nth-child(2){display:none}.edtech-nav-cta{padding:10px 12px}.edtech-hero-inner{padding-top:38px;padding-bottom:78px;grid-template-columns:1fr;gap:40px}.edtech-hero-copy{order:1}.edtech-hero-visual{order:0;width:min(100%,420px);justify-self:center;padding-left:24px}.edtech-image-frame{aspect-ratio:1.12}.edtech-hero h1{font-size:clamp(2.55rem,12vw,4rem)}.edtech-hero-lead{font-size:.96rem}.edtech-hero-baseline{gap:15px;font-size:.53rem;letter-spacing:.1em}.edtech-orbit-note{left:0;top:32px}.edtech-experience,.edtech-videos{padding:72px 0}.edtech-future{padding:72px 0}.edtech-future-grid{grid-template-columns:1fr}.edtech-future-card{min-height:0;padding:18px}.edtech-future-number{margin-bottom:14px}.edtech-section-heading{grid-template-columns:1fr;gap:18px;margin-bottom:28px}.edtech-section-heading h2,.edtech-approach-intro h2,.edtech-contact h2{font-size:2.35rem}.edtech-future-heading h2{font-size:2.25rem}.edtech-role{grid-template-columns:1fr;gap:20px;padding:22px 0}.edtech-role-date{flex-direction:row;align-items:center;gap:10px}.edtech-role-date i{width:28px;height:1px;margin:0}.edtech-role-heading h3{font-size:1.27rem}.edtech-role-main{gap:18px}.edtech-tenure{font-size:1.4rem}.edtech-approach{padding:70px 18px;gap:32px}.edtech-principle{grid-template-columns:30px 1fr 16px;gap:12px;padding:20px 0}.edtech-video-grid{grid-template-columns:1fr;gap:14px}.edtech-video-featured{grid-column:auto}.edtech-video-meta{padding:10px 4px 5px}.edtech-contact{padding:58px 20px;flex-direction:column;align-items:flex-start;gap:20px}.edtech-footer{padding:20px 0;min-height:0;display:grid;grid-template-columns:1fr auto;gap:12px;font-size:.65rem}.edtech-footer>span{grid-column:1/-1;grid-row:2}.edtech-footer>a:last-child{grid-column:2;grid-row:1}}
 @media(prefers-reduced-motion:reduce){.edtech-page *, .edtech-page *::before,.edtech-page *::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+.edtech-presentations{width:min(1200px,calc(100% - 56px));margin:0 auto;padding:0 0 108px}
+.edtech-presentation-layout{display:grid;grid-template-columns:minmax(230px,.36fr) minmax(0,1fr);gap:22px;align-items:start}
+.edtech-presentation-list{display:grid;gap:8px}
+.edtech-presentation-choice{display:grid;grid-template-columns:30px 1fr 16px;gap:12px;align-items:center;width:100%;padding:16px 13px;text-align:left;color:var(--ed-ink);background:var(--ed-panel);border:1px solid var(--ed-line);border-radius:5px;cursor:pointer;transition:border-color .2s ease,background .2s ease}
+.edtech-presentation-choice:hover,.edtech-presentation-choice.is-active{border-color:var(--ed-teal);background:var(--ed-panel-raised)}
+.edtech-presentation-number,.edtech-presentation-arrow{color:var(--ed-teal);font-family:'Sora',sans-serif;font-size:.75rem}
+.edtech-presentation-label{display:grid;gap:5px}
+.edtech-presentation-label strong{font-family:'Sora',sans-serif;font-size:.83rem;font-weight:600}
+.edtech-presentation-label small{color:var(--ed-muted);font-size:.68rem;line-height:1.45}
+.edtech-presentation-panel{min-width:0;padding:16px;background:var(--ed-panel);border:1px solid var(--ed-line);border-radius:6px}
+.edtech-presentation-panel-heading{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:3px 2px 15px}
+.edtech-presentation-panel-heading .edtech-kicker{margin-bottom:5px}
+.edtech-presentation-panel-heading h3{font-size:1.05rem;font-weight:600}
+.edtech-presentation-actions{display:flex;gap:14px;flex-shrink:0;font-size:.73rem;font-weight:600}
+.edtech-presentation-actions a:hover{color:var(--ed-teal)}
+.edtech-presentation-actions span{color:var(--ed-teal)}
+.edtech-presentation-viewer{min-height:380px;background:var(--ed-paper);border:1px solid var(--ed-line);border-radius:3px}
+.edtech-rendered-slide{width:100%;overflow:hidden;background:#fff}
+.edtech-rendered-slide>div{max-width:100%}
+.edtech-presentation-status{display:grid;min-height:380px;place-items:center;padding:24px;text-align:center}
+.edtech-presentation-error{color:#ff8585}
+.edtech-slide-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;color:var(--ed-muted);font-size:.75rem}
+.edtech-slide-controls button{padding:9px 12px;color:var(--ed-ink);background:var(--ed-panel-raised);border:1px solid var(--ed-line);border-radius:4px;font:inherit;font-weight:600;cursor:pointer}
+.edtech-slide-controls button:hover:not(:disabled){border-color:var(--ed-teal)}
+.edtech-slide-controls button:disabled{opacity:.45;cursor:default}
+.edtech-presentation-note{padding:10px 2px 0;font-size:.68rem;line-height:1.5!important}
+.edtech-presentation-choice:focus-visible,.edtech-presentation-actions a:focus-visible{outline:3px solid var(--ed-blue);outline-offset:3px}
+@media(max-width:900px){.edtech-presentations{width:min(1200px,calc(100% - 56px));padding-bottom:88px}.edtech-presentation-layout{grid-template-columns:1fr}.edtech-presentation-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.edtech-presentations{width:calc(100% - 36px);padding-bottom:72px}.edtech-presentation-list{grid-template-columns:1fr;gap:7px}.edtech-presentation-choice{padding:13px}.edtech-presentation-panel{padding:10px}.edtech-presentation-panel-heading{align-items:flex-start;flex-direction:column;gap:12px}.edtech-presentation-viewer{min-height:320px}.edtech-presentation-status{min-height:320px}.edtech-slide-controls{padding:10px 8px;font-size:.68rem}.edtech-slide-controls button{padding:8px}}
